@@ -1,0 +1,145 @@
+body {
+	font-family: 'Red Hat Display', 'Trebuchet MS', sans-serif;
+	font-weight: 400;
+	line-height: 1.6rem;
+}
+
+p {
+	font-size: 0rem;
+	color: $gris-oscuro;
+	margin: 0 ;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: rem;
+	margin: 0;
+}
+
+h2 {
+	font-size: rem;
+}
+
+h3 {
+	font-size: rem;
+	margin: 0;
+}
+
+h4 {
+	font-size: rem;
+	margin: 0;
+}
+
+h5 {
+	font-size: rem;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+ font-size: auto;
+}
+
+.layout {
+	position: relative;
+	width: 75em;
+	margin: 0 auto;
+	@include grid-structure($columns: 12);
+	grid-template-areas: ''
+}
+
+.fade-enter-active {
+	transition: opacity .5s;
+ }
+ 
+ .fade-enter {
+	opacity: 0;
+ }
+
+main {	
+	@include grid-structure($columns: 12);
+	grid-area: main;	
+}
+
+
+
+.none {
+	display:none;
+}
+
+/*----------------------------------- Mobile Portrait (320px) -----------------------------------*/
+@include responsive(20em) {
+	.layout {
+		width: 100%;
+		grid-template-columns: repeat(6, 2fr);
+		grid-template-areas: '';
+	}
+
+	p {
+		font-size: rem;
+	}
+
+	h1 {
+		font-size:rem;
+	}
+
+	h2 {
+		font-size: em;
+	}
+
+	h3 {
+		font-size:rem;
+	}
+
+	main {
+		margin-top:rem;
+	}
+
+}
+
+/*----------------------------------- Mobile Landscape (568px) ----------------------------------*/
+@include responsive(35.5em) {
+
+
+}
+
+/*----------------------------------- Tablet Portrait (768px) -----------------------------------*/
+@include responsive(48em) {
+
+
+}
+
+/*----------------------------------- Tablet Landscape (1024px) ---------------------------------*/
+@include responsive(64em) {
+
+
+}
+
+/*------------------------------------- Small Desktop (1280px) ----------------------------------*/
+@include responsive(80em) {
+	.layout {
+		width: 75em;
+		grid-template-columns: repeat(12, 2fr);
+		grid-template-areas: '';
+	}
+}
+
+/*------------------------------------ Medium Desktop (1440px) ----------------------------------*/
+@include responsive(90em) {
+}
+
+/*--------------------------------- Medium Large Desktop (1600px) -------------------------------*/
+@include responsive(100em) {
+}
+
+/*------------------------------------- Large Desktop (1920px) ---------------------------------*/
+@include responsive(120em) {
+}
