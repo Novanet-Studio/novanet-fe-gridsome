@@ -8,7 +8,7 @@
 
 @mixin grid-structure($columns: $columns) {
   display: grid;
-  grid-template-columns: repeat(#{$columns}, 2fr);
+  grid-template-columns: repeat(#{$columns}, minmax(0, 1fr));
   grid-template-rows: auto;
 }
 

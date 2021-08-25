@@ -1,15 +1,12 @@
 <template>
   <div class="layout">
-    <header>
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav>
-        <g-link class="" to="/">Home</g-link>
-        <g-link class="" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
+    <div class="container">
+      <Header />
+      <main class="main">
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -21,6 +18,15 @@ query {
 }
 </static-query>
 
-<script lang="scss">
-@import './Default.scss';
+<script>
+import Header from '~/layouts/Header'
+import Footer from '~/layouts/Footer'
+
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+}
+import './Default.scss'
 </script>
