@@ -19,29 +19,6 @@
   background-size: cover;
 }
 
-@mixin section-background-opacity-common() {
-  content: '';
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.15;
-  z-index: -1;
-}
-
-@mixin section-background-opacity($image) {
-  @include section-background-opacity-common();
-  background-image: url('../../assets/images/#{$image}');
-}
-
-@mixin section-background-opacity-a($image) {
-  @include section-background-opacity-common();
-  background-image: url('../assets/images/#{$image}');
-}
-
-
 @mixin flex-center() {
   display: flex;
   justify-content:center;
@@ -49,20 +26,18 @@
 }
 
 
-
-@mixin heading-before-content($image, $color) {
-  color: #{$color};
+@mixin heading-before-content($image) {
   &::before {
     content: '';
     position: absolute;
     float: left;
-    background-image: url('../../assets/images/#{$image}');
+    background-image: url('../assets/images/#{$image}');
     background-repeat: no-repeat;
     background-size: 1em 1em;
     width: 1em;
     height: 1em;
     z-index: -1;
-    margin-left: -0.3em;
+    margin-left: -1.25em;
   }
 }
 

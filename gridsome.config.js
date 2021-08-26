@@ -17,7 +17,27 @@ function addStyleResource(rule) {
 module.exports = {
   runtimeCompiler: true,
   siteName: 'Gridsome',
-  plugins: [],  
+  plugins: [
+    {
+      use: '@gridsome/source-strapi',
+      options: {
+        apiURL: process.env.API_URL,
+        queryLimit: 1000, // Defaults to 100
+        contentTypes: [`articulos`, `proyectos`],
+        singleTypes: [
+          'blog',
+          'inicio',
+          'nosotros',
+          'portafolio',
+          'servicios',
+        ],
+        loginData: {
+          identifier: process.env.API_USER,
+          password: process.env.API_USER_PASSWORD,
+        },
+      },
+    },
+  ],
   chainWebpack(config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
 

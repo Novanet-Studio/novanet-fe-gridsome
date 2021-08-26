@@ -24,3 +24,127 @@
        url('~@/assets/fonts/red-hat-display-v4-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
        url('~@/assets/fonts/red-hat-display-v4-latin-900.svg#RedHatDisplay') format('svg'); /* Legacy iOS */
 }
+
+/*-- Font Icons --*/
+@font-face {
+  font-family: "novaicons";
+  src:url("~@/assets/fonts/novaicons.eot");
+  src:url("~@/assets/fonts/novaicons.eot?#iefix") format("embedded-opentype"),
+    url("~@/assets/fonts/novaicons.woff") format("woff"),
+    url("~@/assets/fonts/novaicons.ttf") format("truetype"),
+    url("~@/assets/fonts/novaicons.svg#novaicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "novaicons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ni-"]:before,
+[class*=" ni-"]:before {
+  font-family: "novaicons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ni-ni-backend:before {
+  content: "\61";
+}
+.ni-ni-ball:before {
+  content: "\62";
+}
+.ni-ni-brain:before {
+  content: "\63";
+}
+.ni-ni-bulb:before {
+  content: "\64";
+}
+.ni-ni-chat:before {
+  content: "\65";
+}
+.ni-ni-comment:before {
+  content: "\66";
+}
+.ni-ni-compas:before {
+  content: "\67";
+}
+.ni-ni-connection:before {
+  content: "\68";
+}
+.ni-ni-database:before {
+  content: "\69";
+}
+.ni-ni-frontend:before {
+  content: "\6a";
+}
+.ni-ni-gear:before {
+  content: "\6b";
+}
+.ni-ni-icon:before {
+  content: "\6c";
+}
+.ni-ni-integration:before {
+  content: "\6d";
+}
+.ni-ni-lock:before {
+  content: "\6e";
+}
+.ni-ni-logo:before {
+  content: "\6f";
+}
+.ni-ni-message:before {
+  content: "\70";
+}
+.ni-ni-pencil:before {
+  content: "\71";
+}
+.ni-ni-phone:before {
+  content: "\72";
+}
+.ni-ni-pin:before {
+  content: "\73";
+}
+.ni-ni-portfolio:before {
+  content: "\74";
+}
+.ni-ni-printer:before {
+  content: "\75";
+}
+.ni-ni-responsive:before {
+  content: "\76";
+}
+.ni-ni-rocket:before {
+  content: "\77";
+}
+.ni-ni-star:before {
+  content: "\78";
+}
+.ni-ni-sync:before {
+  content: "\79";
+}
+.ni-ni-tap:before {
+  content: "\7a";
+}
+.ni-ni-tools:before {
+  content: "\41";
+}
+.ni-ni-webpage:before {
+  content: "\42";
+}

@@ -31,6 +31,10 @@ h1 {
 h2 {
   font-size: 1.375rem;
   line-height: 1.625rem;
+  margin-left: 1.25em;
+  &.green {
+    @include heading-before-content($image: 'triangle.svg');
+  } 
 }
 
 h3 {
@@ -58,26 +62,55 @@ h4 {
 
 .container {
   @include grid-structure($columns: 30);
-  padding: $width-desktop;
+  .header,
+  .footer {
+    padding: $width-desktop/2;
+  }
 }
 
 .header {
-  height: $width-desktop;
   @include grid-structure($columns: 6);
   grid-column: 1 / 31;
+
+  &__green {
+    background-color: $green;
+  }
+
+  &__blue {
+    background-color: $blue;
+  }
+
+  &__magenta {
+    background-color: $magenta;
+  }
 }
 
 .nav {
   @include grid-structure($columns: 6);
   grid-column: 1 / 7;
-
   &__link {
+  }
+}
+
+.navpage {
+  display: flex;
+  flex-direction: row;
+  grid-column: 1 / 7;
+  &__link {
+    display: flex;
+    flex-direction: row;
   }
 }
 
 .main {
   grid-column: 1 / 31;
+  padding: $width-desktop $width-desktop/2 $width-desktop/2 $width-desktop/2;
 }
+
+.footer {
+  grid-column: 1 / 31;
+}
+
 .fade-enter-active {
   transition: opacity 0.5s;
 }

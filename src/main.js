@@ -4,9 +4,26 @@
 import Vue from 'vue'
 
 //Layout por defecto
-import DefaultLayout from '~/layouts/Default.vue'
+import Home from '~/layouts/Home.vue'
+import Page from '~/layouts/Page.vue'
+// Fontawesome
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+import {
+  faFacebook,
+  faTwitter,
+  faInstagram,
+  faWhatsapp
+} from '@fortawesome/free-brands-svg-icons'
+import { faCaretLeft } from '@fortawesome/free-solid-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
-export default function({ router, head, isClient }) {
+config.autoAddCss = false
+library.add(faFacebook, faTwitter, faInstagram, faWhatsapp, faWhatsapp, faCaretLeft)
+
+export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
-  Vue.component('Layout', DefaultLayout)
+  Vue.component('Home', Home)
+  Vue.component('Page', Page)
+  Vue.component('font-awesome', FontAwesomeIcon)
 }

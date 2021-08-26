@@ -28,5 +28,5 @@ export default {
     Footer,
   },
 }
-import './Default.scss'
+import './Home.scss'
 </script>
