@@ -10,7 +10,8 @@ p {
   line-height: 1.5rem;
   font-weight: 400;
   color: $gris-oscuro;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: $col-landscape * 0.1;
 }
 
 ul {
@@ -33,8 +34,8 @@ h2 {
   line-height: 1.625rem;
   margin-left: 1.25em;
   &.green {
-    @include heading-before-content($image: 'triangle.svg');
-  } 
+    @include heading-before-content($image: 'novanet-triangle.svg');
+  }
 }
 
 h3 {
@@ -53,18 +54,19 @@ h3,
 h4 {
   color: $gris-oscuro;
   font-weight: 900;
+  margin-bottom: $col-landscape * 0.1;
 }
 
 .layout {
   width: 100vw;
-  min-height: 100vh;
 }
 
 .container {
   @include grid-structure($columns: 30);
+  min-height: 100vh;
   .header,
   .footer {
-    padding: $width-desktop/2;
+    padding: $col-landscape/2;
   }
 }
 
@@ -72,15 +74,15 @@ h4 {
   @include grid-structure($columns: 6);
   grid-column: 1 / 31;
 
-  &__green {
+  &--green {
     background-color: $green;
   }
 
-  &__blue {
+  &--blue {
     background-color: $blue;
   }
 
-  &__magenta {
+  &--magenta {
     background-color: $magenta;
   }
 }
@@ -88,7 +90,27 @@ h4 {
 .nav {
   @include grid-structure($columns: 6);
   grid-column: 1 / 7;
+  box-sizing: border-box;
+  
   &__link {
+    display: flex;
+    align-items: center;
+    position: relative;
+   
+    &--logo {
+      width: 8.1em;
+    }
+    &--icon::before {
+      color: $gris-oscuro;
+      font-size: 4rem;
+      position: absolute;
+      left: 0;
+      top: -0.10em;
+     
+    }
+    &--title {
+      margin: 0 0 0 3.4em;
+    }
   }
 }
 
@@ -103,12 +125,78 @@ h4 {
 }
 
 .main {
+  display: grid;
   grid-column: 1 / 31;
-  padding: $width-desktop $width-desktop/2 $width-desktop/2 $width-desktop/2;
+  padding: $col-landscape $col-landscape/2 $col-landscape/2 $col-landscape/2;
+  align-self: start;
+}
+
+// Inicio
+
+.section {
+  margin-bottom: $col-landscape * 0.5;
+  &--contacto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+  }
+}
+
+.shapes {
+  @include grid-structure($columns: 4);
+  padding: $col-landscape 0 $col-landscape 0;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.whatsapp {
+  color: #128C7E;
+  margin-right: 0.2em;
 }
 
 .footer {
   grid-column: 1 / 31;
+  align-self: end;
+}
+
+.rrss {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: fit-content;
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    color: $gris-claro;
+    width: $col-landscape * 0.7;
+    height: $col-landscape * 0.7;
+    box-sizing: border-box;
+    margin-right: $col-landscape * 0.45;
+    &--triangle {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background: $green;
+      background: linear-gradient(0deg, $blue 0%, $green 100%);
+      justify-content: flex-end;
+      padding-bottom: 0.75em;
+    }
+    &--square {
+      background: $blue;
+      background: linear-gradient(0deg, $magenta 0%, $blue 100%);
+      justify-content: center;
+    }
+    &--circle {
+      clip-path: circle(50% at 50% 50%);
+      background: $magenta;
+      background: linear-gradient(0deg, $green 0%, $magenta 100%);
+      justify-content: center;
+    }
+  }
 }
 
 .fade-enter-active {

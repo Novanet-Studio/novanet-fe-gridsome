@@ -1,13 +1,13 @@
 <template>
   <footer class="footer">
-    <ul class="footer__rrss">
-      <a class="footer__rrss--link" to="/">
+    <ul class="rrss">
+      <a class="rrss__link rrss__link--triangle" to="/">
         <font-awesome :icon="['fab', 'facebook']" />
       </a>
-      <a class="footer__rrss--link" to="/">
+      <a class="rrss__link rrss__link--square" to="/">
         <font-awesome :icon="['fab', 'twitter']" />
       </a>
-      <a class="footer__rrss--link" to="/">
+      <a class="rrss__link rrss__link--circle" to="/">
         <font-awesome :icon="['fab', 'instagram']" />
       </a>
     </ul>

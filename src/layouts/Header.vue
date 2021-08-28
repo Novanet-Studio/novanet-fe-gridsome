@@ -3,30 +3,30 @@
     <nav class="nav">
       <g-link class="nav__link" to="/">
         <img
-          class="footer__autor__logo"
+          class="nav__link--logo"
           alt="Novanet logo"
           src="../assets/images/novanet-logo.svg"
         />
       </g-link>
       <g-link class="nav__link" to="/nosotros/">
-        <div data-icon="f" class="icon"></div>
-        Nosotros
+        <div data-icon="f" class="nav__link--icon icon"></div>
+        <h4 class="nav__link--title">Nosotros</h4>
       </g-link>
       <g-link class="nav__link" to="/">
-        <div data-icon="m" class="icon"></div>
-        Servicios
+        <div data-icon="m" class="nav__link--icon icon"></div>
+        <h4 class="nav__link--title">Servicios</h4>
       </g-link>
       <g-link class="nav__link" to="/">
-        <div data-icon="t" class="icon"></div>
-        Portafolio
+        <div data-icon="t" class="nav__link--icon icon"></div>
+        <h4 class="nav__link--title">Portafolio</h4>
       </g-link>
       <g-link class="nav__link" to="/">
-        <div data-icon="q" class="icon"></div>
-        Blog
+        <div data-icon="q" class="nav__link--icon icon"></div>
+        <h4 class="nav__link--title">Blog</h4>
       </g-link>
       <g-link class="nav__link" to="/">
-        <div data-icon="z" class="icon"></div>
-        Contacto
+        <div data-icon="z" class="nav__link--icon icon"></div>
+        <h4 class="nav__link--title">Contacto</h4>
       </g-link>
     </nav>
   </header>

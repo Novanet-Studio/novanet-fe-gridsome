@@ -1,16 +1,39 @@
 <template>
   <Home>
     <h1>{{ $page.inicio.edges[0].node.principal }}</h1>
-    <p>
-      {{ $page.inicio.edges[0].node.secundario }}
-    </p>
-    <font-awesome
-      :icon="[
-        $page.inicio.edges[0].node.contacto.prefix,
-        $page.inicio.edges[0].node.contacto.icono,
-      ]"
-    />
-    <p>{{ $page.inicio.edges[0].node.contacto.descripcion }}</p>
+    <ul class="shapes">
+      <li class="shapes__item">
+        <g-image src="~/assets/images/novanet-inicio-diseno.png" width="220" />
+        <h4>Diseño gráfico</h4>
+      </li>
+      <li class="shapes__item">
+        <g-image src="~/assets/images/novanet-inicio-web.png" width="220" />
+        <h4>Tecnologías web</h4>
+      </li>
+      <li class="shapes__item">
+        <g-image
+          src="~/assets/images/novanet-inicio-asesoria.png"
+          width="228"
+        />
+        <h4>Asesoría</h4>
+      </li>
+    </ul>
+    <section class="section">
+      <p>
+        {{ $page.inicio.edges[0].node.secundario }}
+      </p>
+    </section>
+    <section class="section--contacto">
+      <font-awesome
+        class="whatsapp"
+        :icon="[
+          $page.inicio.edges[0].node.contacto.prefix,
+          $page.inicio.edges[0].node.contacto.icono,
+        ]"
+        size="2x"
+      />
+      <p>{{ $page.inicio.edges[0].node.contacto.descripcion }}</p>
+    </section>
   </Home>
 </template>
 

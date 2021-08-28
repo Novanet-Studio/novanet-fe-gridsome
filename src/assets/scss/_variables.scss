@@ -1,12 +1,12 @@
 /* Variables */
 
-$green: #D6F630;
-$blue: #099BC3;
-$magenta:  #DF1F5B;
-$gris-oscuro: #3F3F3F;
-$gris-claro: #EDEDED;
+$green: #d6f630;
+$blue: #099bc3;
+$magenta: #df1f5b;
+$gris-oscuro: #3f3f3f;
+$gris-claro: #ededed;
 
 $error: rgb(199, 25, 25);
 
 // Este número se calcula transformando a em el ancho de una columna del grid establecido
-$width-desktop: 3.333333333em;
+$col-landscape: 3.333333333vw;

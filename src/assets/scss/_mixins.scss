@@ -21,10 +21,9 @@
 
 @mixin flex-center() {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
-
 
 @mixin heading-before-content($image) {
   &::before {
@@ -50,8 +49,6 @@
   overflow: hidden;
   z-index: 0;
 }
-
-
 
 @mixin boton-a($color: $color, $bg: $bg) {
   text-decoration: none;
