@@ -15,11 +15,10 @@
       >
         <h2 class="blue">{{ servicio.titulo }}</h2>
         <p>{{ servicio.descripcion }}</p>
-
         <div v-for="item in servicio.especialidad" :key="item.id">
           <div :data-icon="item.icono" class="icon"></div>
           <h3>{{ item.titulo }}</h3>
-          <p>{{ item.descripcion }}</p>
+          <vue-markdown class="col-3">{{ item.descripcion }}</vue-markdown>
         </div>
       </section>
     </main>
@@ -51,10 +50,12 @@ query {
 
 <script>
 import Header from '~/components/HeaderPage'
+import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
   components: {
     Header,
+    VueMarkdown,
   },
   computed: {
     console: () => console,

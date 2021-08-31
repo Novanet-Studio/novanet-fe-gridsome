@@ -3,21 +3,31 @@ body {
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  color: $dark-grey;
 }
 
 p {
   font-size: 1.25rem;
   line-height: 1.5rem;
-  font-weight: 400;
-  color: $dark-grey;
+  font-weight: inherit;
+  color: inherit;
   margin-top: 0;
   margin-bottom: $col-landscape * 0.1;
+}
+
+// Bloque de excepción por configuración nodos render vue-markdown
+.col-3 {
+  p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: inherit;
+  }
 }
 
 ul {
   font-size: 0.845rem;
   line-height: 1.125rem;
-  font-weight: 400;
+  font-weight: inherit;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -74,7 +84,7 @@ h4 {
   min-height: 100vh;
   .header,
   .footer {
-    padding: $col-landscape*.5
+    padding: $col-landscape * 0.5;
   }
 }
 
@@ -165,7 +175,8 @@ h4 {
 .main {
   display: grid;
   grid-column: 1 / 31;
-  padding: $col-landscape $col-landscape*.5 $col-landscape*.5 $col-landscape*.5;
+  padding: $col-landscape $col-landscape * 0.5 $col-landscape * 0.5
+    $col-landscape * 0.5;
   align-self: start;
 }
 

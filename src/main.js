@@ -6,6 +6,7 @@ import Vue from 'vue'
 //Layout por defecto
 import Home from '~/layouts/Home.vue'
 import Page from '~/layouts/Page.vue'
+
 // Fontawesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
