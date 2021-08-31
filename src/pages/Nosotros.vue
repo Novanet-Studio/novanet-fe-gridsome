@@ -3,7 +3,7 @@
     <Header icon="f" vista="Nosotros" bg="header--green" />
     <main class="main">
       <section class="section">
-        <h1>{{ $page.nosotros.edges[0].node.principal.titulo }}</h1>
+        <h2>{{ $page.nosotros.edges[0].node.principal.titulo }}</h2>
         <p>
           {{ $page.nosotros.edges[0].node.principal.descripcion }}
         </p>
@@ -62,7 +62,7 @@ query {
 </page-query>
 
 <script>
-import Header from '~/layouts/HeaderPage'
+import Header from '~/components/HeaderPage'
 
 export default {
   components: {

@@ -16,7 +16,7 @@ query {
 </static-query>
 
 <script>
-import Footer from '~/layouts/Footer'
+import Footer from '~/components/Footer'
 
 export default {
   components: {

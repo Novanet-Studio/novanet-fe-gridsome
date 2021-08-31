@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <nav class="nav">
+    <nav class="nav--main">
       <g-link class="nav__link" to="/">
         <img
           class="nav__link--logo"
@@ -12,7 +12,7 @@
         <div data-icon="f" class="nav__link--icon icon"></div>
         <h4 class="nav__link--title">Nosotros</h4>
       </g-link>
-      <g-link class="nav__link" to="/">
+      <g-link class="nav__link" to="/servicios/">
         <div data-icon="m" class="nav__link--icon icon"></div>
         <h4 class="nav__link--title">Servicios</h4>
       </g-link>
@@ -33,5 +33,5 @@
 </template>
 
 <script lang="scss">
-@import './Home.scss';
+@import '../layouts/Home.scss'
 </script>

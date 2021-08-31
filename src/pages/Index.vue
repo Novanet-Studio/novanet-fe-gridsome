@@ -3,18 +3,15 @@
     <h1>{{ $page.inicio.edges[0].node.principal }}</h1>
     <ul class="shapes">
       <li class="shapes__item">
-        <g-image src="~/assets/images/novanet-inicio-diseno.png" width="220" />
+        <g-image class="shapes__img" src="~/assets/images/novanet-inicio-diseno.png" />
         <h4>Diseño gráfico</h4>
       </li>
       <li class="shapes__item">
-        <g-image src="~/assets/images/novanet-inicio-web.png" width="220" />
+        <g-image class="shapes__img" src="~/assets/images/novanet-inicio-web.png" />
         <h4>Tecnologías web</h4>
       </li>
       <li class="shapes__item">
-        <g-image
-          src="~/assets/images/novanet-inicio-asesoria.png"
-          width="228"
-        />
+        <g-image class="shapes__img--circle" src="~/assets/images/novanet-inicio-asesoria.png" />
         <h4>Asesoría</h4>
       </li>
     </ul>

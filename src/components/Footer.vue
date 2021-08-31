@@ -15,5 +15,5 @@
 </template>
 
 <script lang="scss">
-@import './Home.scss';
+@import '../layouts/Home.scss'
 </script>
