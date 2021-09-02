@@ -9,14 +9,14 @@
 @mixin grid-structure($columns: $columns) {
   display: grid;
   grid-template-columns: repeat(#{$columns}, minmax(0, 1fr));
-  grid-template-rows: auto;
+  grid-template-rows: max-content;
 }
 
-@mixin section-background($image) {
-  background-image: url('../../assets/images/#{$image}');
+@mixin image-background($image) {
+  background-image: url('../assets/images/#{$image}');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
 }
 
 @mixin heading-before-content($image) {
@@ -35,15 +35,6 @@
   }
 }
 
-@mixin item-radius {
-  margin: 1.5em;
-  padding: 1.5em 1.5em 2em;
-  position: relative;
-  background-color: $verde;
-  border-radius: 1em;
-  overflow: hidden;
-  z-index: 0;
-}
 
 @mixin boton-a($color: $color, $bg: $bg) {
   text-decoration: none;

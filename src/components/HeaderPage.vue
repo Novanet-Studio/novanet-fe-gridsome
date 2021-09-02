@@ -9,7 +9,7 @@
           :data-icon="icon"
           class="nav__link--icon nav__link--icon-page icon"
         ></div>
-        <h1 class="nav__link--title-page">{{ vista }}</h1>
+        <h1 class="nav__link--title">{{ vista }}</h1>
       </div>
     </nav>
   </header>

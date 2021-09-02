@@ -16,7 +16,7 @@
         <div data-icon="m" class="nav__link--icon icon"></div>
         <h4 class="nav__link--title">Servicios</h4>
       </g-link>
-      <g-link class="nav__link" to="/">
+      <g-link class="nav__link" to="/portafolio/">
         <div data-icon="t" class="nav__link--icon icon"></div>
         <h4 class="nav__link--title">Portafolio</h4>
       </g-link>

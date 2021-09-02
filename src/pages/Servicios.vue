@@ -15,10 +15,16 @@
       >
         <h2 class="blue">{{ servicio.titulo }}</h2>
         <p>{{ servicio.descripcion }}</p>
-        <div v-for="item in servicio.especialidad" :key="item.id">
-          <div :data-icon="item.icono" class="icon"></div>
-          <h3>{{ item.titulo }}</h3>
-          <vue-markdown class="col-3">{{ item.descripcion }}</vue-markdown>
+        <div class="col-3">
+          <div
+            class="col-3--services"
+            v-for="item in servicio.especialidad"
+            :key="item.id"
+          >
+            <div :data-icon="item.icono" class="col-3__icon--services icon"></div>
+            <h3>{{ item.titulo }}</h3>
+            <vue-markdown class="text-3-col">{{ item.descripcion }}</vue-markdown>
+          </div>
         </div>
       </section>
     </main>
