@@ -23,7 +23,7 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL,
         queryLimit: 1000, // Defaults to 100
-        contentTypes: [`articulos`, `proyectos`],
+        contentTypes: [`articulos`, `proyectos`, `categorias`],
         singleTypes: [
           'blog',
           'inicio',
@@ -36,7 +36,7 @@ module.exports = {
           password: process.env.API_USER_PASSWORD,
         },
       },
-    },
+    },       
   ],
   chainWebpack(config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']

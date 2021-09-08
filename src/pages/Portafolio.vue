@@ -9,15 +9,17 @@
       </section>
 
       <section class="section">
-        {{ console.log($page.portafolio.edges[0].node.categorias) }}
         <div class="col-3">
           <div
             class="col-3--categories"
-            v-for="categoria in $page.portafolio.edges[0].node.categorias"
+            v-for="categoria in $page.categorias.edges"
             :key="categoria.id"
           >
-            <div :data-icon="categoria.icono" class="col-3__icon--categories icon"></div>
-            <h3 class="col-3__title">{{ categoria.titulo }}</h3>
+            <div
+              :data-icon="categoria.node.icono"
+              class="col-3__icon--categories icon"
+            ></div>
+            <h3 class="col-3__title">{{ categoria.node.nombre }}</h3>
           </div>
         </div>
       </section>
@@ -30,16 +32,19 @@ query {
   portafolio: allStrapiPortafolio {
     edges {
       node {
-        descripcion
-        categorias {
-          id
-          titulo
-          icono
-          descripcion
-        }
+        descripcion       
       }
     }
   }
+  categorias: allStrapiCategorias {
+  edges {
+    node {
+      id
+      icono
+      nombre
+    }
+  }
+}
 }
 </page-query>
 

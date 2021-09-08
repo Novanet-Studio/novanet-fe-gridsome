@@ -5,12 +5,48 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
+module.exports = function(api) {
+  api.createPages(async ({ graphql, createPage }) => {
+    /* const { data } = await graphql(`
+      {
+        allStrapiPortafolio {
+          edges {
+            node {
+              descripcion
+              categorias {
+                id
+                titulo
+                icono
+                descripcion
+              }
+            }
+          }
+        }
+      }
+    `) */
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
+    // Create pages.
+    /* const categorias = data.allStrapiPortafolio.edges[0].node.categorias */
+    /* const categories = data.strapi.categories */
+
+    /* categorias.forEach(categoria => {
+      createPage({
+        path: `/portafolio/categoria/${categoria.titulo}`,
+        component: './src/templates/Categoria.vue',
+        context: {
+          id: categoria.id,
+        },
+      })
+    }) */
+
+    /* categories.forEach((category) => {
+      createPage({
+        path: `/category/${category.slug}`,
+        component: "./src/templates/Category.vue",
+        context: {
+          slug: category.slug,
+        },
+      });
+    }); */
   })
 }

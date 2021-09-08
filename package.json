@@ -15,7 +15,6 @@
   "dependencies": {
     "@adapttive/vue-markdown": "^4.0.1",
     "@gridsome/source-strapi": "^0.2.0",
-    "@hiendv/vue-tabs": "^0.12.6",
     "gridsome": "^0.7.0",
     "gridsome-plugin-pwa": "^0.0.18",
     "sass": "^1.38.1",
