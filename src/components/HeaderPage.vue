@@ -1,9 +1,9 @@
 <template>
   <header class="header" :class="bg">
     <nav class="nav--page">
-      <g-link class="nav__link" to="/">
+      <button class="nav__link" @click="$router.go(-1)">
         <font-awesome :icon="['fa', 'caret-left']" size="lg" />
-      </g-link>
+      </button>
       <div class="nav__link">
         <div
           :data-icon="icon"

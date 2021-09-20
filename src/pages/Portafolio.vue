@@ -9,18 +9,19 @@
       </section>
 
       <section class="section">
-        <div class="col-3">
-          <div
-            class="col-3--categories"
+        <div class="col">
+          <g-link
+            :to="`/portafolio/${categoria.node.slug}`"
+            class="col--categories"
             v-for="categoria in $page.categorias.edges"
             :key="categoria.id"
           >
             <div
               :data-icon="categoria.node.icono"
-              class="col-3__icon--categories icon"
+              class="col__icon--categories icon"
             ></div>
-            <h3 class="col-3__title">{{ categoria.node.nombre }}</h3>
-          </div>
+            <h3 class="col__title">{{ categoria.node.nombre }}</h3>
+          </g-link>
         </div>
       </section>
     </main>
@@ -37,14 +38,15 @@ query {
     }
   }
   categorias: allStrapiCategorias {
-  edges {
-    node {
-      id
-      icono
-      nombre
+    edges {
+      node {
+        id
+        icono
+        nombre
+        slug
+      }
     }
   }
-}
 }
 </page-query>
 

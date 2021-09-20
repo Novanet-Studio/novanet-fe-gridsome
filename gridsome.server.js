@@ -7,46 +7,54 @@
 
 module.exports = function(api) {
   api.createPages(async ({ graphql, createPage }) => {
-    /* const { data } = await graphql(`
+    const { data } = await graphql(`
       {
-        allStrapiPortafolio {
+        allStrapiCategorias {
           edges {
             node {
-              descripcion
+              id
+              slug
+            }
+          }
+        }
+        allStrapiProyectos {
+          edges {
+            node {
+              id
+              slug
               categorias {
-                id
-                titulo
-                icono
-                descripcion
+                slug
               }
             }
           }
         }
       }
-    `) */
+    `)
 
-    // Create pages.
-    /* const categorias = data.allStrapiPortafolio.edges[0].node.categorias */
-    /* const categories = data.strapi.categories */
+    // Create pages
+    const categorias = data.allStrapiCategorias.edges
+    const proyectos = data.allStrapiProyectos.edges
 
-    /* categorias.forEach(categoria => {
+    categorias.forEach(categoria => {
       createPage({
-        path: `/portafolio/categoria/${categoria.titulo}`,
+        path: `/portafolio/${categoria.node.slug}`,
         component: './src/templates/Categoria.vue',
         context: {
-          id: categoria.id,
+          id: categoria.node.id,
         },
       })
-    }) */
+    })
 
-    /* categories.forEach((category) => {
+    proyectos.forEach(proyecto => {
       createPage({
-        path: `/category/${category.slug}`,
-        component: "./src/templates/Category.vue",
+        path: `/portafolio/${proyecto.node.categorias.slug}/${
+          proyecto.node.slug
+        }`,
+        component: './src/templates/Proyecto.vue',
         context: {
-          slug: category.slug,
+          id: proyecto.node.id,
         },
-      });
-    }); */
+      })
+    })
   })
 }
