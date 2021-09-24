@@ -23,7 +23,7 @@
           >
             <div :data-icon="item.icono" class="col__icon--services icon"></div>
             <h3>{{ item.titulo }}</h3>
-            <vue-markdown class="text-3-col">{{ item.descripcion }}</vue-markdown>
+            <vue-markdown class="col-txt">{{ item.descripcion }}</vue-markdown>
           </div>
         </div>
       </section>

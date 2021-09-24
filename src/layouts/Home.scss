@@ -16,7 +16,7 @@ p {
 }
 
 // Bloque de excepción por configuración nodos render vue-markdown
-.col {
+.col-txt {
   p {
     font-size: 1rem;
     line-height: 1.375rem;
@@ -192,6 +192,12 @@ button {
   &--contacto {
     display: flex;
     align-items: center;
+  }
+}
+
+.card {
+  &__image {
+    max-width: 100%;
   }
 }
 

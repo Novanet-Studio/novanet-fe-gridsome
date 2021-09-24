@@ -28,12 +28,22 @@ module.exports = function(api) {
             }
           }
         }
+        allStrapiArticulos {
+          edges {
+            node {
+              id
+              slug
+              tag
+            }
+          }
+        }
       }
     `)
 
-    // Create pages
+    // Create pages for Categorias, Proyectos y Blog
     const categorias = data.allStrapiCategorias.edges
     const proyectos = data.allStrapiProyectos.edges
+    const articulos = data.allStrapiArticulos.edges
 
     categorias.forEach(categoria => {
       createPage({
@@ -53,6 +63,16 @@ module.exports = function(api) {
         component: './src/templates/Proyecto.vue',
         context: {
           id: proyecto.node.id,
+        },
+      })
+    })
+
+    articulos.forEach(articulo => {
+      createPage({
+        path: `/blog/${articulo.node.tag}/${articulo.node.slug}`,
+        component: './src/templates/Articulo.vue',
+        context: {
+          id: articulo.node.id,
         },
       })
     })

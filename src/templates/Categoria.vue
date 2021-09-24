@@ -18,12 +18,12 @@
         </div>
         <p>{{ $page.categorias.descripcion }}</p>
       </section>
-      <section class="section">
+      <section class="section col">
         <div v-for="proyecto in $page.categorias.proyectos" :key="proyecto.id">
           <Card
             view="portafolio"
             :imagen="proyecto.miniatura.url"
-            :coleccion="$page.categorias"
+            :coleccion="$page.categorias.slug"
             :alias="proyecto"
           />
         </div>
