@@ -2,10 +2,12 @@
   <div class="card">
     <g-link :to="`/${view}/${coleccion}/${alias.slug}`">
       <g-image class="card__image" :src="imagen" />
-      <time v-if="alias.createdAt">{{ convertDate(alias.createdAt) }}</time>
-      <h3>{{ alias.titulo }}</h3>       
+      <div class="card__info">
+        <time class="date" v-if="alias.createdAt">{{ convertDate(alias.createdAt) }}</time>
+        <h3>{{ alias.titulo }}</h3>
+        <p class="description" v-if="descripcion">{{ maxWords(descripcion) + '...' }}</p>
+      </div>
     </g-link>
-    <p v-if="descripcion">{{ maxWords(descripcion) + '...' }}</p>
   </div>
 </template>
 
@@ -27,8 +29,8 @@ export default {
     maxWords: function(str) {
       // String as an argument for a function
       let description = str
-      // Number of allowed characters 
-      const maxLength = 630
+      // Number of allowed characters
+      const maxLength = 180
 
       //trim the string to the maximum length
       let trimmedDescription = description.substring(0, maxLength)

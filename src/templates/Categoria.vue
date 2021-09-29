@@ -7,25 +7,31 @@
     />
     <main class="main">
       <section class="section">
-        <div class="col">
-          <div class="col--categories">
+        <div class="categories">
+          <div class="categories__items">
             <div
               :data-icon="$page.categorias.icono"
-              class="col__icon--categories icon"
+              class="categories__icon icon"
             ></div>
-            <h2 class="col__title">{{ $page.categorias.nombre }}</h2>
+            <h2 class="categories__title">{{ $page.categorias.nombre }}</h2>
           </div>
         </div>
         <p>{{ $page.categorias.descripcion }}</p>
       </section>
-      <section class="section col">
-        <div v-for="proyecto in $page.categorias.proyectos" :key="proyecto.id">
-          <Card
-            view="portafolio"
-            :imagen="proyecto.miniatura.url"
-            :coleccion="$page.categorias.slug"
-            :alias="proyecto"
-          />
+      <section class="section">
+        <div class="categories">
+          <div
+            v-for="proyecto in $page.categorias.proyectos"
+            :key="proyecto.id"
+          >
+            <Card
+            class="categories__items"
+              view="portafolio"
+              :imagen="proyecto.miniatura.url"
+              :coleccion="$page.categorias.slug"
+              :alias="proyecto"
+            />
+          </div>
         </div>
       </section>
     </main>

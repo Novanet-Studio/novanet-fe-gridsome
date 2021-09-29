@@ -6,28 +6,20 @@
         <p>
           {{ $page.blog.edges[0].node.descripcion }}
         </p>
-      </section>
+      </section>    
 
       <section class="section">
-        <div v-for="index in 1" :key="index">
-          <Card
-            view="blog"
-            :imagen="$page.articuloDestacado.edges[0].node.imagen.url"
-            :coleccion="$page.articuloDestacado.edges[0].node.tag"
-            :alias="$page.articuloDestacado.edges[0].node"
-            :descripcion="$page.articuloDestacado.edges[0].node.descripcion"
-          />
-        </div>
-      </section>
-
-      <section class="section col">
-        <div v-for="articulo in $page.articulos.edges" :key="articulo.id">
-          <Card
-            view="blog"
-            :imagen="articulo.node.imagen.url"
-            :coleccion="articulo.node.tag"
-            :alias="articulo.node"
-          />
+        <div class="blog">
+          <div v-for="articulo in $page.articulos.edges" :key="articulo.id">
+            <Card
+              class="blog__articulos"
+              view="blog"
+              :imagen="articulo.node.imagen.url"
+              :coleccion="articulo.node.tag"
+              :alias="articulo.node"
+              :descripcion="articulo.node.descripcion"
+            />
+          </div>
         </div>
       </section>
     </main>
@@ -51,22 +43,6 @@
           descripcion
           tag
           slug
-          createdAt
-          imagen {
-            url
-          }
-        }
-      }
-    }
-    articuloDestacado: allStrapiArticulos(filter: { destacado: { eq: true }})  {
-      edges {
-        node {
-          id
-          titulo
-          descripcion
-          tag
-          slug
-          destacado
           createdAt
           imagen {
             url

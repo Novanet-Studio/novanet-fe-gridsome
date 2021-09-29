@@ -26,6 +26,7 @@ module.exports = {
         contentTypes: [`articulos`, `proyectos`, `categorias`],
         singleTypes: [
           'blog',
+          'contacto',
           'inicio',
           'nosotros',
           'portafolio',

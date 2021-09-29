@@ -9,18 +9,18 @@
       </section>
 
       <section class="section">
-        <div class="col">
+        <div class="categories">
           <g-link
             :to="`/portafolio/${categoria.node.slug}`"
-            class="col--categories"
+            class="categories__items"
             v-for="categoria in $page.categorias.edges"
             :key="categoria.id"
           >
             <div
               :data-icon="categoria.node.icono"
-              class="col__icon--categories icon"
+              class="categories__icon icon"
             ></div>
-            <h3 class="col__title">{{ categoria.node.nombre }}</h3>
+            <h3 class="categories__title">{{ categoria.node.nombre }}</h3>
           </g-link>
         </div>
       </section>

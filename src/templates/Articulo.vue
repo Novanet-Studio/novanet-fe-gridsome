@@ -7,16 +7,23 @@
     />
     <main class="main">
       <section class="section">
-        <div>
-          <h1>{{ $page.articulos.titulo }}</h1>
-          <g-image :src="$page.articulos.imagen.url" />
-          <Share
-            :url="currentUrl"
-            :titulo="$page.articulos.titulo"
-            :descripcion="$page.articulos.descripcion"
-            :imagen="$page.articulos.imagen.url"
-          />
-          <vue-markdown>{{ $page.articulos.descripcion }}</vue-markdown>
+        <div class="article">
+          <div class="article__image-share">
+            <g-image class="article__image" :src="$page.articulos.imagen.url" />
+            <Share
+              class="article__share"
+              :url="currentUrl"
+              :titulo="$page.articulos.titulo"
+              :descripcion="$page.articulos.descripcion"
+              :imagen="$page.articulos.imagen.url"
+            />
+          </div>
+          <div class="article__info">
+            <h1 class="article__title">{{ $page.articulos.titulo }}</h1>
+            <vue-markdown class="article__description">{{
+              $page.articulos.descripcion
+            }}</vue-markdown>
+          </div>
         </div>
       </section>
     </main>

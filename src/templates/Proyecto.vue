@@ -2,33 +2,46 @@
   <Page>
     <Header
       icon="t"
-      :vista="
-        `Portafolio / ${$page.proyectos.categorias.nombre} / ${
-          $page.proyectos.titulo
-        }`
-      "
+      :vista="`Portafolio / ${$page.proyectos.categorias.nombre}`"
       bg="header--magenta"
     />
     <main class="main">
       <section class="section">
-        <div>
-          <div>
+        <div class="project">
+          <g-image
+            class="project__image"
+            :src="$page.proyectos.miniatura.url"
+          />
+          <div class="project__info">
             <h1>{{ $page.proyectos.titulo }}</h1>
             <p>{{ $page.proyectos.descripcion }}</p>
-            <g-image :src="$page.proyectos.miniatura.url" />
-            <div v-for="imagen in $page.proyectos.imagenes" :key="imagen.id">
-              <g-image :src="imagen.url" />
-            </div>
-
-            <Share
-              :url="currentUrl"
-              :titulo="$page.proyectos.titulo"
-              :descripcion="$page.proyectos.descripcion"
-              :imagen="$page.proyectos.miniatura.url"
-            />
-
-            {{ console.log(currentUrl) }}
+            <ul class="project__gallery">
+              <li v-for="imagen in $page.proyectos.imagenes" :key="imagen.id">
+                <button
+                  @click="
+                    showModal = true
+                    content = imagen.url
+                  "
+                  class="project__button"
+                >
+                  <g-image class="project__thumbnail" :src="imagen.url" />
+                </button>
+                <modal
+                  v-if="showModal"
+                  @close="showModal = false"
+                  :image="content"
+                />
+              </li>
+            </ul>
           </div>
+
+          <Share
+            :url="currentUrl"
+            :titulo="$page.proyectos.titulo"
+            :descripcion="$page.proyectos.descripcion"
+            :imagen="$page.proyectos.miniatura.url"
+          />
+          {{ console.log(currentUrl) }}
         </div>
       </section>
     </main>
@@ -61,14 +74,18 @@ query Proyectos($id: ID!) {
 <script>
 import Header from '~/components/HeaderPage'
 import Share from '~/components/Share'
+import Modal from '~/components/Modal'
 
 export default {
   components: {
     Header,
     Share,
+    Modal,
   },
   data: function() {
     return {
+      showModal: false,
+      content: null,
       currentOrigin: '',
       currentPath: '',
       currentUrl: '',

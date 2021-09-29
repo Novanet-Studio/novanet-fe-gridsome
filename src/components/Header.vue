@@ -24,7 +24,7 @@
         <div data-icon="q" class="nav__link--icon icon"></div>
         <h4 class="nav__link--title">Blog</h4>
       </g-link>
-      <g-link class="nav__link" to="/">
+      <g-link class="nav__link" to="/contacto/">
         <div data-icon="z" class="nav__link--icon icon"></div>
         <h4 class="nav__link--title">Contacto</h4>
       </g-link>

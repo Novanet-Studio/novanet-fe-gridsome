@@ -1,6 +1,8 @@
 <template>
-  <div>
+  <div class="share">
+    <p class="share__text">Compartir:</p>
     <ShareNetwork
+      class="pinterest"
       network="pinterest"
       :url="url"
       :title="titulo"
@@ -11,6 +13,7 @@
     </ShareNetwork>
 
     <ShareNetwork
+     class="whatsapp"
       network="whatsapp"
       :url="url"
       :title="titulo"
@@ -20,6 +23,7 @@
     </ShareNetwork>
 
     <ShareNetwork
+      class="telegram"
       network="telegram"
       :url="url"
       :title="titulo"
@@ -29,6 +33,7 @@
     </ShareNetwork>
 
     <ShareNetwork
+      class="twitter"
       network="twitter"
       :url="url"
       :title="titulo"
@@ -39,6 +44,7 @@
     </ShareNetwork>
 
     <ShareNetwork
+      class="facebook"
       network="facebook"
       :url="url"
       :title="titulo"

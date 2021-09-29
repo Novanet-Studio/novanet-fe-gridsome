@@ -1,6 +1,5 @@
 <template>
-  <Home>
-    <h1>{{ $page.inicio.edges[0].node.principal }}</h1>
+  <Home>    
     <ul class="shapes">
       <li class="shapes__item">
         <g-image class="shapes__img" src="~/assets/images/novanet-inicio-diseno.png" />
@@ -14,8 +13,9 @@
         <g-image class="shapes__img--circle" src="~/assets/images/novanet-inicio-asesoria.png" />
         <h4>Asesoría</h4>
       </li>
+      <h1 class="shapes__titulo">{{ $page.inicio.edges[0].node.principal }}</h1>
     </ul>
-    <section class="section">
+    <!-- <section class="section">
       <p>
         {{ $page.inicio.edges[0].node.secundario }}
       </p>
@@ -30,7 +30,7 @@
         size="2x"
       />
       <p>{{ $page.inicio.edges[0].node.contacto.descripcion }}</p>
-    </section>
+    </section> -->
   </Home>
 </template>
 
