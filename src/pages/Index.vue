@@ -1,16 +1,25 @@
 <template>
-  <Home>    
+  <Home>
     <ul class="shapes">
       <li class="shapes__item">
-        <g-image class="shapes__img" src="~/assets/images/novanet-inicio-diseno.png" />
+        <g-image
+          class="shapes__img"
+          src="~/assets/images/novanet-inicio-diseno.png"
+        />
         <h4>Diseño gráfico</h4>
       </li>
       <li class="shapes__item">
-        <g-image class="shapes__img" src="~/assets/images/novanet-inicio-web.png" />
+        <g-image
+          class="shapes__img"
+          src="~/assets/images/novanet-inicio-web.png"
+        />
         <h4>Tecnologías web</h4>
       </li>
       <li class="shapes__item">
-        <g-image class="shapes__img--circle" src="~/assets/images/novanet-inicio-asesoria.png" />
+        <g-image
+          class="shapes__img--circle"
+          src="~/assets/images/novanet-inicio-asesoria.png"
+        />
         <h4>Asesoría</h4>
       </li>
       <h1 class="shapes__titulo">{{ $page.inicio.edges[0].node.principal }}</h1>

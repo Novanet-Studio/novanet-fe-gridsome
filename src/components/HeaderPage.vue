@@ -9,7 +9,7 @@
           :data-icon="icon"
           class="nav__link--icon nav__link--icon-page icon"
         ></div>
-        <h1 class="nav__link--title">{{ vista }}</h1>
+        <h1 :class="tituloclase">{{ vista }}</h1>
       </div>
     </nav>
   </header>
@@ -21,6 +21,7 @@ export default {
     vista: String,
     icon: String,
     bg: String,
+    tituloclase: String,
   },
 }
 import '../layouts/Home.scss'

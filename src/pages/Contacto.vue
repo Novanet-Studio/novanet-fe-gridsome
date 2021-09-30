@@ -1,6 +1,11 @@
 <template>
   <Page>
-    <Header icon="z" vista="Contacto" bg="header--blue" />
+    <Header
+      icon="z"
+      vista="Contacto"
+      bg="header--blue"
+      tituloclase="nav__link--title-contacto"
+    />
     <main class="main">
       <section class="section">
         <div class="contacto">
@@ -35,9 +40,7 @@
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <h3 class="formulario__titulo">
-                Formulario de contacto
-              </h3>
+              <h3 class="formulario__titulo">Formulario de contacto</h3>
 
               <p hidden>
                 <label> Don’t fill this out: <input name="bot-field" /> </label>
@@ -126,7 +129,8 @@ export default {
     encode(data) {
       return Object.keys(data)
         .map(
-          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+          (key) =>
+            encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
         )
         .join('&')
     },
@@ -140,9 +144,9 @@ export default {
         }),
       })
         .then(() => this.$router.push('/success'))
-        .catch(error => alert(error))
+        .catch((error) => alert(error))
     },
-    getMarkers: function(latArg, lngArg) {
+    getMarkers: function (latArg, lngArg) {
       let markers = []
       let lat = parseFloat(latArg)
       let lng = parseFloat(lngArg)

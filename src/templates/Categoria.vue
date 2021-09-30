@@ -4,6 +4,7 @@
       icon="t"
       :vista="`Portafolio / ${$page.categorias.nombre}`"
       bg="header--magenta"
+      tituloclase="nav__link--title"
     />
     <main class="main">
       <section class="section">

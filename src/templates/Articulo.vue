@@ -1,9 +1,10 @@
 <template>
   <Page>
     <Header
-      icon="t"
+      icon="q"
       :vista="`Blog / ${$page.articulos.tag}`"
       bg="header--green"
+      tituloclase="nav__link--title"
     />
     <main class="main">
       <section class="section">

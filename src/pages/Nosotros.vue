@@ -1,6 +1,11 @@
 <template>
   <Page>
-    <Header icon="f" vista="Nosotros" bg="header--green" />
+    <Header
+      icon="f"
+      vista="Nosotros"
+      bg="header--green"
+      tituloClase="nav__link--title"
+    />
     <main class="main">
       <section class="section">
         <h2>{{ $page.nosotros.edges[0].node.principal.titulo }}</h2>
