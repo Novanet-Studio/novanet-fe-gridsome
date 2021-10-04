@@ -12,7 +12,7 @@ p {
   font-weight: inherit;
   color: inherit;
   margin-top: 0;
-  margin-bottom: $col-landscape * 0.1;
+  margin-bottom: $col-landscape * 0.3;
 }
 
 ul {
@@ -274,6 +274,7 @@ button {
     display: flex;
     align-items: center;
     position: relative;
+    color: inherit;
 
     &:visited {
       color: inherit;
@@ -298,6 +299,11 @@ button {
 
     &--title {
       margin: 0 0 0 ($col-landscape * 1.1);
+      color: inherit;
+      &-contacto {
+        margin: 0 0 0 ($col-landscape * 0.98);
+        color: inherit;
+      }
     }
   }
 }
@@ -356,7 +362,7 @@ button {
 // Inicio
 .shapes {
   @include grid-structure($columns: 3);
-  padding: ($col-landscape * 1.2) 0 ($col-landscape * 1.25) 0;
+  padding: ($col-landscape * 2.2) 0 0 0;
 
   &__item {
     display: flex;
@@ -380,12 +386,12 @@ button {
     font-size: 1.4rem;
     font-weight: 400;
     color: $dark-grey-2;
-    letter-spacing: .23rem;
+    letter-spacing: 0.23rem;
   }
 }
 
 .services {
-  @include grid-structure($columns: 3);
+  @include grid-structure($columns: 3, $padding: 0.5);
   margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
 
   &__items {
@@ -403,6 +409,7 @@ button {
   }
   &__icon {
     margin-bottom: -$col-landscape * 0.65;
+    margin-left: -$col-landscape * 0.25 ;
     font-size: 5rem;
   }
   &__description {
@@ -465,6 +472,7 @@ button {
 
   &__gallery {
     @include grid-structure($columns: 6, $col-landscape: $col-landscape);
+    margin-top: $col-landscape * 0.25;
   }
 
   &__thumbnail {
@@ -500,7 +508,7 @@ button {
 
   .date {
     font-size: 0.85rem;
-    color: $dark-grey;
+    color: $dark-grey-2;
   }
 }
 
@@ -546,10 +554,9 @@ button {
 }
 
 .formulario {
-
   input,
   textarea {
-  width: 60%;
+    width: 60%;
     border: 0;
     min-height: 2em;
     margin-top: 0;
@@ -557,7 +564,8 @@ button {
     font-size: 1.05rem;
     border-bottom: 0.1em solid $blue;
   }
-  input[type=submit] {
+  input[type='submit'] {
+    width: 25%;
     margin-top: $col-landscape * 0.3;
     background-color: $blue;
     color: $white;

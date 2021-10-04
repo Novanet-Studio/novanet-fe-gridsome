@@ -26,7 +26,7 @@
       </g-link>
       <g-link class="nav__link" to="/contacto/">
         <div data-icon="z" class="nav__link--icon icon"></div>
-        <h4 class="nav__link--title">Contacto</h4>
+        <h4 class="nav__link--title-contacto">Contacto</h4>
       </g-link>
     </nav>
   </header>

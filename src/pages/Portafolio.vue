@@ -1,6 +1,11 @@
 <template>
   <Page>
-    <Header icon="t" vista="Portafolio" bg="header--magenta" />
+    <Header
+      icon="t"
+      vista="Portafolio"
+      bg="header--magenta"
+      tituloclase="nav__link--title"
+    />
     <main class="main">
       <section class="section">
         <p>

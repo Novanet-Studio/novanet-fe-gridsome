@@ -1,6 +1,11 @@
 <template>
   <Page>
-    <Header icon="l" vista="Servicios" bg="header--blue" />
+    <Header
+      icon="m"
+      vista="Servicios"
+      bg="header--blue"
+      tituloClase="nav__link--title"
+    />
     <main class="main">
       <section class="section">
         <p>
@@ -23,7 +28,9 @@
           >
             <div :data-icon="item.icono" class="services__icon icon"></div>
             <h3>{{ item.titulo }}</h3>
-            <vue-markdown class="services__description">{{ item.descripcion }}</vue-markdown>
+            <vue-markdown class="services__description">{{
+              item.descripcion
+            }}</vue-markdown>
           </div>
         </div>
       </section>

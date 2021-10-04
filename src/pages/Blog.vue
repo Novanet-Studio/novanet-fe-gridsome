@@ -1,12 +1,17 @@
 <template>
   <Page>
-    <Header icon="t" vista="Blog" bg="header--green" />
+    <Header
+      icon="q"
+      vista="Blog"
+      bg="header--green"
+      tituloclase="nav__link--title"
+    />
     <main class="main">
       <section class="section">
         <p>
           {{ $page.blog.edges[0].node.descripcion }}
         </p>
-      </section>    
+      </section>
 
       <section class="section">
         <div class="blog">
