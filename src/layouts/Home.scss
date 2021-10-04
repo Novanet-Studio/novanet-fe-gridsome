@@ -586,19 +586,67 @@ button {
 
 /*----------------------------------- Tablet Landscape (1024px) ---------------------------------*/
 @include responsive(64em) {
+  h4 {
+    font-size: 0.985rem;
+    line-height: 0.985rem;
+  }
+
+  .nav {
+    // Navegación Inicio
+    &__link {
+      &--logo {
+        width: 7em;
+      }
+
+      &--icon {
+        &::before {
+          font-size: 3.3rem;
+        }
+      }
+
+      &--title {
+        margin: 0 0 0 ($col-landscape * 1.45);
+        &-contacto {
+          margin: 0 0 0 ($col-landscape * 1.25);
+        }
+      }
+    }
+  }
+
+  // Inicio
+  .shapes {
+    padding: ($col-landscape * 4) 0 0 0;
+
+    &__titulo {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 /*------------------------------------- Small Desktop (1280px) ----------------------------------*/
 @include responsive(80em) {
+  h4 {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+
   .nav {
     // Navegación Inicio
     &__link {
+      &--logo {
+        width: 8.1em;
+      }
+
+      &--icon {
+        &::before {
+          font-size: 4rem;
+        }
+      }
+      
       &--title {
         margin: 0 0 0 ($col-landscape * 1.4);
-        color: inherit;
         &-contacto {
           margin: 0 0 0 ($col-landscape * 1.25);
-          color: inherit;
         }
       }
     }
@@ -607,6 +655,10 @@ button {
   // Inicio
   .shapes {
     padding: ($col-landscape * 1.3) 0 0 0;
+
+    &__titulo {
+      font-size: 1.4rem;
+    }
   }
 
   .categories {
@@ -625,10 +677,8 @@ button {
     &__link {
       &--title {
         margin: 0 0 0 ($col-landscape * 1.25);
-        color: inherit;
         &-contacto {
           margin: 0 0 0 ($col-landscape * 1.1);
-          color: inherit;
         }
       }
     }
@@ -636,7 +686,7 @@ button {
 
   // Inicio
   .shapes {
-    padding: ($col-landscape * 2.2) 0 0 0;
+    padding: ($col-landscape * 1.4) 0 0 0;
   }
 
   .categories {
@@ -664,7 +714,7 @@ button {
 
   // Inicio
   .shapes {
-    padding: ($col-landscape * 1.7) 0 0 0;
+    padding: ($col-landscape * 1.8) 0 0 0;
   }
 }
 
