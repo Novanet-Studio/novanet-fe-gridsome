@@ -4,7 +4,7 @@
       icon="m"
       vista="Servicios"
       bg="header--blue"
-      tituloClase="nav__link--title"
+      tituloclase="nav__link--title"
     />
     <main class="main">
       <section class="section">
