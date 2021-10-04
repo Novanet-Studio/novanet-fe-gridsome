@@ -408,8 +408,8 @@ button {
     }
   }
   &__icon {
-    margin-bottom: -$col-landscape * 0.65;
-    margin-left: -$col-landscape * 0.25;
+    margin-bottom: -$col-landscape * 0.75;
+    margin-left: -$col-landscape * 0.3;
     font-size: 5rem;
   }
   &__description {
@@ -586,6 +586,31 @@ button {
 
 /*----------------------------------- Tablet Landscape (1024px) ---------------------------------*/
 @include responsive(64em) {
+  p {
+    font-size: 1.05rem;
+    line-height: 1.4rem;
+  }
+
+  ul {
+    font-size: 0.645rem;
+    line-height: 0.925rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    line-height: 1.55rem;
+  }
+
+  h2 {
+    font-size: 1.175rem;
+    line-height: 1.425rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    line-height: 1.3rem;
+  }
+
   h4 {
     font-size: 0.985rem;
     line-height: 0.985rem;
@@ -601,6 +626,11 @@ button {
       &--icon {
         &::before {
           font-size: 3.3rem;
+          top: -0.03em;
+        }
+
+        &-page::before {
+          top: -0.1em;
         }
       }
 
@@ -613,6 +643,15 @@ button {
     }
   }
 
+  .rrss {
+    &__link {
+      font-size: 0.65rem;
+      &--triangle {
+        padding-bottom: 0.35em;
+      }
+    }
+  }
+
   // Inicio
   .shapes {
     padding: ($col-landscape * 4) 0 0 0;
@@ -621,10 +660,62 @@ button {
       font-size: 1.2rem;
     }
   }
+
+  .services {
+    &__icon {
+      margin-bottom: -$col-landscape * 1;
+    }
+  }
+
+  .categories {
+    &__icon {
+      &::before {
+        margin-top: $col-landscape * 0.5;
+      }
+    }
+  }
+
+  .contacto {
+    &__mapa {
+      height: 41.5vh;
+    }
+  }
+
+  .formulario {
+    input,
+    textarea {
+      width: 80%;
+    }
+  }
 }
 
 /*------------------------------------- Small Desktop (1280px) ----------------------------------*/
 @include responsive(80em) {
+  p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  ul {
+    font-size: 0.845rem;
+    line-height: 1.125rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
   h4 {
     font-size: 1.125rem;
     line-height: 1.25rem;
@@ -640,15 +731,26 @@ button {
       &--icon {
         &::before {
           font-size: 4rem;
+          top: -0.09em;
+        }
+
+        &-page::before {
+          top: -0.2em;
         }
       }
-      
+
       &--title {
         margin: 0 0 0 ($col-landscape * 1.4);
         &-contacto {
           margin: 0 0 0 ($col-landscape * 1.25);
         }
       }
+    }
+  }
+
+  .rrss {
+    &__link {
+      font-size: 0.8rem;
     }
   }
 
@@ -661,11 +763,30 @@ button {
     }
   }
 
+  .services {
+    &__icon {
+      margin-bottom: -$col-landscape * 0.75;
+    }
+  }
+
   .categories {
     &__icon {
       &::before {
         margin-top: $col-landscape * 0.4;
       }
+    }
+  }
+
+  .contacto {
+    &__mapa {
+      height: 40vh;
+    }
+  }
+
+  .formulario {
+    input,
+    textarea {
+      width: 60%;
     }
   }
 }
@@ -708,6 +829,14 @@ button {
         &-contacto {
           margin: 0 0 0 ($col-landscape * 0.98);
         }
+      }
+    }
+  }
+
+  .rrss {
+    &__link {
+      &--triangle {
+        padding-bottom: 0.75em;
       }
     }
   }
