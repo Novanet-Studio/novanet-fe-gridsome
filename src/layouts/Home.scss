@@ -289,11 +289,11 @@ button {
         font-size: 4rem;
         position: absolute;
         left: 0;
-        top: -0.09em;
+        top: -0.065em;
       }
 
       &-page::before {
-        top: -0.2em;
+        top: -0.12em;
       }
     }
 
@@ -341,7 +341,7 @@ button {
       background: $green;
       background: linear-gradient(0deg, $blue 0%, $green 100%);
       justify-content: flex-end;
-      padding-bottom: 0.75em;
+      padding-bottom: 0.55em;
     }
 
     &--square {
@@ -362,7 +362,7 @@ button {
 // Inicio
 .shapes {
   @include grid-structure($columns: 3);
-  padding: ($col-landscape * 1.8) 0 0 0;
+  padding: ($col-landscape * 1.7) 0 0 0;
 
   &__item {
     display: flex;
@@ -547,6 +547,7 @@ button {
   }
 
   &__mapa {
+    padding-top: 1vh;
     width: 98%;
     height: 40vh;
     border: 0;
@@ -582,13 +583,14 @@ button {
 
 /*----------------------------------- Tablet Portrait (768px) -----------------------------------*/
 @include responsive(48em) {
-}
+  body {
+    font-size: 0.95rem;
+    line-height: 1.3rem;
+  }
 
-/*----------------------------------- Tablet Landscape (1024px) ---------------------------------*/
-@include responsive(64em) {
   p {
-    font-size: 1.05rem;
-    line-height: 1.4rem;
+    font-size: 0.95rem;
+    line-height: 1.3rem;
   }
 
   ul {
@@ -597,45 +599,51 @@ button {
   }
 
   h1 {
-    font-size: 1.3rem;
-    line-height: 1.55rem;
+    font-size: 1.25rem;
+    line-height: 1.45rem;
   }
 
   h2 {
     font-size: 1.175rem;
-    line-height: 1.425rem;
+    line-height: 1.325rem;
   }
 
   h3 {
-    font-size: 1.05rem;
-    line-height: 1.3rem;
+    font-size: 1.07rem;
+    line-height: 1.2rem;
   }
 
   h4 {
-    font-size: 0.985rem;
-    line-height: 0.985rem;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .container {
+    @include grid-structure($columns: 24);
+  }
+
+  .header {
+    grid-column: 1 / 25;
+    height: $col-landscape;
   }
 
   .nav {
-    // Navegación Inicio
     &__link {
       &--logo {
-        width: 7em;
+        width: 7.1em;
       }
-
       &--icon {
         &::before {
-          font-size: 3.3rem;
-          top: -0.03em;
+          font-size: 2.5rem;
+          top: -0.065em;
         }
 
         &-page::before {
-          top: -0.1em;
+          top: -0.075em;
         }
       }
-
       &--title {
-        margin: 0 0 0 ($col-landscape * 1.45);
+        margin: 0 0 0 ($col-landscape * 1.4);
         &-contacto {
           margin: 0 0 0 ($col-landscape * 1.25);
         }
@@ -643,12 +651,118 @@ button {
     }
   }
 
+  .main {
+    grid-column: 1 / 25;
+  }
+
+  .footer {
+    grid-column: 1 / 25;
+  }
+
   .rrss {
     &__link {
       font-size: 0.65rem;
-      &--triangle {
-        padding-bottom: 0.35em;
+      width: $col-landscape * 1;
+      height: $col-landscape * 1;
+      margin-right: $col-landscape * 0.75;
+    }
+    &--triangle {
+      padding-bottom: 0.35em;
+    }
+  }
+
+  // Inicio
+  .shapes {
+    padding: ($col-portrait * 9) 0 0 0;
+
+    &__img {
+      width: 20vw;
+    }
+
+    &__img--circle {
+      width: 21.1vw;
+    }
+
+    &__titulo {
+      margin-top: $col-portrait * 2;
+      font-size: 1.2rem;
+    }
+  }
+
+  /*
+  .services {
+    &__icon {
+      margin-bottom: -$col-portrait * 3.5;
+      margin-left: -$col-portrait * 1;
+      font-size: 5rem;
+    }
+    &__description {
+      p {
+        font-size: 0.9rem;
+        line-height: 1.175rem;
       }
+    }
+  }
+
+  .categories {
+    @include grid-structure($columns: 2);
+
+    &__items {
+      margin-bottom: $col-portrait * 3;
+    }
+    &__icon {
+      font-size: 3.5em;
+      padding: $col-portrait * 0.6;
+      &::before {
+        margin-top: $col-portrait * 6.5;
+      }
+    }
+  }*/
+}
+
+/*----------------------------------- Tablet Landscape (1024px) ---------------------------------*/
+@include responsive(64em) {
+  .container {
+    @include grid-structure($columns: 30);
+  }
+
+  .header {
+    grid-column: 1 / 31;
+  }
+
+  .nav {
+    // Navegación Inicio
+    &__link {
+      &--logo {
+        width: 8.1em;
+      }
+
+      &--icon {
+        &::before {
+          font-size: 3.3rem;
+          top: -0.08em;
+        }
+
+        &-page::before {
+          top: -0.1em;
+        }
+      }
+    }
+  }
+
+  .main {
+    grid-column: 1 / 31;
+  }
+
+  .footer {
+    grid-column: 1 / 31;
+  }
+
+  .rrss {
+    &__link {
+      width: $col-landscape * 0.7;
+      height: $col-landscape * 0.7;
+      margin-right: $col-landscape * 0.45;
     }
   }
 
@@ -656,7 +770,16 @@ button {
   .shapes {
     padding: ($col-landscape * 4) 0 0 0;
 
+    &__img {
+      width: 15vw;
+    }
+
+    &__img--circle {
+      width: 16.1vw;
+    }
+
     &__titulo {
+      margin-top: $col-landscape * 1.6;
       font-size: 1.2rem;
     }
   }
@@ -664,20 +787,27 @@ button {
   .services {
     &__icon {
       margin-bottom: -$col-landscape * 1;
+      margin-left: -$col-landscape * 0.3;
     }
-  }
-
-  .categories {
-    &__icon {
-      &::before {
-        margin-top: $col-landscape * 0.5;
+    &__description {
+      p {
+        font-size: 1rem;
       }
     }
   }
 
-  .contacto {
-    &__mapa {
-      height: 41.5vh;
+  .categories {
+    @include grid-structure($columns: 3);
+
+    &__items {
+      margin-bottom: $col-landscape * 0.25;
+    }
+    &__icon {
+      font-size: 4rem;
+      padding: $col-landscape * 0.1;
+      &::before {
+        margin-top: $col-landscape * 0.4;
+      }
     }
   }
 
@@ -691,6 +821,11 @@ button {
 
 /*------------------------------------- Small Desktop (1280px) ----------------------------------*/
 @include responsive(80em) {
+  body {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
   p {
     font-size: 1.25rem;
     line-height: 1.5rem;
@@ -724,25 +859,14 @@ button {
   .nav {
     // Navegación Inicio
     &__link {
-      &--logo {
-        width: 8.1em;
-      }
-
       &--icon {
         &::before {
           font-size: 4rem;
-          top: -0.09em;
+          top: -0.05em;
         }
 
         &-page::before {
-          top: -0.2em;
-        }
-      }
-
-      &--title {
-        margin: 0 0 0 ($col-landscape * 1.4);
-        &-contacto {
-          margin: 0 0 0 ($col-landscape * 1.25);
+          top: -0.15em;
         }
       }
     }
@@ -769,20 +893,6 @@ button {
     }
   }
 
-  .categories {
-    &__icon {
-      &::before {
-        margin-top: $col-landscape * 0.4;
-      }
-    }
-  }
-
-  .contacto {
-    &__mapa {
-      height: 40vh;
-    }
-  }
-
   .formulario {
     input,
     textarea {
@@ -797,17 +907,12 @@ button {
     // Navegación Inicio
     &__link {
       &--title {
-        margin: 0 0 0 ($col-landscape * 1.25);
+        margin: 0 0 0 ($col-landscape * 1.3);
         &-contacto {
           margin: 0 0 0 ($col-landscape * 1.1);
         }
       }
     }
-  }
-
-  // Inicio
-  .shapes {
-    padding: ($col-landscape * 1.4) 0 0 0;
   }
 
   .categories {
@@ -836,14 +941,14 @@ button {
   .rrss {
     &__link {
       &--triangle {
-        padding-bottom: 0.75em;
+        padding-bottom: 0.55em;
       }
     }
   }
 
   // Inicio
   .shapes {
-    padding: ($col-landscape * 1.8) 0 0 0;
+    padding: ($col-landscape * 1.7) 0 0 0;
   }
 }
 
@@ -853,11 +958,17 @@ button {
     // Navegación Inicio
     &__link {
       &--title {
-        margin: 0 0 0 ($col-landscape * 0.98);
+        margin: 0 0 0 ($col-landscape * 0.94);
         &-contacto {
           margin: 0 0 0 ($col-landscape * 0.88);
         }
       }
+    }
+  }
+
+  .rrss {
+    &__link {
+      font-size: 0.9rem;
     }
   }
 
