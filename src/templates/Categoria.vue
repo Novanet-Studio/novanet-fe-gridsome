@@ -20,7 +20,7 @@
         <p>{{ $page.categorias.descripcion }}</p>
       </section>
       <section class="section">
-        <div class="categories">
+        <div class="categories categories__internal">
           <div
             v-for="proyecto in $page.categorias.proyectos"
             :key="proyecto.id"
