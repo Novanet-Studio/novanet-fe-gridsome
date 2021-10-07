@@ -615,6 +615,16 @@ button {
     font-size: 0.75rem;
     line-height: 1rem;
   }
+
+  
+  .container {
+    @include grid-structure($columns: 20);
+
+    .header,
+    .footer {
+      padding: $col-portrait * 0.5 $col-portrait * 0.2;
+    }
+  }
 }
 
 /*----------------------------------- Mobile Landscape (568px) ----------------------------------*/
@@ -651,15 +661,6 @@ button {
   h4 {
     font-size: 0.9rem;
     line-height: 1.25rem;
-  }
-
-  .container {
-    @include grid-structure($columns: 20);
-
-    .header,
-    .footer {
-      padding: $col-portrait * 0.5 $col-portrait * 0.2;
-    }
   }
 
   .header {
