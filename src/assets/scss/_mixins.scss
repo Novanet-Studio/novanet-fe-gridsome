@@ -6,12 +6,12 @@
   font-family: 'Red Hat Display', 'Helvetica', sans-serif;
 }
 
-@mixin grid-structure($columns: $columns, $col-landscape: $col-landscape, $col-portrait: $col-portrait, $padding: 0.5, $grid-template-rows: max-content) {
+@mixin grid-structure($columns: $columns, $col: 1, $padding: 0.5, $grid-template-rows: max-content) {
   display: grid;
   grid-template-columns: repeat(#{$columns}, minmax(0, 1fr));
   grid-template-rows: $grid-template-rows;
   & > div {
-    padding-right: $col-landscape * $padding;
+    padding-right: $col * $padding;
   }
 }
 

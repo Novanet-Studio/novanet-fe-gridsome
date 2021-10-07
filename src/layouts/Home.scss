@@ -398,7 +398,7 @@ button {
 }
 
 .services {
-  @include grid-structure($columns: 3, $col-landscape: $col-landscape);
+  @include grid-structure($columns: 3, $col: $col-landscape);
   margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
 
   &__items {
@@ -466,7 +466,7 @@ button {
 }
 
 .project {
-  @include grid-structure($columns: 6, $col-landscape: $col-landscape);
+  @include grid-structure($columns: 6, $col: $col-landscape);
 
   &__image {
     max-width: 97%;
@@ -478,7 +478,7 @@ button {
   }
 
   &__gallery {
-    @include grid-structure($columns: 6, $col-landscape: $col-landscape);
+    @include grid-structure($columns: 6, $col: $col-landscape);
     margin-top: $col-landscape * 0.25;
   }
 
@@ -493,7 +493,7 @@ button {
 }
 
 .blog {
-  @include grid-structure($columns: 4, $col-landscape: $col-landscape);
+  @include grid-structure($columns: 4, $col: $col-landscape);
   margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
 
   &__items {
@@ -522,7 +522,7 @@ button {
 .article {
   @include grid-structure(
     $columns: 3,
-    $col-landscape: $col-landscape,
+    $col: $col-landscape,
     $grid-template-rows: auto
   );
 
@@ -758,7 +758,7 @@ button {
   }
 
   .project {
-    @include grid-structure($columns: 2, $col-portrait: $col-portrait);
+    @include grid-structure($columns: 2, $col: $col-portrait);
 
     &__image {
       grid-column: 1 / 2;
@@ -779,7 +779,7 @@ button {
   }
 
   .blog {
-    @include grid-structure($columns: 3, $col-portrait: $col-portrait);
+    @include grid-structure($columns: 3, $col: $col-portrait);
 
     .description {
       font-size: 0.92rem;
@@ -907,7 +907,7 @@ button {
   }
 
   .project {
-    @include grid-structure($columns: 6, $col-landscape: $col-landscape);
+    @include grid-structure($columns: 6, $col: $col-landscape);
 
     &__image {
       grid-column: 1 / 3;
@@ -919,13 +919,13 @@ button {
     }
 
     &__gallery {
-      @include grid-structure($columns: 6, $col-landscape: $col-landscape);
+      @include grid-structure($columns: 6, $col: $col-landscape);
       margin-top: $col-landscape * 0.25;
     }
   }
 
   .blog {
-    @include grid-structure($columns: 4, $col-landscape: $col-landscape);
+    @include grid-structure($columns: 4, $col: $col-landscape);
 
     .description {
       font-size: 1rem;
