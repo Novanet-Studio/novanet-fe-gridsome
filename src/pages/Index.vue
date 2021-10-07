@@ -1,29 +1,33 @@
 <template>
   <Home>
-    <div class="shapes">
-        <li class="shapes__item">
+    <section class="home">
+      <div class="shapes">
+        <div class="shapes__item">
           <g-image
             class="shapes__img"
             src="~/assets/images/novanet-inicio-diseno.png"
           />
           <h4>Diseño gráfico</h4>
-        </li>
-        <li class="shapes__item">
+        </div>
+        <div class="shapes__item">
           <g-image
             class="shapes__img"
             src="~/assets/images/novanet-inicio-web.png"
           />
           <h4>Tecnologías web</h4>
-        </li>
-        <li class="shapes__item">
+        </div>
+        <div class="shapes__item">
           <g-image
             class="shapes__img--circle"
             src="~/assets/images/novanet-inicio-asesoria.png"
           />
           <h4>Asesoría</h4>
-        </li>
-      <h1 class="shapes__titulo">{{ $page.inicio.edges[0].node.principal }}</h1>
-    </div>
+        </div>
+        <h1 class="shapes__titulo">
+          {{ $page.inicio.edges[0].node.principal }}
+        </h1>
+      </div>
+    </section>
     <!-- <section class="section">
       <p>
         {{ $page.inicio.edges[0].node.secundario }}
