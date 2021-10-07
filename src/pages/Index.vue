@@ -28,22 +28,6 @@
         </h1>
       </div>
     </section>
-    <!-- <section class="section">
-      <p>
-        {{ $page.inicio.edges[0].node.secundario }}
-      </p>
-    </section>
-    <section class="section--contacto">
-      <font-awesome
-        class="whatsapp"
-        :icon="[
-          $page.inicio.edges[0].node.contacto.prefix,
-          $page.inicio.edges[0].node.contacto.icono,
-        ]"
-        size="2x"
-      />
-      <p>{{ $page.inicio.edges[0].node.contacto.descripcion }}</p>
-    </section> -->
   </Home>
 </template>
 

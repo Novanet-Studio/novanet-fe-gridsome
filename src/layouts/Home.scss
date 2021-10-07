@@ -76,11 +76,11 @@ button {
 .section {
   margin-bottom: $col-landscape * 0.5;
 
-   &--home {
+  &--home {
     display: grid;
-    height: $col-landscape * 10; 
+    height: $col-landscape * 10;
     align-content: center;
-   }
+  }
 }
 
 .card {
