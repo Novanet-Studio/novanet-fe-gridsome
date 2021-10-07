@@ -76,10 +76,11 @@ button {
 .section {
   margin-bottom: $col-landscape * 0.5;
 
-  &--contacto {
-    display: flex;
-    align-items: center;
-  }
+   &--home {
+    display: grid;
+    height: $col-landscape * 10; 
+    align-content: center;
+   }
 }
 
 .card {
@@ -312,12 +313,6 @@ button {
   padding: $col-landscape ($col-landscape * 0.5) ($col-landscape * 0.5)
     ($col-landscape * 0.5);
   height: min-content;
-}
-
-.home {
-  display: grid;
-  height: $col-landscape * 10; 
-  align-content: center;
 }
 
 .footer {

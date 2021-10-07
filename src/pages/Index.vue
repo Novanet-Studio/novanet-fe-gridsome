@@ -1,6 +1,6 @@
 <template>
   <Home>
-    <section class="home">
+    <section class="section--home">
       <div class="shapes">
         <div class="shapes__item">
           <g-image
