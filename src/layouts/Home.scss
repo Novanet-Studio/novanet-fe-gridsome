@@ -274,10 +274,6 @@ button {
         left: 0;
         top: -0.1em;
       }
-
-      &-page::before {
-        top: -0.15em;
-      }
     }
 
     &--title {
@@ -658,9 +654,6 @@ button {
           top: -0.22em;
         }
 
-        &-page::before {
-          top: -0.17em;
-        }
       }
       &--title {
         margin: 0 0 0 ($col-portrait * 3.1);
@@ -760,14 +753,13 @@ button {
     @include grid-structure($columns: 1, $col: $col-portrait);
 
     &__items {
-      margin-bottom: $col-portrait * 0.5;
 
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3),
       &:nth-child(4) {
         grid-column: 1 / 2;
-        margin: 0;
+        margin-bottom: $col-portrait ;
       }
     }
 
@@ -775,7 +767,7 @@ button {
       font-size: 3.5em;
       padding: $col-portrait * 0.2;
       &::before {
-        margin-top: $col-portrait * 0.85;
+        margin-top: $col-portrait * 0.55;
       }
     }
 
