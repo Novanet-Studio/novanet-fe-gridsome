@@ -107,7 +107,7 @@ button {
   }
 
   & > a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   &__text {
@@ -272,19 +272,19 @@ button {
         font-size: 4rem;
         position: absolute;
         left: 0;
-        top: -0.18em;
+        top: -0.1em;
       }
 
       &-page::before {
-        top: -0.24em;
+        top: -0.15em;
       }
     }
 
     &--title {
-      margin: 0 0 0 ($col-landscape * 1.75);
+      margin: 0 0 0 ($col-landscape * 1.8);
       color: inherit;
       &-contacto {
-        margin: 0 0 0 ($col-landscape * 1.6);
+        margin: 0 0 0 ($col-landscape * 1.62);
         color: inherit;
       }
     }
@@ -294,8 +294,7 @@ button {
 .main {
   display: grid;
   grid-column: 1 / 41;
-  padding: $col-landscape ($col-landscape * 0.5) ($col-landscape * 0.5)
-    ($col-landscape * 0.5);
+  padding: $col-landscape $col-landscape 0;
   height: min-content;
 }
 
@@ -345,10 +344,13 @@ button {
 
 .section {
   margin-bottom: $col-landscape;
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &--home {
     display: grid;
-    height: $col-landscape * 15;
+    height: $col-landscape * 14;
     align-content: center;
   }
 }
@@ -402,7 +404,7 @@ button {
     }
   }
   &__icon {
-    margin-bottom: -$col-landscape * 0.75;
+    margin-bottom: -$col-landscape;
     margin-left: -$col-landscape * 0.3;
     font-size: 5rem;
   }
@@ -417,11 +419,10 @@ button {
 
 .categories {
   @include grid-structure($columns: 3, $col: $col-landscape);
-  margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
 
   &__items {
     display: flex;
-    margin-bottom: $col-landscape * 0.25;
+    margin-bottom: $col-landscape * 0.5;
 
     &:nth-child(1) {
       grid-column: 1 / 2;
@@ -440,13 +441,13 @@ button {
   }
   &__icon {
     display: flex;
-    font-size: 4rem;
-    padding: $col-landscape * 0.1;
+    font-size: 3.5rem;
+    padding: $col-landscape * 0.095;
     color: $white;
     @include image-background($image: 'novanet-circle.svg');
 
     &::before {
-      margin-top: $col-landscape * 0.4;
+      margin-top: $col-landscape * 0.53;
     }
   }
   @include subheader();
@@ -463,20 +464,24 @@ button {
 }
 
 .project {
-  @include grid-structure($columns: 6, $col: $col-landscape);
+  @include grid-structure($columns: 3, $col: $col-landscape);
 
   &__image {
-    max-width: 97%;
-    grid-column: 1 / 3;
+    max-width: 95%;
+    grid-column: 1 / 2;
   }
 
   &__info {
-    grid-column: 3 / 7;
+    grid-column: 2 / 4;
   }
 
   &__gallery {
     @include grid-structure($columns: 6, $col: $col-landscape);
     margin-top: $col-landscape * 0.25;
+  }
+
+  .share {
+    margin-top: $col-landscape * 0.4;
   }
 
   &__thumbnail {
@@ -547,6 +552,7 @@ button {
   }
 
   &__mapa {
+    margin-top: $col-landscape * 0.25;
     width: 98%;
     height: 40vh;
     border: 0;
@@ -556,7 +562,7 @@ button {
 .formulario {
   input,
   textarea {
-    width: 60%;
+    width: 70%;
     border: 0;
     margin-top: 0;
     min-height: 2em;
@@ -565,10 +571,12 @@ button {
     border-bottom: 0.1em solid $blue;
   }
   input[type='submit'] {
-    width: 25%;
+    cursor: pointer;
     margin-top: $col-landscape * 0.3;
-    background-color: $blue;
+    padding-right:0;
+    width: 25%;
     color: $white;
+    background-color: $blue;
   }
 }
 
@@ -610,6 +618,7 @@ button {
   }
 
   .share {
+    margin-top: $col-portrait * 0.3;
     & > * {
       margin-right: 0.8em;
     }
@@ -619,7 +628,7 @@ button {
     }
 
     &__text {
-      font-size: 0.86rem;
+      font-size: 0.78rem;
     }
   }
 
@@ -645,17 +654,17 @@ button {
       }
       &--icon {
         &::before {
-          top: -0.16em;
+          top: -0.22em;
         }
 
         &-page::before {
-          top: -0.16em;
+          top: -0.17em;
         }
       }
       &--title {
-        margin: 0 0 0 ($col-portrait * 3.2);
+        margin: 0 0 0 ($col-portrait * 3.1);
         &-contacto {
-          margin: 0 0 0 ($col-portrait * 3.2);
+          margin: 0 0 0 ($col-portrait * 2.8);
         }
       }
       &--mobile {
@@ -675,7 +684,7 @@ button {
 
   .main {
     grid-column: 1 / 21;
-    padding: ($col-portrait * 0.9);
+    padding: ($col-portrait * 0.9) ($col-portrait * 0.9) 0;
   }
 
   .footer {
@@ -693,15 +702,13 @@ button {
         padding-bottom: 0.5em;
       }
     }
-
-    
   }
 
   .section {
     margin-bottom: $col-portrait * 0.9;
 
     &--home {
-      height: $col-portrait * 27;
+      height: $col-portrait * 28.5;
     }
   }
 
@@ -717,28 +724,28 @@ button {
 
     &__titulo {
       margin-top: $col-portrait * 1.1;
-      font-size: 0.9rem;
-      line-height: 1.1rem;
+      font-size: 0.96rem;
+      line-height: 1.2rem;
     }
   }
 
   .services {
     @include grid-structure($columns: 1, $col: $col-portrait);
-    margin: ($col-portrait * 0.9) 0 ($col-portrait * 0.1) 0;
+    margin: ($col-portrait * 0.4) 0 ($col-portrait * 0.1) 0;
 
     &__items {
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3) {
         grid-column: 1 / 2;
-        padding-bottom: $col-portrait * 0.5;
+        padding-bottom: $col-portrait * 0.7;
       }
     }
 
     &__icon {
-      margin-bottom: -$col-portrait * 1.65;
-      margin-left: -$col-portrait * 0.7;
-      font-size: 5rem;
+      margin-bottom: -$col-portrait * 1.15;
+      margin-left: -$col-portrait * 0.5;
+      font-size: 4rem;
     }
     &__description {
       p {
@@ -764,25 +771,25 @@ button {
     }
 
     &__icon {
-      font-size: 4em;
+      font-size: 3.5em;
       padding: $col-portrait * 0.2;
       &::before {
-        margin-top: $col-portrait * 1;
+        margin-top: $col-portrait * 0.85;
       }
     }
 
     &__title {
-      margin: 0 0 0 ($col-portrait * 0.4);
+      margin: 0 0 0 ($col-portrait * 0.3);
     }
 
     &__internal {
       @include grid-structure($columns: 2, $col: $col-portrait);
       > div {
         &:nth-child(odd) {
-          padding-right: $col-portrait * 0.9;
+          padding-right: $col-portrait * 0.95;
         }
         &:nth-child(even) {
-          padding-left: $col-portrait * 0.9;
+          padding-left: $col-portrait * 0.95;
           padding-right: 0;
         }
       }
@@ -793,6 +800,7 @@ button {
     @include grid-structure($columns: 1, $col: $col-portrait);
 
     &__image {
+      max-width:100%;
       grid-column: 1 / 2;
     }
 
@@ -816,6 +824,7 @@ button {
     .description {
       font-size: 0.875rem;
       line-height: 1.125rem;
+      display:none;
     }
 
     .date {
@@ -824,10 +833,10 @@ button {
 
     > div {
       &:nth-child(odd) {
-        padding-right: $col-portrait * 0.9;
+        padding-right: $col-portrait * 0.95;
       }
       &:nth-child(even) {
-        padding-left: $col-portrait * 0.9;
+        padding-left: $col-portrait * 0.95;
         padding-right: 0;
       }
     }
@@ -835,6 +844,10 @@ button {
 
   .article {
     @include grid-structure($columns: 1, $col: $col-portrait);
+
+   > div.article__image-share {
+        padding-right: 0;
+      }
 
     &__info {
       grid-column: 1 / 4;
@@ -864,9 +877,11 @@ button {
   }
 
   .formulario {
+    margin-top: $col-portrait * 0.7;
+    margin-bottom: $col-portrait * 0.7;
     input,
     textarea {
-      width: 100%;
+      width: 94.5%;
       font-size: 0.85rem;
     }
     input[type='submit'] {
