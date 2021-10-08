@@ -645,12 +645,13 @@ button {
 
     &--page {
       padding: ($col-portrait * 0.2) 0 ($col-portrait * 0.4);
+      align-items: start;
     }
 
     &__link {
 
       &--logo {
-        width: $col-portrait * 6;
+        width: $col-portrait * 5.5;
       }
       &--icon {
         &::before {
