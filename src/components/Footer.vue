@@ -2,7 +2,7 @@
   <footer class="footer">
     <ul class="rrss">
       <a class="rrss__link rrss__link--triangle" to="/">
-        <font-awesome :icon="['fab', 'facebook']" />
+        <font-awesome :icon="['fab', 'facebook-f']" />
       </a>
       <a class="rrss__link rrss__link--square" to="/">
         <font-awesome :icon="['fab', 'twitter']" />

@@ -17,6 +17,7 @@ import {
   faWhatsapp,
   faTelegram,
   faPinterest,
+  faFacebookF,
 } from '@fortawesome/free-brands-svg-icons'
 import { faCaretLeft, faTimes, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -25,7 +26,7 @@ import VueSocialSharing from 'vue-social-sharing'
 
 config.autoAddCss = false
 library.add(
-  faFacebook,
+  faFacebookF,
   faTwitter,
   faInstagram,
   faWhatsapp,
