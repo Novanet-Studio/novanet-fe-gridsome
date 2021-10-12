@@ -14,6 +14,7 @@
             :src="$page.proyectos.miniatura.url"
           />
           <div class="project__info">
+            <time class="date">{{ $page.proyectos.Ano }}</time>
             <h1>{{ $page.proyectos.titulo }}</h1>
             <p>{{ $page.proyectos.descripcion }}</p>
             <ul class="project__gallery">

@@ -2,10 +2,14 @@
   <div class="card">
     <g-link :to="`/${view}/${coleccion}/${alias.slug}`">
       <g-image class="card__image" :src="imagen" />
-      <div class="card__info">        
+      <div class="card__info">
+        <time class="date" v-if="alias.createdAt">{{
+          convertDate(alias.createdAt)
+        }}</time>
         <h3 class="card__title">{{ alias.titulo }}</h3>
-        <time class="date" v-if="alias.createdAt">{{ convertDate(alias.createdAt) }}</time>
-        <p class="description" v-if="descripcion">{{ maxWords(descripcion) + '...' }}</p>        
+        <p class="description" v-if="descripcion">
+          {{ maxWords(descripcion) + '...' }}
+        </p>
       </div>
     </g-link>
   </div>
