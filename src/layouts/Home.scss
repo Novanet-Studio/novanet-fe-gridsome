@@ -675,7 +675,7 @@ button {
 
     .header,
     .footer {
-      padding: ($col-portrait * 0.8);
+      padding: $col-portrait;
     }
   }
 
@@ -705,7 +705,7 @@ button {
     margin-bottom: $col-portrait * 0.9;
 
     &--home {
-      height: $col-portrait * 28.5;
+      height: $col-portrait * 27.8;
     }
   }
 
@@ -767,7 +767,7 @@ button {
 
     &__icon {
       font-size: 3.5em;
-      padding: $col-portrait * 0.2;
+      padding: $col-portrait * 0.25;
       &::before {
         margin-top: $col-portrait * 0.55;
       }
@@ -842,13 +842,13 @@ button {
     @include grid-structure($columns: 1, $col: $col-portrait, $padding: 0);
 
     &__info {
-      grid-column: 1 / 4;
+      grid-column: 1 / 2;
       margin-top: $col-portrait * 0.3;
     }
   }
 
   .contacto {
-    @include grid-structure($columns: 2, $col: $col-portrait, $padding: 0);
+    @include grid-structure($columns:2, $col: $col-portrait, $padding: 0);
 
     &__items {
       &:nth-child(odd),
@@ -874,15 +874,155 @@ button {
       padding: ($col-portrait * 0.3) 0;
     }
     input[type='submit'] {
-      width: 25%;
+      width: 20%;
       margin-top: $col-portrait * 0.7;
-      padding-right: 0;
     }
   }
 }
 
 /*----------------------------------- Mobile Landscape (568px) ----------------------------------*/
 @include responsive(35.5em) {
+  .nav {
+    // Navegación Inicio
+    &__link {
+      &--logo {
+        width: $col-portrait * 3.5;
+      }
+      &--title {
+        margin: 0 0 0 ($col-portrait * 1.8);
+        &-contacto {
+          margin: 0 0 0 ($col-portrait * 1.95);
+        }
+      }
+    }
+  }
+
+  .container {
+    .header,
+    .footer {
+      padding: ($col-portrait * 0.5);
+    }
+  }
+
+  .main {
+    padding: ($col-portrait * 0.5) ($col-portrait * 0.5) 0;
+  }
+
+  .rrss {
+    &__link {
+      width: $col-portrait * 0.8;
+      height: $col-portrait * 0.8;
+      margin-right: $col-portrait * 0.55;
+    }
+  }
+
+  .section {
+    &--home {
+      height: $col-portrait * 7;
+    }
+  }
+
+  // Inicio
+  .shapes {
+    &__img {
+      width: 17vw;
+    }
+
+    &__img--circle {
+      width: 17vw;
+    }
+
+    &__titulo {
+      margin-top: $col-portrait * 0.5;
+    }
+  }
+
+  .services {
+    &__icon {
+      margin-bottom: -$col-portrait * 0.6;
+      margin-left: -$col-portrait * 0.3;
+    }
+  }
+
+  .categories {
+    @include grid-structure($columns: 2, $col: $col-portrait);
+
+    &__items {
+      &:nth-child(2),
+      &:nth-child(4) {
+        grid-column: 2 / 3;
+      }
+
+      &:nth-child(3) {
+        grid-column: 1 / 2;
+      }
+    }
+
+    &__icon {
+      &::before {
+        margin-top: $col-portrait * 0.3;
+      }
+    }
+
+    &__internal {
+      @include grid-structure($columns: 3, $col: $col-portrait);
+      > div {
+        &:nth-child(odd),
+        &:nth-child(even) {
+          padding-left: 0;
+          padding-right: $col-portrait-tablet * 1.3;
+        }
+      }
+    }
+  }
+
+  .project {
+    @include grid-structure($columns: 2, $col: $col-portrait, $padding: 0);
+
+    &__image {
+      grid-column: 1 / 2;
+    }
+
+    &__info {
+      grid-column: 1 / 3;
+    }
+  }
+
+  .blog {
+    @include grid-structure($columns: 3, $col: $col-portrait, $padding: 0);
+
+    > div {
+      &:nth-child(odd) {
+        padding-right: $col-portrait;
+      }
+      &:nth-child(even) {
+        padding-left: 0;
+        padding-right: $col-portrait;
+      }
+    }
+  }
+
+  .article {
+    @include grid-structure($columns: 2, $col: $col-portrait, $padding: 0);
+
+    &__info {
+      grid-column: 1 / 3;
+    }
+  }
+
+  .contacto {
+    &__mapa {
+      width: 68%;
+      height: 55vh;
+    }
+  }
+
+  .formulario {
+    input,
+    textarea {
+      width: 67%;
+    }
+  }
 }
 
 /*----------------------------------- Tablet Portrait (768px) -----------------------------------*/
@@ -1005,16 +1145,14 @@ button {
       margin-right: $col-portrait-tablet * 0.65;
 
       &--triangle {
-        padding-bottom: 0.35em;
+        padding-bottom: 0.3em;
       }
     }
   }
 
   .section {
-    margin-bottom: $col-portrait-tablet;
-
     &--home {
-      height: $col-portrait-tablet * 25;
+      height: $col-portrait-tablet * 26;
     }
   }
 
@@ -1069,8 +1207,6 @@ button {
   }
 
   .categories {
-    @include grid-structure($columns: 2, $col: $col-portrait-tablet);
-
     &__items {
       &:nth-child(1),
       &:nth-child(2),
@@ -1078,16 +1214,8 @@ button {
       &:nth-child(4) {
         margin-bottom: $col-portrait-tablet;
       }
-
-      &:nth-child(2),
-      &:nth-child(4) {
-        grid-column: 2 / 3;
-      }
-
-      &:nth-child(3) {
-        grid-column: 1 / 2;
-      }
     }
+    
     &__icon {
       font-size: 5rem;
       padding: $col-portrait-tablet * 0.27;
@@ -1099,23 +1227,10 @@ button {
 
     &__internal {
       @include grid-structure($columns: 3, $col: $col-portrait-tablet);
-      > div {
-        &:nth-child(odd),
-        &:nth-child(even) {
-          padding-left: 0;
-          padding-right: $col-portrait-tablet * 1.3;
-        }
-      }
     }
   }
 
   .project {
-    @include grid-structure($columns: 2, $col: $col-portrait-tablet, $padding: 0);
-
-    &__info {
-      grid-column: 1 / 3;
-    }
-
     &__gallery {
       @include grid-structure($columns: 6, $col: $col-portrait-tablet);
       margin-top: $col-portrait-tablet * 0.35;
@@ -1142,19 +1257,8 @@ button {
     }
   }
 
-  .article {
-    @include grid-structure($columns: 2, $col: $col-portrait-tablet, $padding: 0);
-
-    &__info {
-      grid-column: 1 / 3;
-    }
-  }
-
   .contacto {
-    @include grid-structure($columns: 1, $col: $col-portrait-tablet, $padding: 0);
-
     &__mapa {
-      width: 68%;
       height: 30vh;
     }
   }
@@ -1162,7 +1266,6 @@ button {
   .formulario {
     input,
     textarea {
-      width: 67%;
       font-size: 1.05rem;
     }
   }
