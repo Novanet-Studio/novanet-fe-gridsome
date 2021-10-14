@@ -959,6 +959,10 @@ button {
           margin: 0 0 0 ($col-landscape * 3.1);
         }
       }
+
+      &--view {
+        display:none;
+      }
     }
   }
   
