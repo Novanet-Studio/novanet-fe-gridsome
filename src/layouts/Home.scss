@@ -26,8 +26,6 @@ time {
   margin-bottom: $col-landscape * 0.3;
 }
 
-
-
 ul {
   font-size: 1rem;
   line-height: 1.375rem;
@@ -67,7 +65,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 0.97rem;
   line-height: 1.125rem;
 }
 
@@ -584,7 +582,7 @@ button {
   }
 }
 
-/*----------------------------------- Mobile Portrait (320px) ----------------------------------
+/*----------------------------------- Mobile Portrait (320px) ----------------------------------*/
 @include responsive(20em) {
   body {
     font-size: 0.875rem;
@@ -688,7 +686,7 @@ button {
 
   .rrss {
     &__link {
-      font-size: 0.6rem;
+      font-size: 0.65rem;
       width: $col-portrait * 1.3;
       height: $col-portrait * 1.3;
       margin-right: $col-portrait * 1;
@@ -709,7 +707,6 @@ button {
 
   // Inicio
   .shapes {
-
     &__img {
       width: 24vw;
     }
@@ -755,7 +752,9 @@ button {
     @include grid-structure($columns: 1, $col: $col-portrait);
 
     &__items {
-      &:nth-child(1),
+      &:nth-child(1) {
+        margin-bottom: $col-portrait;
+      }
       &:nth-child(2),
       &:nth-child(3),
       &:nth-child(4) {
@@ -765,7 +764,7 @@ button {
     }
 
     &__icon {
-      font-size: 3.5em;
+      font-size: 3rem;
       padding: $col-portrait * 0.25;
       &::before {
         margin-top: $col-portrait * 0.55;
@@ -847,17 +846,16 @@ button {
   }
 
   .contacto {
-    @include grid-structure($columns:2, $col: $col-portrait, $padding: 0);
+    @include grid-structure($columns: 1, $col: $col-portrait, $padding: 0);
 
     &__items {
       &:nth-child(odd),
       &:nth-child(even) {
-        grid-column: 1 / 3;
+        grid-column: 1 / 2;
       }
     }
 
     &__mapa {
-      height: 37vh;
       margin-bottom: $col-portrait * 0.7;
     }
   }
@@ -876,7 +874,7 @@ button {
       margin-top: $col-portrait * 0.7;
     }
   }
-}*/
+}
 
 /*----------------------------------- Mobile Landscape (568px) ----------------------------------*/
 @include responsive(35.5em) {
@@ -884,62 +882,62 @@ button {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
-  
+
   ul {
     font-size: 1rem;
     line-height: 1.375rem;
   }
-  
+
   h1 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
-  
+
   h2 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
-  
+
   h3 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
-  
+
   h4 {
-    font-size: 0.95rem;
+    font-size: 0.97rem;
     line-height: 1.125rem;
   }
-  
+
   .share {
     margin-top: $col-landscape * 0.3;
     & > * {
       margin-right: $col-landscape * 0.5;
     }
-  
+
     & > a {
       margin-top: $col-landscape * 0.05;
       font-size: 1rem;
     }
-  
+
     &__text {
       font-size: 0.9rem;
     }
   }
-  
+
   .container {
     @include grid-structure($columns: 40, $col: $col-landscape);
-  
+
     .header,
     .footer {
       padding: $col-landscape;
     }
   }
-  
+
   .header {
     @include grid-structure($columns: 6, $col: $col-landscape);
     grid-column: 1 / 41;
   }
-  
+
   .nav {
     // Navegación Inicio
     &--main {
@@ -948,74 +946,66 @@ button {
 
     &--page {
       padding: ($col-landscape * 0.2) 0 ($col-landscape * 0.4);
-      align-items: start;
     }
-  
+
     &__link {
       &--logo {
         width: $col-landscape * 7;
       }
-  
+
       &--title {
         margin: 0 0 0 ($col-landscape * 3.6);
         &-contacto {
           margin: 0 0 0 ($col-landscape * 3.1);
         }
       }
-
-      &--view {
-        display:none;
-      }
     }
   }
-  
+
   .main {
     grid-column: 1 / 41;
     padding: $col-landscape $col-landscape 0;
   }
-  
+
   .footer {
     grid-column: 1 / 41;
   }
-  
+
   .rrss {
     &__link {
-      font-size: 0.65rem;
       width: $col-landscape * 1.5;
       height: $col-landscape * 1.5;
       margin-right: $col-landscape;
-  
+
       &--triangle {
         padding-bottom: 0.3em;
       }
     }
   }
-  
+
   .section {
     margin-bottom: $col-landscape;
 
     &--home {
-      height: $col-landscape * 14.5;
+      height: $col-landscape * 14.4;
     }
   }
-  
+
   // Inicio
   .shapes {
     &__img {
       width: 15vw;
     }
-  
+
     &__img--circle {
       width: 16.1vw;
     }
-  
+
     &__titulo {
       margin-top: $col-landscape * 1;
-      font-size: 0.96rem;
-      line-height: 1.2rem;
     }
   }
-  
+
   .services {
     @include grid-structure($columns: 2, $col: $col-landscape);
 
@@ -1023,44 +1013,47 @@ button {
       &:nth-child(odd) {
         grid-column: 1 / 2;
       }
-  
+
       &:nth-child(even) {
         grid-column: 2 / 3;
       }
-   }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        padding-bottom: 0;
+      }
+    }
 
     &__icon {
-      margin-bottom: -$col-landscape * 1.4;
+      margin-bottom: -$col-landscape * 1.6;
       margin-left: -$col-landscape * 0.7;
       font-size: 5rem;
     }
     &__description {
       p {
-        font-size: 1rem;
-        line-height: 1.375rem;
+        font-size: 0.95rem;
+        line-height: 1.275rem;
       }
     }
   }
-  
+
   .categories {
     @include grid-structure($columns: 2, $col: $col-landscape);
-  
+
     &__items {
-      &:nth-child(2) {
+      &:nth-child(2),
+      &:nth-child(4) {
         grid-column: 2 / 3;
       }
       &:nth-child(3) {
         grid-column: 1 / 2;
       }
-  
-      &:nth-child(4) {
-        grid-column: 2 / 3;
-      }
     }
     &__icon {
       font-size: 3.5rem;
-      padding: $col-landscape * 0.25;
-  
+      padding: $col-landscape * 0.3;
+
       &::before {
         margin-top: $col-landscape * 0.7;
       }
@@ -1079,81 +1072,68 @@ button {
       }
     }
   }
-  
+
   .project {
     @include grid-structure($columns: 2, $col: $col-landscape);
-  
-    &__image {
-      grid-column: 1 / 2;
-    }
-  
+
     &__info {
-      grid-column: 1 / 3;
       margin-top: $col-landscape * 0.5;
+      grid-column: 1 / 3;
     }
-  
+
     &__gallery {
       @include grid-structure($columns: 5, $col: $col-landscape);
       margin-top: $col-landscape * 0.5;
     }
+
+    .share {
+      margin-top: $col-landscape * 0.2;
+    }
   }
-  
+
   .blog {
     @include grid-structure($columns: 2, $col: $col-landscape);
     margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
-  
-    > div {
-      &:nth-child(odd),
-      &:nth-child(even) {
-        padding-left: 0;
-        padding-right: $col-landscape * 2;
-      }
-    }
-  
+
     .description {
+      display: block;
       font-size: 1rem;
       line-height: 1.375rem;
     }
-  
+
     .date {
       font-size: 0.85rem;
     }
   }
-  
+
   .article {
     @include grid-structure($columns: 2, $col: $col-landscape);
-  
+
     &__image-share {
       grid-column: 1 / 2;
     }
-  
+
     &__info {
-      grid-column: 1 / 3;
       margin-top: $col-landscape * 0.5;
+      grid-column: 1 / 3;
     }
   }
-  
+
   .contacto {
-    @include grid-structure($columns: 1, $col: $col-landscape);
-  
+    @include grid-structure($columns: 1, $col: $col-landscape, $padding: 0);
+
     &__items {
-      &:nth-child(odd) {
-        grid-column: 1 / 2;
-      }
-  
       &:nth-child(even) {
-        grid-column: 1 / 2;
-        margin-top: $col-landscape;
+        margin-top: $col-landscape * 0.25;
       }
     }
-  
+
     &__mapa {
-      margin-top: $col-landscape * 0.25;
-      width: 100%;
-      height: 60vh;
+      margin-top: $col-landscape * 0.5;
+      height: 70vh;
     }
   }
-  
+
   .formulario {
     margin-top: $col-landscape * 0.25;
     input,
@@ -1163,53 +1143,16 @@ button {
       font-size: 1.05rem;
     }
     input[type='submit'] {
-      cursor: pointer;
       margin-top: $col-landscape;
     }
   }
 }
 
-
-/*----------------------------------- Tablet Portrait (768px) -----------------------------------
+/*----------------------------------- Tablet Portrait (768px) -----------------------------------*/
 @include responsive(48em) {
-  body {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  p {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-
-  ul {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-
-  h1 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-
-  h4 {
-    font-size: 1rem;
-    line-height: 1.125rem;
-  }
-
   .share {
     & > * {
-      margin-right: 0.4em;
+      margin-right: $col-portrait-tablet * 0.4;
     }
 
     & > a {
@@ -1245,7 +1188,17 @@ button {
       padding: 0;
       align-items: center;
       .nav__link--title {
-        font-size: inherit;
+        margin: 0 0 0 ($col-portrait-tablet * 1.8);
+        font-size: 1.375rem;
+        &-contacto {
+          margin: 0 0 0 ($col-portrait-tablet * 1.7);
+        }
+      }
+      .nav__link--icon {
+        &::before {
+          top: -0.15em;
+          font-size: 4rem;
+        }
       }
     }
 
@@ -1288,14 +1241,12 @@ button {
       width: $col-portrait-tablet * 0.85;
       height: $col-portrait-tablet * 0.85;
       margin-right: $col-portrait-tablet * 0.65;
-
-      &--triangle {
-        padding-bottom: 0.3em;
-      }
     }
   }
 
   .section {
+    margin-bottom: $col-portrait-tablet * 0.95;
+
     &--home {
       height: $col-portrait-tablet * 26;
     }
@@ -1313,45 +1264,24 @@ button {
 
     &__titulo {
       margin-top: $col-portrait-tablet * 1.2;
-      font-size: 1.3rem;
+      font-size: 1.22rem;
       line-height: 1.5rem;
     }
   }
 
   .services {
-    @include grid-structure($columns: 3, $col: $col-portrait-tablet);
+    @include grid-structure($columns: 2, $col: $col-portrait-tablet);
     margin: ($col-portrait-tablet * 0.4) 0 ($col-portrait-tablet * 0.4) 0;
-
-    &__items {
-      &:nth-child(2) {
-        grid-column: 2 / 3;
-      }
-
-      &:nth-child(3) {
-        grid-column: 3 / 4;
-      }
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3) {
-        padding-bottom: 0;
-      }
-    }
 
     &__icon {
       margin-bottom: -$col-portrait-tablet * 0.85;
       margin-left: -$col-portrait-tablet * 0.3;
-      font-size: 5rem;
-    }
-
-    &__description {
-      p {
-        font-size: 0.95rem;
-        line-height: 1.275rem;
-      }
     }
   }
 
   .categories {
+    @include grid-structure($columns: 2, $col: $col-portrait-tablet);
+
     &__items {
       &:nth-child(1),
       &:nth-child(2),
@@ -1360,7 +1290,7 @@ button {
         margin-bottom: $col-portrait-tablet;
       }
     }
-    
+
     &__icon {
       font-size: 5rem;
       padding: $col-portrait-tablet * 0.27;
@@ -1377,7 +1307,7 @@ button {
 
   .project {
     &__gallery {
-      @include grid-structure($columns: 6, $col: $col-portrait-tablet);
+      @include grid-structure($columns: 6, $col: $col-portrait-tablet, $padding:0);
       margin-top: $col-portrait-tablet * 0.35;
     }
 
@@ -1396,14 +1326,15 @@ button {
         padding-right: $col-portrait-tablet * 1.3;
       }
     }
+  }
 
-    .date {
-      font-size: 0.85rem;
-    }
+  .article {
+    @include grid-structure($columns: 2, $col: $col-landscape, $padding: 0);
   }
 
   .contacto {
     &__mapa {
+      width: 70%;
       height: 30vh;
     }
   }
@@ -1411,10 +1342,13 @@ button {
   .formulario {
     input,
     textarea {
-      font-size: 1.05rem;
+      padding: ($col-portrait-tablet * 0.2) 0;
+    }
+    input[type='submit'] {
+      margin-top: $col-landscape * 0.7;
     }
   }
-}*/
+}
 
 /*----------------------------------- Tablet Landscape (1024px) ---------------------------------*/
 @include responsive(64em) {
