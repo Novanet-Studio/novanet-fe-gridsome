@@ -1369,11 +1369,6 @@ button {
 
 /*----------------------------------- Tablet Landscape (1024px) ---------------------------------*/
 @include responsive(64em) {
-  h1 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-
   .share {
     margin-top: $col-landscape * 0.2;
     & > * {
