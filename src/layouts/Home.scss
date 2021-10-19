@@ -383,6 +383,7 @@ button {
     margin-top: $col-landscape * 1.3;
     margin-bottom: 0;
     font-size: 1.55rem;
+    letter-spacing: 0.1rem;
     font-weight: 400;
     color: $dark-grey-2;
   }
@@ -719,6 +720,7 @@ button {
       margin-top: $col-portrait * 1.1;
       font-size: 0.96rem;
       line-height: 1.2rem;
+      letter-spacing: 0;
     }
   }
 
@@ -752,14 +754,11 @@ button {
     @include grid-structure($columns: 1, $col: $col-portrait);
 
     &__items {
-      &:nth-child(1) {
-        margin-bottom: $col-portrait;
-      }
+      margin-bottom: $col-portrait;
       &:nth-child(2),
       &:nth-child(3),
       &:nth-child(4) {
         grid-column: 1 / 2;
-        margin-bottom: $col-portrait;
       }
     }
 
@@ -1280,12 +1279,7 @@ button {
     @include grid-structure($columns: 2, $col: $col-portrait-tablet);
 
     &__items {
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4) {
-        margin-bottom: $col-portrait-tablet;
-      }
+      margin-bottom: $col-portrait-tablet;
     }
 
     &__icon {
@@ -1398,9 +1392,9 @@ button {
 
     &--page {
       .nav__link--title {
-        margin: 0 0 0 ($col-portrait-tablet * 1.35);
+        margin: 0 0 0 ($col-landscape * 2.2);
         &-contacto {
-          margin: 0 0 0 ($col-portrait-tablet * 1.2);
+          margin: 0 0 0 ($col-landscape * 2);
         }
       }
     }
@@ -1420,7 +1414,7 @@ button {
       &--title {
         margin: 0 0 0 ($col-landscape * 2.2);
         &-contacto {
-          margin: 0 0 0 ($col-landscape * 2.05);
+          margin: 0 0 0 ($col-landscape * 2);
         }
       }
     }
@@ -1487,6 +1481,8 @@ button {
 
   .categories {
     @include grid-structure($columns: 3, $col: $col-landscape, $padding: 1);
+
+    &__items {margin-bottom: $col-landscape}
 
     &__icon {
       font-size: 4rem;
@@ -1600,6 +1596,7 @@ button {
 
       &--title {
         margin: 0 0 0 ($col-landscape * 1.8);
+        font-size: 0.97rem;
         &-contacto {
           margin: 0 0 0 ($col-landscape * 1.52);
         }
@@ -1638,7 +1635,7 @@ button {
       font-size: 3.5rem;
       padding: $col-landscape * 0.13;
       &::before {
-        margin-top: $col-landscape * 0.55;
+        margin-top: $col-landscape * 0.52;
       }
     }
   }
@@ -1658,12 +1655,204 @@ button {
 
 /*------------------------------------ Medium Desktop (1440px) ----------------------------------*/
 @include responsive(90em) {
+  .rrss {
+    &__link {
+      &--triangle {
+        padding-bottom: 0.4em;
+      }
+    }
+  }
+
+  .nav {
+    &--page {
+      .nav__link--title {
+        margin: 0 0 0 ($col-landscape * 1.6);
+        &-contacto {
+          margin: 0 0 0 ($col-landscape * 1.4);
+        }
+      }
+    }
+
+    &__link {
+      &--icon {
+        &::before {
+          top: -0.1em;
+        }
+      }
+
+      &--title {
+        margin: 0 0 0 ($col-landscape * 1.6);
+        &-contacto {
+          margin: 0 0 0 ($col-landscape * 1.4);
+        }
+      }
+    }
+  }
+
+  .section {
+    &--home {
+      height: $col-landscape * 14;
+    }
+  }
+
+  // Inicio
+  .shapes {
+    &__titulo {
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  .categories {
+    &__items {
+      margin-bottom: $col-landscape;
+    }
+  }
+
+  
+  .contacto {
+    &__mapa {
+      height: 40vh;
+    }
+  }
 }
 
 /*--------------------------------- Medium Large Desktop (1600px) -------------------------------*/
 @include responsive(100em) {
+  .nav {
+    &--page {
+      .nav__link--title {
+        margin: 0 0 0 ($col-landscape * 1.4);
+        &-contacto {
+          margin: 0 0 0 ($col-landscape * 1.25);
+        }
+      }
+    }
+
+    &__link {
+      &--icon {
+        &::before {
+          top: -0.05em;
+        }
+      }
+
+      &--title {
+        margin: 0 0 0 ($col-landscape * 1.4);
+        &-contacto {
+          margin: 0 0 0 ($col-landscape * 1.25);
+        }
+      }
+    }
+  }
+
+  .shapes {
+    &__titulo {
+      letter-spacing: 0.16rem;
+    }
+  }
+
+  .section {
+    &--home {
+      height: $col-landscape * 19;
+    }
+  }
+
+  .categories {
+    &__icon {
+      &::before {
+        margin-top: $col-landscape * 0.4;
+      }
+    }
+  }
 }
 
 /*------------------------------------- Large Desktop (1920px) ---------------------------------*/
 @include responsive(120em) {
+  body {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  p,
+  time {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  .nav {
+    &--page {
+      .nav__link--title {
+        font-size: 1.5rem;
+        margin: 0 0 0 ($col-landscape * 1.2);
+        &-contacto {
+          margin: 0 0 0 ($col-landscape * 1.1);
+        }
+      }
+    }
+
+    &__link {
+      &--icon {
+        &::before {
+          top: 0.03em;
+        }
+      }
+
+      &--title {
+        font-size: 1.125rem;
+        margin: 0 0 0 ($col-landscape * 1.2);
+        &-contacto {
+          margin: 0 0 0 ($col-landscape * 1.1);
+        }
+      }
+    }
+  }
+
+  .rrss {
+    &__link {
+      width: $col-landscape * 0.7;
+      height: $col-landscape * 0.7;
+      &--triangle {
+        padding-bottom: 0.5em;
+      }
+    }
+  }
+
+  .shapes {
+    &__titulo {
+      font-size: 1.75rem;
+      letter-spacing: 0.26rem;
+    }
+  }
+  .section {
+    &--home {
+      height: $col-landscape * 15.5;
+    }
+  }
+
+  .categories {
+    &__icon {
+      &::before {
+        margin-top: $col-landscape * 0.33;
+      }
+    }
+  }
 }
