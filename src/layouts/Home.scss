@@ -16,13 +16,18 @@ h4 {
   margin-bottom: $col-landscape * 0.1;
 }
 
-p,
-time {
+p {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-weight: inherit;
   color: inherit;
   margin-top: 0;
+  margin-bottom: $col-landscape * 0.3;
+}
+
+time {
+  font-size: 1rem;
+  color: $dark-grey;
   margin-bottom: $col-landscape * 0.3;
 }
 
@@ -65,7 +70,7 @@ h3 {
 }
 
 h4 {
-  font-size: 0.97rem;
+  font-size: 1rem;
   line-height: 1.125rem;
 }
 
@@ -383,7 +388,7 @@ button {
   &__titulo {
     grid-column: 1 / 4;
     text-align: center;
-    margin-top: $col-landscape * 1.3;
+    margin: ($col-landscape * 1.3) 0 0;
     margin-bottom: 0;
     font-size: 1.55rem;
     letter-spacing: 0.1rem;
@@ -520,11 +525,6 @@ button {
     font-weight: inherit;
     color: $dark-grey;
   }
-
-  .date {
-    font-size: 0.85rem;
-    color: $dark-grey-2;
-  }
 }
 
 .article {
@@ -596,6 +596,10 @@ button {
   p {
     font-size: 0.875rem;
     line-height: 1.125rem;
+  }
+
+  time {
+    font-size: 0.8rem;
   }
 
   ul {
@@ -708,7 +712,7 @@ button {
       font-size: 0.65rem;
       width: $col-portrait * 1.3;
       height: $col-portrait * 1.3;
-      margin-right: $col-portrait * 1;
+      margin-right: $col-portrait;
 
       &--triangle {
         padding-bottom: 0.4em;
@@ -735,9 +739,9 @@ button {
     }
 
     &__titulo {
-      margin-top: $col-portrait * 1.1;
-      font-size: 0.96rem;
-      line-height: 1.2rem;
+      margin: ($col-portrait * 1.1) 0 0;
+      font-size: 1.05rem;
+      line-height: 1.35rem;
       letter-spacing: 0;
     }
   }
@@ -833,10 +837,6 @@ button {
 
     .description {
       display: none;
-    }
-
-    .date {
-      font-size: 0.75rem;
     }
 
     > div {
@@ -1029,7 +1029,7 @@ button {
     }
 
     &__titulo {
-      margin-top: $col-landscape * 1;
+      margin: ($col-landscape) ($col-landscape * 1.7) 0;
     }
   }
 
@@ -1131,10 +1131,6 @@ button {
   .blog {
     @include grid-structure($columns: 2, $col: $col-landscape);
     margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
-
-    .date {
-      font-size: 0.85rem;
-    }
   }
 
   .article {
@@ -1177,6 +1173,10 @@ button {
 
 /*----------------------------------- Tablet Portrait (768px) -----------------------------------*/
 @include responsive(48em) {
+  time {
+    font-size: 1rem;
+  }
+
   // Estilos modal
   .modal {
     &__converter {
@@ -1290,7 +1290,7 @@ button {
     }
 
     &__titulo {
-      margin-top: $col-portrait-tablet * 1.2;
+      margin: ($col-portrait-tablet * 1.2) ($col-portrait-tablet * 0.8) 0;
       font-size: 1.22rem;
       line-height: 1.5rem;
     }
@@ -1346,7 +1346,7 @@ button {
     @include grid-structure($columns: 3, $col: $col-portrait-tablet);
 
     > div {
-      padding-bottom: $col-portrait-tablet * 1;
+      padding-bottom: $col-portrait-tablet;
       &:nth-child(odd),
       &:nth-child(even) {
         padding-left: 0;
@@ -1474,15 +1474,15 @@ button {
   // Inicio
   .shapes {
     &__img {
-      width: 15vw;
+      width: 14vw;
     }
 
     &__img--circle {
-      width: 16.1vw;
+      width: 15.1vw;
     }
 
     &__titulo {
-      margin-top: $col-landscape * 1.3;
+      margin: ($col-landscape * 1.3) 0;
     }
   }
 
@@ -1687,10 +1687,14 @@ button {
 
 /*------------------------------------ Medium Desktop (1440px) ----------------------------------*/
 @include responsive(90em) {
+  h4 {
+    font-size: 1rem;
+  }
+
   .rrss {
     &__link {
       &--triangle {
-        padding-bottom: 0.4em;
+        padding-bottom: 0.45em;
       }
     }
   }
@@ -1707,7 +1711,7 @@ button {
     &__link {
       &--icon {
         &::before {
-          top: -0.06em;
+          top: -0.065em;
         }
       }
 
@@ -1722,7 +1726,7 @@ button {
 
   .section {
     &--home {
-      height: $col-landscape * 14;
+      height: $col-landscape * 18;
     }
   }
 
@@ -1748,55 +1752,23 @@ button {
 
 /*--------------------------------- Medium Large Desktop (1600px) -------------------------------*/
 @include responsive(100em) {
-  .nav {
-    &__link {
-      &--icon {
-        &::before {
-          top: -0.05em;
-        }
-      }
-
-      &--title {
-        margin: 0 0 0 ($col-landscape * 1.4);
-        &-contacto {
-          margin: 0 0 0 ($col-landscape * 1.25);
-        }
-      }
-    }
-  }
-
-  .shapes {
-    &__titulo {
-      letter-spacing: 0.16rem;
-    }
-  }
-
-  .section {
-    &--home {
-      height: $col-landscape * 19;
-    }
-  }
-
-  .categories {
-    &__icon {
-      &::before {
-        margin-top: $col-landscape * 0.4;
-      }
-    }
-  }
-}
-
-/*------------------------------------- Large Desktop (1920px) ---------------------------------*/
-@include responsive(120em) {
   body {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 
-  p,
+  p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
   time {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    font-size: 1rem;
+  }
+
+  ul {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 
   h1 {
@@ -1819,32 +1791,107 @@ button {
     line-height: 1.375rem;
   }
 
-  // Estilos modal
-  .modal {
-    &__converter {
-      img {
-        width: 60em;
+  .nav {
+    &__link {
+      &--icon {
+        &::before {
+          font-size: 4.6rem;
+        }
       }
     }
-    &__boton {
-      top: $col-landscape * 0.7;
-      right: $col-landscape * 0.7;
+  }
+
+  .section {
+    &--home {
+      height: $col-landscape * 15;
     }
+  }
+
+  .shapes {
+    &__img {
+      width: 12vw;
+    }
+
+    &__img--circle {
+      width: 13.1vw;
+    }
+
+    &__titulo {
+      font-size: 1.75rem;
+      letter-spacing: 0.14rem;
+    }
+  }
+
+  .services {
+    &__description {
+      p {
+        font-size: 1.125rem;
+        line-height: 1.475rem;
+      }
+    }
+  }
+
+  .categories {
+    &__icon {
+      &::before {
+        margin-top: $col-landscape * 0.4;
+      }
+    }
+  }
+}
+
+/*------------------------------------- Large Desktop (1920px) ---------------------------------*/
+@include responsive(120em) {
+  body {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+
+  p {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+
+  time {
+    font-size: 1.1rem;
+  }
+
+  ul {
+    font-size: 1.1rem;
+    line-height: 1.475rem;
+  }
+
+  h1 {
+    font-size: 1.625rem;
+    line-height: 1.875rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 
   .nav {
     &__link {
       &--icon {
         &::before {
-          top: 0.03em;
+          top: -0.01em;
         }
       }
-
       &--title {
-        font-size: 1.125rem;
-        margin: 0 0 0 ($col-landscape * 1.2);
+        margin: 0 0 0 ($col-landscape * 1.4);
         &-contacto {
-          margin: 0 0 0 ($col-landscape * 1.1);
+          margin: 0 0 0 ($col-landscape * 1.25);
         }
       }
     }
@@ -1852,35 +1899,53 @@ button {
 
   .rrss {
     &__link {
-      width: $col-landscape * 0.7;
-      height: $col-landscape * 0.7;
-      &--triangle {
-        padding-bottom: 0.5em;
-      }
+      font-size: 1rem;
+      margin-right: $col-landscape * 0.7;
     }
   }
 
+  // Inicio
   .shapes {
     &__titulo {
-      font-size: 1.75rem;
-      letter-spacing: 0.26rem;
+      font-size: 1.95rem;
     }
   }
-  .section {
-    &--home {
-      height: $col-landscape * 15.5;
+
+  .services {
+    &__icon {
+      margin-left: -$col-landscape * 0.2;
+      font-size: 5.5rem;
     }
   }
 
   .categories {
     &__icon {
+      font-size: 5rem;
+      padding: $col-landscape * 0.165;
       &::before {
-        margin-top: $col-landscape * 0.33;
+        margin-top: $col-landscape * 0.5;
       }
+    }
+  }
+
+  .blog {
+    .description {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  .formulario {
+    input,
+    textarea {
+      font-size: 1.25rem;
+    }
+    input[type='submit'] {
+      width: 20%;
     }
   }
 }
 
-/*---------------------------------- High Large Desktop (3840px) ------------------------------*/
+/*----------------------------------- High Large Desktop (3840px) -------------------------------*/
 @include responsive(240em) {
 }
