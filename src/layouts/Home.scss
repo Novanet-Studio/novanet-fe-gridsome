@@ -1482,7 +1482,7 @@ button {
     }
 
     &__titulo {
-      margin: ($col-landscape * 1.3) 0;
+      margin: ($col-landscape * 1.3) 0 0;
     }
   }
 
@@ -1643,7 +1643,7 @@ button {
 
   .section {
     &--home {
-      height: $col-landscape * 15.5;
+      height: $col-landscape * 15.6;
     }
   }
 
@@ -1726,7 +1726,7 @@ button {
 
   .section {
     &--home {
-      height: $col-landscape * 18;
+      height: $col-landscape * 17;
     }
   }
 
@@ -1752,96 +1752,6 @@ button {
 
 /*--------------------------------- Medium Large Desktop (1600px) -------------------------------*/
 @include responsive(100em) {
-  body {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  p {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  time {
-    font-size: 1rem;
-  }
-
-  ul {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-
-  h2 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  h4 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-
-  .nav {
-    &__link {
-      &--icon {
-        &::before {
-          font-size: 4.6rem;
-        }
-      }
-    }
-  }
-
-  .section {
-    &--home {
-      height: $col-landscape * 15;
-    }
-  }
-
-  .shapes {
-    &__img {
-      width: 12vw;
-    }
-
-    &__img--circle {
-      width: 13.1vw;
-    }
-
-    &__titulo {
-      font-size: 1.75rem;
-      letter-spacing: 0.14rem;
-    }
-  }
-
-  .services {
-    &__description {
-      p {
-        font-size: 1.125rem;
-        line-height: 1.475rem;
-      }
-    }
-  }
-
-  .categories {
-    &__icon {
-      &::before {
-        margin-top: $col-landscape * 0.4;
-      }
-    }
-  }
-}
-
-/*------------------------------------- Large Desktop (1920px) ---------------------------------*/
-@include responsive(120em) {
   body {
     font-size: 1.375rem;
     line-height: 1.625rem;
@@ -1885,6 +1795,49 @@ button {
     &__link {
       &--icon {
         &::before {
+          font-size: 4.6rem;
+        }
+      }
+    }
+  }
+
+  .section {
+    &--home {
+      height: $col-landscape * 14;
+    }
+  }
+
+  .shapes {
+    &__titulo {
+      font-size: 1.75rem;
+      letter-spacing: 0.07rem;
+    }
+  }
+
+  .services {
+    &__description {
+      p {
+        font-size: 1.125rem;
+        line-height: 1.475rem;
+      }
+    }
+  }
+
+  .categories {
+    &__icon {
+      &::before {
+        margin-top: $col-landscape * 0.4;
+      }
+    }
+  }
+}
+
+/*------------------------------------- Large Desktop (1920px) ---------------------------------*/
+@include responsive(120em) {
+  .nav {
+    &__link {
+      &--icon {
+        &::before {
           top: -0.01em;
         }
       }
@@ -1904,12 +1857,6 @@ button {
     }
   }
 
-  // Inicio
-  .shapes {
-    &__titulo {
-      font-size: 1.95rem;
-    }
-  }
 
   .services {
     &__icon {
