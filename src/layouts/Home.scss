@@ -1857,7 +1857,6 @@ button {
     }
   }
 
-
   .services {
     &__icon {
       margin-left: -$col-landscape * 0.2;
@@ -1895,4 +1894,180 @@ button {
 
 /*----------------------------------- High Large Desktop (3840px) -------------------------------*/
 @include responsive(240em) {
+  h2,
+  h3,
+  h4 {
+    margin-top: $col-landscape * 0.4;
+    margin-bottom: $col-landscape * 0.1;
+  }
+
+  body {
+    font-size: 2.688rem;
+    line-height: 3rem;
+  }
+
+  p {
+    font-size: 2.688rem;
+    line-height: 3rem;
+  }
+
+  time {
+    font-size: 2.35rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 4.25rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+
+  h3 {
+    font-size: 3.25rem;
+    line-height: 3.5rem;
+  }
+
+  h4 {
+    font-size: 3rem;
+    line-height: 3.25rem;
+  }
+
+  .share {
+    & > * {
+      margin-right: $col-landscape * 0.2;
+    }
+
+    & > a {
+      margin-top: -$col-landscape * 0.05;
+      font-size: 2.4rem;
+    }
+
+    &__text {
+      font-size: 2rem;
+    }
+  }
+
+  // Estilos modal
+  .modal {
+    &__converter {
+      img {
+        width: 120em;
+      }
+    }
+    &__boton {
+      width: 2.5em;
+      height: 2.5em;
+      top: $col-landscape * 0.55;
+      right: $col-landscape * 0.55;
+      font-size: 2rem;
+    }
+  }
+
+  .nav {
+    &--page {
+      .nav__link--icon {
+        &::before {
+          top: -0.15em;
+        }
+      }
+    }
+
+    &__link {
+      &--logo {
+        width: $col-landscape * 5;
+      }
+
+      &--icon {
+        &::before {
+          font-size: 12rem;
+          top: -0.04em;
+        }
+      }
+
+      &--title {
+        margin: 0 0 0 ($col-landscape * 1.8);
+        &-contacto {
+          margin: 0 0 0 ($col-landscape * 1.6);
+        }
+      }
+    }
+  }
+
+  .rrss {
+    &__link {
+      font-size: 2rem;
+      width: $col-landscape * 0.85;
+      height: $col-landscape * 0.85;
+      margin-right: $col-landscape * 0.65;
+
+      &--triangle {
+        padding-bottom: 0.4em;
+      }
+    }
+  }
+
+  // Inicio
+  .shapes {
+    &__titulo {
+      font-size: 4.5rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  .services {
+    &__icon {
+      margin-bottom: -$col-landscape * 0.8;
+      margin-left: -$col-landscape * 0.2;
+      font-size: 9rem;
+    }
+    &__description {
+      p {
+        font-size: 2.1rem;
+        line-height: 2.45rem;
+      }
+    }
+  }
+
+  .categories {
+    &__icon {
+      font-size: 10rem;
+      padding: $col-landscape * 0.17;
+
+      &::before {
+        margin-top: $col-landscape * 0.55;
+      }
+    }
+
+    &__internal {
+      @include grid-structure($columns: 4, $col: $col-portrait);
+      > div {
+        &:nth-child(odd),
+        &:nth-child(even) {
+          padding-left: 0;
+          padding-right: $col-landscape;
+        }
+      }
+    }
+  }
+
+  .blog {
+    .description {
+      font-size: 2rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  .formulario {
+    input,
+    textarea {
+      font-size: 2.5rem;
+    }
+    input[type='submit'] {
+      padding: ($col-landscape * 0.2) 0;
+      width: 17%;
+    }
+  }
 }
