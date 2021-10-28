@@ -586,8 +586,8 @@ button {
   }
 }
 
-/*----------------------------------- Mobile Portrait (320px) ----------------------------------*/
-@include responsive(20em) {
+/*----------------------------------- Mobile Portrait (320px) ---------------------------------*/
+@include responsive($size: 20em, $orientation: 'portrait') {
   body {
     font-size: 0.875rem;
     line-height: 1.125rem;
@@ -599,7 +599,7 @@ button {
   }
 
   time {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 
   ul {
@@ -632,7 +632,7 @@ button {
     &__converter {
       margin-top: 0;
       img {
-        width: 30em;
+        width: 28em;
       }
     }
     &__boton {
@@ -645,11 +645,11 @@ button {
   .share {
     margin-top: $col-portrait * 0.3;
     & > * {
-      margin-right: $col-portrait * 0.2;
+      margin-right: $col-portrait * 0.4;
     }
 
     & > a {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
     &__text {
@@ -715,7 +715,7 @@ button {
       margin-right: $col-portrait;
 
       &--triangle {
-        padding-bottom: 0.4em;
+        padding-bottom: 0.3em;
       }
     }
   }
@@ -894,7 +894,7 @@ button {
   }
 }
 
-/*----------------------------------- Mobile Landscape (568px) ----------------------------------*/
+/*----------------------------------- Mobile Landscape (568px) ---------------------------------
 @include responsive(35.5em) {
   p {
     font-size: 1.125rem;
@@ -1169,9 +1169,9 @@ button {
       margin-top: $col-landscape;
     }
   }
-}
+}*/
 
-/*----------------------------------- Tablet Portrait (768px) -----------------------------------*/
+/*----------------------------------- Tablet Portrait (768px) ----------------------------------
 @include responsive(48em) {
   time {
     font-size: 1rem;
@@ -1390,9 +1390,9 @@ button {
       margin-top: $col-landscape * 0.7;
     }
   }
-}
+}*/
 
-/*----------------------------------- Tablet Landscape (1024px) ---------------------------------*/
+/*----------------------------------- Tablet Landscape (1024px) --------------------------------
 @include responsive(64em) {
   .share {
     margin-top: $col-landscape * 0.2;
@@ -1599,9 +1599,9 @@ button {
       margin-top: $col-landscape * 0.3;
     }
   }
-}
+}*/
 
-/*------------------------------------- Small Desktop (1280px) ----------------------------------*/
+/*------------------------------------- Small Desktop (1280px) ----------------------------------
 @include responsive(80em) {
   // Estilos modal
   .modal {
@@ -1643,7 +1643,7 @@ button {
 
   .section {
     &--home {
-      height: $col-landscape * 15.6;
+      height: $col-landscape * 11.7;
     }
   }
 
@@ -1683,9 +1683,9 @@ button {
       height: 43vh;
     }
   }
-}
+}*/
 
-/*------------------------------------ Medium Desktop (1440px) ----------------------------------*/
+/*------------------------------------ Medium Desktop (1440px) ---------------------------------
 @include responsive(90em) {
   h4 {
     font-size: 1rem;
@@ -1726,7 +1726,7 @@ button {
 
   .section {
     &--home {
-      height: $col-landscape * 17;
+      height: $col-landscape * 14.5;
     }
   }
 
@@ -1748,9 +1748,9 @@ button {
       height: 40vh;
     }
   }
-}
+}*/
 
-/*--------------------------------- Medium Large Desktop (1600px) -------------------------------*/
+/*--------------------------------- Medium Large Desktop (1600px) ------------------------------
 @include responsive(100em) {
   body {
     font-size: 1.375rem;
@@ -1801,12 +1801,6 @@ button {
     }
   }
 
-  .section {
-    &--home {
-      height: $col-landscape * 14;
-    }
-  }
-
   .shapes {
     &__titulo {
       font-size: 1.75rem;
@@ -1830,9 +1824,9 @@ button {
       }
     }
   }
-}
+}*/
 
-/*------------------------------------- Large Desktop (1920px) ---------------------------------*/
+/*------------------------------------- Large Desktop (1920px) --------------------------------
 @include responsive(120em) {
   .nav {
     &__link {
@@ -1890,12 +1884,10 @@ button {
       width: 20%;
     }
   }
-}
+}*/
 
-/*----------------------------------- High Large Desktop (3840px) -------------------------------*/
+/*----------------------------------- High Large Desktop (3840px) -------------------------------
 @include responsive(240em) {
-
-
   body {
     font-size: 3.125rem;
     line-height: 3.5rem;
@@ -2066,3 +2058,4 @@ button {
     }
   }
 }
+*/
