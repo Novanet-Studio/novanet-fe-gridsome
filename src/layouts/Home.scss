@@ -926,7 +926,7 @@ button {
   }
 
   h4 {
-    font-size: 0.95rem;
+    font-size: 0.93rem;
     line-height: 1.125rem;
   }
 
@@ -1230,7 +1230,7 @@ button {
   }
 
   h4 {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.125rem;
   }
 
@@ -1303,8 +1303,8 @@ button {
   .shapes {
     &__titulo {
       margin: ($col-landscape) ($col-landscape * 1.7) 0;
-      font-size: 1.05rem;
-      line-height: 1.3rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
     }
   }
 
@@ -1422,8 +1422,20 @@ button {
     }
   }
 }
+
 /*----------------------------------- Tablet Landscape (1024px) --------------------------------*/
 @include responsive($size: 64em, $orientation: 'landscape') {
+  .modal {
+    &__converter {
+      img {
+        width: 50em;
+      }
+    }
+    &__boton {
+      font-size: 1.2rem;
+    }
+  }
+
   .share {
     & > * {
       margin-right: $col-landscape * 0.2;
@@ -1431,6 +1443,10 @@ button {
   }
 
   .nav {
+    &--page {
+      padding: 0;
+    }
+
     &__link {
       display: flex;
       &--logo {
@@ -1549,22 +1565,8 @@ button {
   }
 }
 
-/*------------------------------------- Small Desktop (1280px) ----------------------------------
-@include responsive(80em) {
-  // Estilos modal
-  .modal {
-    &__converter {
-      img {
-        width: 50em;
-      }
-    }
-    &__boton {
-      font-size: 1.2rem;
-      top: $col-portrait-tablet * 0.5;
-      right: $col-portrait-tablet * 0.5;
-    }
-  }
-
+/*------------------------------------- Small Desktop (1280px) ----------------------------------*/
+@include responsive($size: 80em) {
   .nav {
     &__link {
       &--logo {
@@ -1574,7 +1576,7 @@ button {
       &--title {
         margin: 0 0 0 ($col-landscape * 1.8);
         &-contacto {
-          margin: 0 0 0 ($col-landscape * 1.52);
+          margin: 0 0 0 ($col-landscape * 1.6);
         }
       }
     }
@@ -1585,28 +1587,33 @@ button {
       font-size: 0.8rem;
       width: $col-landscape * 0.85;
       height: $col-landscape * 0.85;
-      margin-right: $col-landscape * 0.45;
     }
   }
 
   .section {
     &--home {
-      height: $col-landscape * 11.7;
+      height: $col-landscape * 15;
     }
   }
 
-  // Inicio
-  .shapes {
-    &__titulo {
-      font-size: 1.55rem;
+    // Inicio
+    .shapes {
+      &__titulo {
+        font-size: 1.55rem;
+        line-height:1.7rem;
+      }
     }
-  }
 
+    
   .services {
     margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
   }
 
   .categories {
+    &__items {
+      margin-bottom: $col-landscape;
+    }
+
     &__icon {
       font-size: 3.5rem;
       padding: $col-landscape * 0.13;
@@ -1615,38 +1622,11 @@ button {
       }
     }
   }
+}
 
-  .blog {
-    > div {
-      padding-bottom: $col-landscape;
-    }
 
-    .description {
-      display: block;
-    }
-  }
-
-  .contacto {
-    &__mapa {
-      height: 43vh;
-    }
-  }
-}*/
-
-/*------------------------------------ Medium Desktop (1440px) ---------------------------------
+/*------------------------------------ Medium Desktop (1440px) ---------------------------------*/
 @include responsive(90em) {
-  h4 {
-    font-size: 1rem;
-  }
-
-  .rrss {
-    &__link {
-      &--triangle {
-        padding-bottom: 0.45em;
-      }
-    }
-  }
-
   .nav {
     &--page {
       .nav__link--icon {
@@ -1671,32 +1651,7 @@ button {
       }
     }
   }
-
-  .section {
-    &--home {
-      height: $col-landscape * 14.5;
-    }
-  }
-
-  // Inicio
-  .shapes {
-    &__titulo {
-      letter-spacing: 0.1rem;
-    }
-  }
-
-  .categories {
-    &__items {
-      margin-bottom: $col-landscape;
-    }
-  }
-
-  .contacto {
-    &__mapa {
-      height: 40vh;
-    }
-  }
-}*/
+}
 
 /*--------------------------------- Medium Large Desktop (1600px) ------------------------------
 @include responsive(100em) {
