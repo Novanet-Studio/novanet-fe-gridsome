@@ -1,8 +1,8 @@
 body {
   font-family: 'Red Hat Display', 'Trebuchet MS', sans-serif;
   font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   color: $dark-grey;
 }
 
@@ -50,7 +50,6 @@ h2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   margin: 0;
-
   &.green {
     @include heading-before-content($image: 'novanet-triangle.svg');
   }
@@ -159,12 +158,14 @@ button {
   &__wrapper {
     align-self: center;
   }
+
   &__container {
     position: relative;
     width: auto;
     margin: 0px auto;
     transition: all 0.3s ease;
   }
+
   &__converter {
     margin-top: $col-landscape * 0.3;
     padding: 0;
@@ -172,6 +173,7 @@ button {
       width: 50em;
     }
   }
+
   &__boton {
     width: 2em;
     height: 2em;
@@ -180,7 +182,7 @@ button {
     right: $col-landscape * 0.5;
     border-radius: 50%;
     border: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
     background-color: $magenta;
     cursor: pointer;
@@ -212,10 +214,14 @@ button {
   }
 }
 
+.header,
+.main,
+.footer {
+  grid-column: 1 / 41;
+}
+
 .header {
   @include grid-structure($columns: 6, $col: $col-landscape);
-  grid-column: 1 / 41;
-
   &--green {
     background-color: $green;
     color: $dark-grey;
@@ -267,7 +273,6 @@ button {
     color: inherit;
     padding-right: 0;
     padding-left: 0;
-
     &:visited {
       color: inherit;
     }
@@ -298,19 +303,21 @@ button {
         margin: 0 0 0 ($col-landscape * 1.52);
         color: inherit;
       }
+      &-pago {
+        margin: 0 0 0 ($col-landscape * 1.6);
+        color: inherit;
+      }
     }
   }
 }
 
 .main {
   display: grid;
-  grid-column: 1 / 41;
   padding: $col-landscape $col-landscape 0;
   height: min-content;
 }
 
 .footer {
-  grid-column: 1 / 41;
   align-self: end;
 }
 
@@ -318,7 +325,6 @@ button {
   display: flex;
   justify-content: space-between;
   width: fit-content;
-
   &__link {
     display: flex;
     flex-direction: column;
@@ -329,7 +335,6 @@ button {
     height: $col-landscape * 0.85;
     box-sizing: border-box;
     margin-right: $col-landscape * 0.45;
-
     &--triangle {
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
       background: $green;
@@ -369,7 +374,6 @@ button {
 // Inicio
 .shapes {
   @include grid-structure($columns: 3, $col: $col-landscape);
-
   &__item {
     display: flex;
     flex-direction: column;
@@ -400,7 +404,6 @@ button {
 .services {
   @include grid-structure($columns: 3, $col: $col-landscape);
   margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
-
   &__items {
     &:nth-child(1) {
       grid-column: 1 / 2;
@@ -414,11 +417,13 @@ button {
       grid-column: 3 / 4;
     }
   }
+
   &__icon {
     margin-bottom: -$col-landscape;
     margin-left: -$col-landscape * 0.3;
     font-size: 5rem;
   }
+
   &__description {
     p {
       font-size: 1rem;
@@ -430,11 +435,9 @@ button {
 
 .categories {
   @include grid-structure($columns: 3, $col: $col-landscape, $padding: 1);
-
   &__items {
     display: flex;
     margin-bottom: $col-landscape * 0.5;
-
     &:nth-child(1) {
       grid-column: 1 / 2;
     }
@@ -450,6 +453,7 @@ button {
       grid-column: 2 / 3;
     }
   }
+
   &__icon {
     display: flex;
     font-size: 3.5rem;
@@ -462,6 +466,10 @@ button {
     }
   }
   @include subheader();
+
+  &__internal {
+    margin-right: -$col-landscape;
+  }
 }
 
 .card {
@@ -476,7 +484,6 @@ button {
 
 .project {
   @include grid-structure($columns: 3, $col: $col-landscape, $padding: 0);
-
   &__image {
     width: 95%;
     grid-column: 1 / 2;
@@ -507,8 +514,7 @@ button {
 
 .blog {
   @include grid-structure($columns: 4, $col: $col-landscape, $padding: 1);
-  margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
-
+  margin: ($col-landscape * 0.2) (-$col-landscape) ($col-landscape * 0.1) 0;
   &__items {
     &:nth-child(odd) {
       grid-column: 1 / 2;
@@ -529,7 +535,6 @@ button {
 
 .article {
   @include grid-structure($columns: 3, $col: $col-landscape, $padding: 0);
-
   &__image-share {
     grid-column: 1 / 2;
   }
@@ -546,7 +551,6 @@ button {
 .contacto {
   @include grid-structure($columns: 4, $col: $col-landscape, $padding: 1);
   margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
-
   &__items {
     &:nth-child(odd) {
       grid-column: 1 / 3;
@@ -583,6 +587,20 @@ button {
     width: 25%;
     color: $white;
     background-color: $blue;
+  }
+}
+
+.pago {
+  @include grid-structure($columns: 6, $col: $col-landscape, $padding: 0);
+  &__app {
+    display: flex;
+    justify-content: center;
+    margin-right: $col-landscape;
+    background-color: $light-grey;
+  }
+  &__logos {
+    width: 10em;
+    padding: 1em;
   }
 }
 
@@ -630,9 +648,8 @@ button {
   // Estilos modal
   .modal {
     &__converter {
-      margin-top: 0;
       img {
-        width: 28em;
+        width: 30em;
       }
     }
     &__boton {
@@ -643,7 +660,6 @@ button {
   }
 
   .share {
-    margin-top: $col-portrait * 0.3;
     & > * {
       margin-right: $col-portrait * 0.4;
     }
@@ -657,9 +673,10 @@ button {
     }
   }
 
-  .header {
+  .header,
+  .main,
+  .footer {
     grid-column: 1 / 21;
-    height: auto;
   }
 
   .nav {
@@ -669,7 +686,6 @@ button {
     }
 
     &--page {
-      padding: ($col-portrait * 0.2) 0 ($col-portrait * 0.4);
       align-items: start;
     }
 
@@ -678,9 +694,12 @@ button {
         width: $col-portrait * 5.5;
       }
       &--title {
-        margin: 0 0 0 ($col-portrait * 3.3);
+        margin: 0 0 0 ($col-portrait * 3.2);
         &-contacto {
-          margin: 0 0 0 ($col-portrait * 2.8);
+          margin: 0 0 0 ($col-portrait * 2.7);
+        }
+        &-pago {
+          margin: 0 0 0 ($col-portrait * 3.4);
         }
       }
       &--view {
@@ -691,7 +710,6 @@ button {
 
   .container {
     @include grid-structure($columns: 20, $col: $col-portrait);
-
     .header,
     .footer {
       padding: $col-portrait;
@@ -699,12 +717,7 @@ button {
   }
 
   .main {
-    grid-column: 1 / 21;
     padding: $col-portrait $col-portrait 0;
-  }
-
-  .footer {
-    grid-column: 1 / 21;
   }
 
   .rrss {
@@ -713,16 +726,11 @@ button {
       width: $col-portrait * 1.3;
       height: $col-portrait * 1.3;
       margin-right: $col-portrait;
-
-      &--triangle {
-        padding-bottom: 0.3em;
-      }
     }
   }
 
   .section {
     margin-bottom: $col-portrait * 0.9;
-
     &--home {
       height: $col-portrait * 27.8;
     }
@@ -740,16 +748,14 @@ button {
 
     &__titulo {
       margin: ($col-portrait * 1.1) 0 0;
-      font-size: 1.05rem;
-      line-height: 1.35rem;
-      letter-spacing: 0;
+      font-size: 0.97rem;
+      line-height: 1.15rem;
     }
   }
 
   .services {
     @include grid-structure($columns: 1, $col: $col-portrait);
     margin: ($col-portrait * 0.4) 0 ($col-portrait * 0.1) 0;
-
     &__items {
       &:nth-child(1),
       &:nth-child(2),
@@ -764,6 +770,7 @@ button {
       margin-left: -$col-portrait * 0.5;
       font-size: 4rem;
     }
+
     &__description {
       p {
         font-size: 0.875rem;
@@ -774,7 +781,6 @@ button {
 
   .categories {
     @include grid-structure($columns: 1, $col: $col-portrait);
-
     &__items {
       margin-bottom: $col-portrait;
       &:nth-child(2),
@@ -798,6 +804,7 @@ button {
 
     &__internal {
       @include grid-structure($columns: 2, $col: $col-portrait);
+      margin-right: 0;
       > div {
         &:nth-child(odd) {
           padding-right: $col-portrait * 0.95;
@@ -812,7 +819,6 @@ button {
 
   .project {
     @include grid-structure($columns: 1, $col: $col-portrait, $padding: 0);
-
     &__image {
       width: 100%;
     }
@@ -834,11 +840,7 @@ button {
 
   .blog {
     @include grid-structure($columns: 2, $col: $col-portrait);
-
-    .description {
-      display: none;
-    }
-
+    margin: 0;
     > div {
       padding-bottom: $col-portrait * 1.3;
       &:nth-child(odd) {
@@ -849,14 +851,17 @@ button {
         padding-right: 0;
       }
     }
+
+    .description {
+      display: none;
+    }
   }
 
   .article {
     @include grid-structure($columns: 1, $col: $col-portrait, $padding: 0);
-
     &__info {
-      grid-column: 1 / 2;
       margin-top: $col-portrait * 0.3;
+      grid-column: 1 / 2;
     }
 
     &__image {
@@ -866,7 +871,6 @@ button {
 
   .contacto {
     @include grid-structure($columns: 1, $col: $col-portrait, $padding: 0);
-
     &__items {
       &:nth-child(odd),
       &:nth-child(even) {
@@ -888,14 +892,35 @@ button {
       font-size: 0.85rem;
       padding: ($col-portrait * 0.3) 0;
     }
+
     input[type='submit'] {
-      margin-top: $col-portrait * 0.7;
+      margin-top: $col-portrait * 0.5;
+    }
+  }
+
+  .pago {
+    @include grid-structure($columns: 2, $col: $col-portrait, $padding: 0);
+    margin-top: $col-portrait * 0.5;
+    &__app {
+      margin-bottom: $col-portrait * 2;
+      &:nth-child(odd) {
+        margin-right: $col-portrait;
+      }
+      &:nth-child(even) {
+        margin-right: 0;
+        margin-left: $col-portrait;
+      }
     }
   }
 }
 
 /*----------------------------------- Tablet Portrait (768px) ----------------------------------*/
 @include responsive($size: 48em, $orientation: 'portrait') {
+  body {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
   p {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -934,11 +959,11 @@ button {
   .modal {
     &__converter {
       img {
-        width: 65em;
+        width: 40em;
       }
     }
     &__boton {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 
@@ -964,7 +989,9 @@ button {
     }
   }
 
-  .header {
+  .header,
+  .main,
+  .footer {
     grid-column: 1 / 25;
   }
 
@@ -976,7 +1003,6 @@ button {
 
     // Navegación interna
     &--page {
-      padding: 0;
       align-items: center;
       .nav__link {
         &--icon {
@@ -1012,17 +1038,15 @@ button {
         &-contacto {
           margin: 0 0 0 ($col-portrait-tablet * 1.05);
         }
+        &-pago {
+          margin: 0 0 0 ($col-portrait-tablet * 1.95);
+        }
       }
     }
   }
 
   .main {
-    grid-column: 1 / 25;
     padding: $col-portrait-tablet $col-portrait-tablet 0;
-  }
-
-  .footer {
-    grid-column: 1 / 25;
   }
 
   .rrss {
@@ -1061,7 +1085,6 @@ button {
 
   .services {
     @include grid-structure($columns: 2, $col: $col-portrait-tablet);
-
     &__items {
       &:nth-child(even) {
         grid-column: 2 / 3;
@@ -1089,7 +1112,6 @@ button {
 
   .categories {
     @include grid-structure($columns: 2, $col: $col-portrait-tablet);
-
     &__items {
       &:nth-child(2),
       &:nth-child(4) {
@@ -1101,32 +1123,17 @@ button {
     }
 
     &__icon {
-      font-size: 5rem;
+      font-size: 4.8rem;
     }
 
     &__internal {
       @include grid-structure($columns: 3, $col: $col-portrait-tablet);
+      margin-right: -$col-portrait-tablet;
       > div {
         &:nth-child(odd),
         &:nth-child(even) {
+          padding-right: ($col-portrait-tablet);
           padding-left: 0;
-          padding-right: 0;
-        }
-        &:nth-child(1),
-        &:nth-child(4),
-        &:nth-child(7) {
-          padding-right: $col-landscape * 0.75;
-        }
-        &:nth-child(2),
-        &:nth-child(5),
-        &:nth-child(8) {
-          padding-left: $col-landscape * 0.35;
-          padding-right: $col-landscape * 0.35;
-        }
-        &:nth-child(3),
-        &:nth-child(6),
-        &:nth-child(9) {
-          padding-left: $col-landscape * 0.75;
         }
       }
     }
@@ -1154,29 +1161,13 @@ button {
 
   .blog {
     @include grid-structure($columns: 3, $col: $col-portrait-tablet);
-
+    margin-right: -$col-portrait-tablet;
     > div {
-      padding-bottom: $col-portrait-tablet;
+      padding-bottom: $col-portrait-tablet * 0.7;
       &:nth-child(odd),
       &:nth-child(even) {
         padding-left: 0;
-        padding-right: 0;
-      }
-      &:nth-child(1),
-      &:nth-child(4),
-      &:nth-child(7) {
-        padding-right: $col-portrait-tablet * 0.7;
-      }
-      &:nth-child(2),
-      &:nth-child(5),
-      &:nth-child(8) {
-        padding-left: $col-portrait-tablet * 0.35;
-        padding-right: $col-portrait-tablet * 0.35;
-      }
-      &:nth-child(3),
-      &:nth-child(6),
-      &:nth-child(9) {
-        padding-left: $col-portrait-tablet * 0.7;
+        padding-right: $col-portrait-tablet;
       }
     }
   }
@@ -1200,10 +1191,33 @@ button {
       font-size: 1.05rem;
     }
   }
+
+  .pago {
+    @include grid-structure(
+      $columns: 4,
+      $col: $col-portrait-tablet,
+      $padding: 0
+    );
+    margin-top: 0;
+    margin-right: -$col-portrait-tablet;
+
+    &__app {
+      &:nth-child(even),
+      &:nth-child(odd) {
+        margin-right: $col-portrait-tablet;
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 /*----------------------------------- Mobile Landscape (568px) ---------------------------------*/
 @include responsive($size: 35.5em, $orientation: 'landscape') {
+  body {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
   p {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -1252,7 +1266,6 @@ button {
     }
 
     & > a {
-      margin-top: $col-landscape * 0.05;
       font-size: 1rem;
     }
 
@@ -1262,10 +1275,6 @@ button {
   }
 
   .nav {
-    &--page {
-      padding: ($col-landscape * 0.2) 0 ($col-landscape * 0.4);
-    }
-
     &__link {
       &--logo {
         width: $col-landscape * 7;
@@ -1275,6 +1284,9 @@ button {
         margin: 0 0 0 ($col-landscape * 3.4);
         &-contacto {
           margin: 0 0 0 ($col-landscape * 3.1);
+        }
+        &-pago {
+          margin: 0 0 0 ($col-landscape * 3.8);
         }
       }
 
@@ -1330,7 +1342,6 @@ button {
       p {
         font-size: 0.9rem;
         line-height: 1.275rem;
-        padding-right: $col-landscape * 0.2;
       }
     }
   }
@@ -1346,30 +1357,16 @@ button {
 
     &__internal {
       @include grid-structure($columns: 3, $col: $col-landscape);
-      > div {
-        &:nth-child(odd),
-        &:nth-child(even) {
-          padding-left: 0;
-          padding-right: 0;
-        }
-        &:nth-child(1),
-        &:nth-child(4),
-        &:nth-child(7) {
-          padding-right: $col-landscape * 0.75;
-        }
-        &:nth-child(2),
-        &:nth-child(5),
-        &:nth-child(8) {
-          padding-left: $col-landscape * 0.35;
-          padding-right: $col-landscape * 0.35;
-        }
-        &:nth-child(3),
-        &:nth-child(6),
-        &:nth-child(9) {
-          padding-left: $col-landscape * 0.75;
-        }
+    margin-right: -$col-landscape;
+    > div {
+      margin-bottom: $col-landscape * 0.5;
+      &:nth-child(odd),
+      &:nth-child(even) {
+        padding-right: ($col-landscape);
+        padding-left: 0;
       }
     }
+  }
   }
 
   .project {
@@ -1381,10 +1378,7 @@ button {
 
   .blog {
     @include grid-structure($columns: 2, $col: $col-landscape);
-    .description {
-      display: none;
-    }
-
+    margin-right: 0;
     > div {
       padding-bottom: $col-landscape * 1.3;
       &:nth-child(odd) {
@@ -1394,6 +1388,10 @@ button {
         padding-left: $col-landscape * 0.95;
         padding-right: 0;
       }
+    }
+    
+    .description {
+      display: none;
     }
   }
 
@@ -1421,6 +1419,11 @@ button {
       height: 70vh;
     }
   }
+
+  .pago {
+    @include grid-structure($columns: 4, $col: $col-landscape, $padding: 0);
+    margin-right: -$col-landscape;
+  }
 }
 
 /*----------------------------------- Tablet Landscape (1024px) --------------------------------*/
@@ -1431,22 +1434,15 @@ button {
         width: 50em;
       }
     }
-    &__boton {
-      font-size: 1.2rem;
-    }
   }
 
   .share {
     & > * {
-      margin-right: $col-landscape * 0.2;
+      margin-right: $col-landscape * 0.3;
     }
   }
 
   .nav {
-    &--page {
-      padding: 0;
-    }
-
     &__link {
       display: flex;
       &--logo {
@@ -1463,6 +1459,9 @@ button {
         margin: 0 0 0 ($col-landscape * 2.2);
         &-contacto {
           margin: 0 0 0 ($col-landscape * 2);
+        }
+        &-pago {
+          margin: 0 0 0 ($col-landscape * 2.4);
         }
       }
     }
@@ -1482,38 +1481,27 @@ button {
     }
   }
 
-  // Inicio
-  .shapes {
-    &__titulo {
-      margin: ($col-landscape * 1.3) 0 0;
-    }
-  }
-
   .services {
     @include grid-structure($columns: 3, $col: $col-landscape, $padding: 1);
-
+    margin: 0;
     &__items {
       &:nth-child(3) {
         grid-column: 3 / 4;
       }
     }
+
     &__icon {
-      margin-bottom: -$col-landscape;
+      margin-bottom: -$col-landscape * 1.3;
       margin-left: -$col-landscape * 0.4;
     }
   }
 
   .categories {
     @include grid-structure($columns: 3, $col: $col-landscape, $padding: 1);
-
-    &__icon {
-      font-size: 4rem;
-    }
   }
 
   .project {
     @include grid-structure($columns: 3, $col: $col-landscape, $padding: 0);
-
     &__info {
       grid-column: 2 / 4;
     }
@@ -1521,16 +1509,10 @@ button {
 
   .blog {
     @include grid-structure($columns: 4, $col: $col-landscape, $padding: 1);
-
+    margin-right: -$col-landscape;
     > div {
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6),
-      &:nth-child(7),
-      &:nth-child(8) {
+      &:nth-child(odd),
+      &:nth-child(even) {
         padding-left: 0;
         padding-right: $col-landscape;
       }
@@ -1539,7 +1521,6 @@ button {
 
   .article {
     @include grid-structure($columns: 3, $col: $col-landscape, $padding: 0);
-
     &__info {
       grid-column: 2 / 4;
     }
@@ -1547,7 +1528,6 @@ button {
 
   .contacto {
     @include grid-structure($columns: 4, $col: $col-landscape, $padding: 1);
-
     &__items {
       &:nth-child(odd) {
         grid-column: 1 / 3;
@@ -1563,6 +1543,11 @@ button {
       height: 40vh;
     }
   }
+
+  .pago {
+    @include grid-structure($columns: 6, $col: $col-landscape, $padding: 0);
+    margin-right: 0;
+  }
 }
 
 /*------------------------------------- Small Desktop (1280px) ----------------------------------*/
@@ -1574,9 +1559,12 @@ button {
       }
 
       &--title {
-        margin: 0 0 0 ($col-landscape * 1.8);
+        margin: 0 0 0 ($col-landscape * 1.75);
         &-contacto {
-          margin: 0 0 0 ($col-landscape * 1.6);
+          margin: 0 0 0 ($col-landscape * 1.55);
+        }
+        &-pago {
+          margin: 0 0 0 ($col-landscape * 1.85);
         }
       }
     }
@@ -1596,17 +1584,13 @@ button {
     }
   }
 
-    // Inicio
-    .shapes {
-      &__titulo {
-        font-size: 1.55rem;
-        line-height:1.7rem;
-      }
+  // Inicio
+  .shapes {
+    &__titulo {
+      font-size: 1.55rem;
+      line-height: 1.7rem;
+      margin: ($col-landscape * 1.3) 0 0;
     }
-
-    
-  .services {
-    margin: ($col-landscape * 0.2) 0 ($col-landscape * 0.1) 0;
   }
 
   .categories {
@@ -1615,15 +1599,19 @@ button {
     }
 
     &__icon {
-      font-size: 3.5rem;
       padding: $col-landscape * 0.13;
       &::before {
-        margin-top: $col-landscape * 0.52;
+        margin-top: $col-landscape * 0.45;
       }
     }
   }
-}
 
+  .blog {
+    .description {
+      display: block;
+    }
+  }
+}
 
 /*------------------------------------ Medium Desktop (1440px) ---------------------------------*/
 @include responsive(90em) {
@@ -1644,16 +1632,25 @@ button {
       }
 
       &--title {
-        margin: 0 0 0 ($col-landscape * 1.6);
+        margin: 0 0 0 ($col-landscape * 1.55);
         &-contacto {
           margin: 0 0 0 ($col-landscape * 1.4);
+        }
+        &-pago {
+          margin: 0 0 0 ($col-landscape * 1.65);
         }
       }
     }
   }
+
+  .services {
+    &__icon {
+      margin-bottom: -$col-landscape;
+    }
+  }
 }
 
-/*--------------------------------- Medium Large Desktop (1600px) ------------------------------
+/*--------------------------------- Medium Large Desktop (1600px) ------------------------------*/
 @include responsive(100em) {
   body {
     font-size: 1.375rem;
@@ -1698,7 +1695,7 @@ button {
     &__link {
       &--icon {
         &::before {
-          font-size: 4.6rem;
+          font-size: 4.5rem;
         }
       }
     }
@@ -1706,8 +1703,7 @@ button {
 
   .shapes {
     &__titulo {
-      font-size: 1.75rem;
-      letter-spacing: 0.07rem;
+      font-size: 1.7rem;
     }
   }
 
@@ -1719,29 +1715,24 @@ button {
       }
     }
   }
+}
 
-  .categories {
-    &__icon {
-      &::before {
-        margin-top: $col-landscape * 0.4;
-      }
-    }
-  }
-}*/
-
-/*------------------------------------- Large Desktop (1920px) --------------------------------
+/*------------------------------------- Large Desktop (1920px) --------------------------------*/
 @include responsive(120em) {
   .nav {
     &__link {
       &--icon {
         &::before {
-          top: -0.01em;
+          top: 0.015rem;
         }
       }
       &--title {
         margin: 0 0 0 ($col-landscape * 1.4);
         &-contacto {
           margin: 0 0 0 ($col-landscape * 1.25);
+        }
+        &-pago {
+          margin: 0 0 0 ($col-landscape * 1.5);
         }
       }
     }
@@ -1757,16 +1748,22 @@ button {
   .services {
     &__icon {
       margin-left: -$col-landscape * 0.2;
-      font-size: 5.5rem;
     }
   }
 
   .categories {
     &__icon {
-      font-size: 5rem;
-      padding: $col-landscape * 0.165;
-      &::before {
-        margin-top: $col-landscape * 0.5;
+      font-size: 5.2rem;
+    }
+
+    &__internal {
+      @include grid-structure($columns: 4, $col: $col-landscape);
+      > div {
+        &:nth-child(odd),
+        &:nth-child(even) {
+          padding-left: 0;
+          padding-right: $col-landscape;
+        }
       }
     }
   }
@@ -1783,22 +1780,19 @@ button {
     textarea {
       font-size: 1.25rem;
     }
-    input[type='submit'] {
-      width: 20%;
-    }
   }
-}*/
+}
 
-/*----------------------------------- High Large Desktop (3840px) -------------------------------
+/*----------------------------------- High Large Desktop (3840px) -------------------------------*/
 @include responsive(240em) {
   body {
-    font-size: 3.125rem;
-    line-height: 3.5rem;
+    font-size: 3.25rem;
+    line-height: 3.7rem;
   }
 
   p {
     font-size: 3.25rem;
-    line-height: 3.5rem;
+    line-height: 3.7rem;
   }
 
   time {
@@ -1826,12 +1820,7 @@ button {
   }
 
   .share {
-    & > * {
-      margin-right: $col-landscape * 0.2;
-    }
-
     & > a {
-      margin-top: -$col-landscape * 0.05;
       font-size: 2.4rem;
     }
 
@@ -1850,8 +1839,6 @@ button {
     &__boton {
       width: 2.5em;
       height: 2.5em;
-      top: $col-landscape * 0.55;
-      right: $col-landscape * 0.55;
       font-size: 2rem;
     }
   }
@@ -1866,21 +1853,9 @@ button {
     }
 
     &__link {
-      &--logo {
-        width: $col-landscape * 5;
-      }
-
       &--icon {
         &::before {
-          font-size: 12rem;
-          top: -0.04em;
-        }
-      }
-
-      &--title {
-        margin: 0 0 0 ($col-landscape * 1.8);
-        &-contacto {
-          margin: 0 0 0 ($col-landscape * 1.6);
+          font-size: 9.8rem;
         }
       }
     }
@@ -1889,33 +1864,24 @@ button {
   .rrss {
     &__link {
       font-size: 2rem;
-      width: $col-landscape * 0.85;
-      height: $col-landscape * 0.85;
-      margin-right: $col-landscape * 0.65;
-
-      &--triangle {
-        padding-bottom: 0.4em;
-      }
     }
   }
 
   // Inicio
   .shapes {
     &__titulo {
-      font-size: 4.5rem;
-      letter-spacing: 0.1rem;
+      font-size: 4.4rem;
     }
   }
 
   .services {
     &__icon {
       margin-bottom: -$col-landscape * 0.8;
-      margin-left: -$col-landscape * 0.2;
-      font-size: 9rem;
+      font-size: 10rem;
     }
     &__description {
       p {
-        font-size: 3rem;
+        font-size: 2.7rem;
         line-height: 3.375rem;
       }
     }
@@ -1923,30 +1889,14 @@ button {
 
   .categories {
     &__icon {
-      font-size: 10rem;
-      padding: $col-landscape * 0.17;
-
-      &::before {
-        margin-top: $col-landscape * 0.55;
-      }
-    }
-
-    &__internal {
-      @include grid-structure($columns: 4, $col: $col-portrait);
-      > div {
-        &:nth-child(odd),
-        &:nth-child(even) {
-          padding-left: 0;
-          padding-right: $col-landscape;
-        }
-      }
+      font-size: 10.5rem;
     }
   }
 
   .blog {
     .description {
       font-size: 2.5rem;
-      line-height: 2.75rem;
+      line-height: 2.95rem;
     }
   }
 
@@ -1956,9 +1906,7 @@ button {
       font-size: 2.5rem;
     }
     input[type='submit'] {
-      padding: ($col-landscape * 0.2) 0;
       width: 17%;
     }
   }
 }
-*/
