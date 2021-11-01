@@ -1485,7 +1485,7 @@ button {
 
   .section {
     &--home {
-      height: $col-landscape * 22.5;
+      height: $col-landscape * 20;
     }
   }
 
@@ -1587,6 +1587,13 @@ button {
   }
 
   // Inicio
+
+  .section {
+
+    &--home {
+      height: $col-landscape * 13;
+    }
+  } 
   .shapes {
     &__titulo {
       font-size: 1.55rem;
