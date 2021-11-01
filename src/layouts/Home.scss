@@ -366,7 +366,7 @@ button {
 
   &--home {
     display: grid;
-    height: $col-landscape * 14;
+    height: $col-landscape * 13;
     align-content: center;
   }
 }
@@ -604,8 +604,8 @@ button {
   }
 }
 
-/*----------------------------------- Mobile Portrait (320px) ---------------------------------*/
-@include responsive($size: 20em, $orientation: 'portrait') {
+/*----------------------------------- Mobile Portrait ---------------------------------*/
+@include responsive-max($max-width: 26em, $orientation: 'portrait') {
   body {
     font-size: 0.875rem;
     line-height: 1.125rem;
@@ -914,8 +914,227 @@ button {
   }
 }
 
-/*----------------------------------- Tablet Portrait (768px) ----------------------------------*/
-@include responsive($size: 48em, $orientation: 'portrait') {
+/*----------------------------------- Mobile Landscape 736px ---------------------------------*/
+@include responsive-max($max-width: 46em, $orientation: 'landscape') {
+  body {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  ul {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+
+  h1 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+
+  // Estilos modal
+  .modal {
+    &__converter {
+      img {
+        width: 27em;
+      }
+    }
+    &__boton {
+      font-size: 1rem;
+    }
+  }
+
+  .share {
+    & > * {
+      margin-right: $col-landscape * 0.5;
+    }
+
+    & > a {
+      font-size: 1rem;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+    }
+  }
+
+  .nav {
+    &__link {
+      &--logo {
+        width: $col-landscape * 7;
+      }
+
+      &--title {
+        margin: 0 0 0 ($col-landscape * 3.4);
+        &-contacto {
+          margin: 0 0 0 ($col-landscape * 3.1);
+        }
+        &-pago {
+          margin: 0 0 0 ($col-landscape * 3.8);
+        }
+      }
+
+      &--view {
+        display: none;
+      }
+    }
+  }
+
+  .rrss {
+    &__link {
+      font-size: 0.65rem;
+      width: $col-landscape * 1.5;
+      height: $col-landscape * 1.5;
+      margin-right: $col-landscape;
+    }
+  }
+
+  .section {
+    &--home {
+      height: $col-landscape * 14;
+    }
+  }
+
+  // Inicio
+  .shapes {
+    &__titulo {
+      margin: ($col-landscape) ($col-landscape * 1.7) 0;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .services {
+    @include grid-structure($columns: 2, $col: $col-landscape);
+    margin: ($col-landscape) 0;
+    &__items {
+      &:nth-child(even) {
+        grid-column: 2 / 3;
+      }
+
+      &:nth-child(3) {
+        grid-column: 1 / 2;
+      }
+    }
+
+    &__icon {
+      margin-bottom: -$col-landscape * 1.6;
+      margin-left: -$col-landscape * 0.7;
+    }
+
+    &__description {
+      p {
+        font-size: 0.9rem;
+        line-height: 1.275rem;
+      }
+    }
+  }
+
+  .categories {
+    @include grid-structure($columns: 2, $col: $col-landscape);
+    &__icon {
+      padding: $col-landscape * 0.28;
+      &::before {
+        margin-top: $col-landscape * 0.7;
+      }
+    }
+
+    &__internal {
+      @include grid-structure($columns: 3, $col: $col-landscape);
+      margin-right: -$col-landscape;
+      > div {
+        margin-bottom: $col-landscape * 0.5;
+        &:nth-child(odd),
+        &:nth-child(even) {
+          padding-right: ($col-landscape);
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .project {
+    @include grid-structure($columns: 2, $col: $col-landscape);
+    &__info {
+      grid-column: 1 / 3;
+    }
+  }
+
+  .blog {
+    @include grid-structure($columns: 2, $col: $col-landscape);
+    margin-right: 0;
+    > div {
+      padding-bottom: $col-landscape * 1.3;
+      &:nth-child(odd) {
+        padding-right: $col-landscape * 0.95;
+      }
+      &:nth-child(even) {
+        padding-left: $col-landscape * 0.95;
+        padding-right: 0;
+      }
+    }
+
+    .description {
+      display: none;
+    }
+  }
+
+  .article {
+    @include grid-structure($columns: 2, $col: $col-landscape, $padding: 0);
+    &__info {
+      grid-column: 1 / 3;
+    }
+  }
+
+  .contacto {
+    @include grid-structure($columns: 1, $col: $col-landscape, $padding: 0);
+    &__items {
+      &:nth-child(odd),
+      &:nth-child(even) {
+        grid-column: 1 / 2;
+      }
+
+      &:nth-child(even) {
+        margin-top: $col-landscape;
+      }
+    }
+
+    &__mapa {
+      height: 70vh;
+    }
+  }
+
+  .pago {
+    @include grid-structure($columns: 4, $col: $col-landscape, $padding: 0);
+    margin-right: -$col-landscape;
+  }
+}
+
+/*----------------------------------- Tablet Portrait 768px -1024px ----------------------------------*/
+@include responsive-min-max(
+  $min-width: 48em,
+  $max-width: 64em,
+  $orientation: 'portrait'
+) {
   body {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -1211,223 +1430,12 @@ button {
   }
 }
 
-/*----------------------------------- Mobile Landscape (568px) ---------------------------------*/
-@include responsive($size: 35.5em, $orientation: 'landscape') {
-  body {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-
-  p {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-
-  ul {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-
-  h1 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-
-  h4 {
-    font-size: 1rem;
-    line-height: 1.125rem;
-  }
-
-  // Estilos modal
-  .modal {
-    &__converter {
-      img {
-        width: 27em;
-      }
-    }
-    &__boton {
-      font-size: 1rem;
-    }
-  }
-
-  .share {
-    & > * {
-      margin-right: $col-landscape * 0.5;
-    }
-
-    & > a {
-      font-size: 1rem;
-    }
-
-    &__text {
-      font-size: 0.9rem;
-    }
-  }
-
-  .nav {
-    &__link {
-      &--logo {
-        width: $col-landscape * 7;
-      }
-
-      &--title {
-        margin: 0 0 0 ($col-landscape * 3.4);
-        &-contacto {
-          margin: 0 0 0 ($col-landscape * 3.1);
-        }
-        &-pago {
-          margin: 0 0 0 ($col-landscape * 3.8);
-        }
-      }
-
-      &--view {
-        display: none;
-      }
-    }
-  }
-
-  .rrss {
-    &__link {
-      font-size: 0.65rem;
-      width: $col-landscape * 1.5;
-      height: $col-landscape * 1.5;
-      margin-right: $col-landscape;
-    }
-  }
-
-  .section {
-    &--home {
-      height: $col-landscape * 14;
-    }
-  }
-
-  // Inicio
-  .shapes {
-    &__titulo {
-      margin: ($col-landscape) ($col-landscape * 1.7) 0;
-      font-size: 1.2rem;
-      line-height: 1.5rem;
-    }
-  }
-
-  .services {
-    @include grid-structure($columns: 2, $col: $col-landscape);
-    margin: ($col-landscape) 0;
-    &__items {
-      &:nth-child(even) {
-        grid-column: 2 / 3;
-      }
-
-      &:nth-child(3) {
-        grid-column: 1 / 2;
-      }
-    }
-
-    &__icon {
-      margin-bottom: -$col-landscape * 1.6;
-      margin-left: -$col-landscape * 0.7;
-    }
-
-    &__description {
-      p {
-        font-size: 0.9rem;
-        line-height: 1.275rem;
-      }
-    }
-  }
-
-  .categories {
-    @include grid-structure($columns: 2, $col: $col-landscape);
-    &__icon {
-      padding: $col-landscape * 0.28;
-      &::before {
-        margin-top: $col-landscape * 0.7;
-      }
-    }
-
-    &__internal {
-      @include grid-structure($columns: 3, $col: $col-landscape);
-    margin-right: -$col-landscape;
-    > div {
-      margin-bottom: $col-landscape * 0.5;
-      &:nth-child(odd),
-      &:nth-child(even) {
-        padding-right: ($col-landscape);
-        padding-left: 0;
-      }
-    }
-  }
-  }
-
-  .project {
-    @include grid-structure($columns: 2, $col: $col-landscape);
-    &__info {
-      grid-column: 1 / 3;
-    }
-  }
-
-  .blog {
-    @include grid-structure($columns: 2, $col: $col-landscape);
-    margin-right: 0;
-    > div {
-      padding-bottom: $col-landscape * 1.3;
-      &:nth-child(odd) {
-        padding-right: $col-landscape * 0.95;
-      }
-      &:nth-child(even) {
-        padding-left: $col-landscape * 0.95;
-        padding-right: 0;
-      }
-    }
-    
-    .description {
-      display: none;
-    }
-  }
-
-  .article {
-    @include grid-structure($columns: 2, $col: $col-landscape, $padding: 0);
-    &__info {
-      grid-column: 1 / 3;
-    }
-  }
-
-  .contacto {
-    @include grid-structure($columns: 1, $col: $col-landscape, $padding: 0);
-    &__items {
-      &:nth-child(odd),
-      &:nth-child(even) {
-        grid-column: 1 / 2;
-      }
-
-      &:nth-child(even) {
-        margin-top: $col-landscape;
-      }
-    }
-
-    &__mapa {
-      height: 70vh;
-    }
-  }
-
-  .pago {
-    @include grid-structure($columns: 4, $col: $col-landscape, $padding: 0);
-    margin-right: -$col-landscape;
-  }
-}
-
-/*----------------------------------- Tablet Landscape (1024px) --------------------------------*/
-@include responsive($size: 64em, $orientation: 'landscape') {
+/*----------------------------------- Tablet Landscape 1024px --------------------------------*/
+@include responsive-min-max(
+  $min-width: 64em,
+  $max-width: 85.375em,
+  $orientation: 'landscape'
+) {
   .modal {
     &__converter {
       img {
@@ -1550,8 +1558,8 @@ button {
   }
 }
 
-/*------------------------------------- Small Desktop (1280px) ----------------------------------*/
-@include responsive($size: 80em) {
+/*------------------------------------- Desktop 1280px ----------------------------------*/
+@include responsive-min($min-width: 80em) {
   .nav {
     &__link {
       &--logo {
@@ -1575,12 +1583,6 @@ button {
       font-size: 0.8rem;
       width: $col-landscape * 0.85;
       height: $col-landscape * 0.85;
-    }
-  }
-
-  .section {
-    &--home {
-      height: $col-landscape * 15;
     }
   }
 
@@ -1613,8 +1615,8 @@ button {
   }
 }
 
-/*------------------------------------ Medium Desktop (1440px) ---------------------------------*/
-@include responsive(90em) {
+/*------------------------------------ Desktop 1440px ---------------------------------*/
+@include responsive-min($min-width: 90em) {
   .nav {
     &--page {
       .nav__link--icon {
@@ -1650,8 +1652,8 @@ button {
   }
 }
 
-/*--------------------------------- Medium Large Desktop (1600px) ------------------------------*/
-@include responsive(100em) {
+/*--------------------------------- Desktop 1600px ------------------------------*/
+@include responsive-min($min-width: 100em) {
   body {
     font-size: 1.375rem;
     line-height: 1.625rem;
@@ -1717,8 +1719,8 @@ button {
   }
 }
 
-/*------------------------------------- Large Desktop (1920px) --------------------------------*/
-@include responsive(120em) {
+/*------------------------------------- Desktop 1920px --------------------------------*/
+@include responsive-min($min-width: 120em) {
   .nav {
     &__link {
       &--icon {
@@ -1783,8 +1785,8 @@ button {
   }
 }
 
-/*----------------------------------- High Large Desktop (3840px) -------------------------------*/
-@include responsive(240em) {
+/*----------------------------------- 4k Screen 3840px -------------------------------*/
+@include responsive-min($min-width: 240em) {
   body {
     font-size: 3.25rem;
     line-height: 3.7rem;
