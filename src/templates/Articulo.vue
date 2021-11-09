@@ -52,6 +52,15 @@ import Share from '~/components/Share'
 import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
+  metaInfo () {
+    return {
+      meta: [
+        { key: 'title', name: 'title', content: this.$page.articulos.titulo },
+        { key: 'description', name: 'description', content: this.$page.articulos.descripcion.substring(0, 158)},
+        { key: 'image', name: 'image', content: this.$page.articulos.imagen.url},
+      ]
+    }
+  },
   components: {
     Header,
     Share,

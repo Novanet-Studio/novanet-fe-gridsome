@@ -15,9 +15,29 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  runtimeCompiler: true,
-  siteName: 'Gridsome',
+  runtimeCompiler: true,    
+  metadata: {
+    siteName: 'Novanet web app',
+    title: "Novanet",
+    titleTemplate: "%s · Estudio de diseño",
+    siteDescription: 'Estudio de diseño dedicado al diseño gráfico, al desarrollo web y al marketing online.',
+    siteUrl: process.env.DEPLOY_URL || 'https://novanet.studio',
+    author: "Novanet Studio",
+    image: "https://novanet.studio/site/img/og-thumbnail.png",
+    twitter: {
+      site: '@novanetstudio',
+      creator: '@flaex_'
+    }
+  },
+  
   plugins: [
+    'gridsome-plugin-seo',
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/privacy', '/legal']
+      }
+    },
     {
       use: '@gridsome/source-strapi',
       options: {

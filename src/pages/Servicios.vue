@@ -40,6 +40,9 @@
 
 <page-query>
 query {
+  metadata {
+    image
+  }
   servicios: allStrapiServicios {
     edges {
       node {
@@ -66,6 +69,16 @@ import Header from '~/components/HeaderPage'
 import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
+  metaInfo () {
+    return {
+      meta: [
+        { key: 'title', name: 'title', content: 'Servcios' },
+        { key: 'description', name: 'description', content: this.$page.servicios.edges[0].node.descripcion.substring(0, 168)},
+        { key: 'image', name: 'image', content: this.$page.metadata.image },
+
+      ]
+    }
+  },
   components: {
     Header,
     VueMarkdown,

@@ -91,6 +91,9 @@
 
 <page-query>
 query {
+  metadata {
+    image
+  }
   contacto: allStrapiContacto {
     edges {
       node {
@@ -115,6 +118,15 @@ import Header from '~/components/HeaderPage'
 import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
+  metaInfo() {
+    return {
+      meta: [
+        { key: 'title', name: 'title', content: 'Contacto' },
+        { key: 'description', name: 'description', content: this.$page.contacto.edges[0].node.principal.descripcion.substring(0, 168) },
+        { key: 'image', name: 'image', content: this.$page.metadata.image },
+      ],
+    }
+  },
   components: {
     Header,
     VueMarkdown,

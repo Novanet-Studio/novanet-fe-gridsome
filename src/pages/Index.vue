@@ -34,6 +34,9 @@
 <page-query>
 
 query {
+  metadata {
+    image
+  }
   inicio: allStrapiInicio {
     edges {
      node {
@@ -52,8 +55,15 @@ query {
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Hello, world!',
+  metaInfo() {
+    return {
+      meta: [
+        { key: 'title', name: 'title', content: 'Inicio' },
+        { key: 'description', name: 'description', content: this.$page.inicio.edges[0].node.principal },
+        { key: 'image', name: 'image', content: this.$page.metadata.image },
+
+      ],
+    }
   },
   computed: {
     console: () => console,

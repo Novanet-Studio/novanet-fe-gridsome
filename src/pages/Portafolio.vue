@@ -35,6 +35,9 @@
 
 <page-query>
 query {
+  metadata {
+    image
+  }
   portafolio: allStrapiPortafolio {
     edges {
       node {
@@ -59,6 +62,15 @@ query {
 import Header from '~/components/HeaderPage'
 
 export default {
+  metaInfo () {
+    return {
+      meta: [
+        { key: 'title', name: 'title', content: 'Portafolio' },
+        { key: 'description', name: 'description', content: this.$page.portafolio.edges[0].node.descripcion.substring(0, 168)},
+        { key: 'image', name: 'image', content: this.$page.metadata.image },
+      ]
+    }
+  },
   components: {
     Header,
   },

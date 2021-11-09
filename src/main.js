@@ -38,6 +38,7 @@ library.add(
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
+  head.htmlAttrs = { lang: 'es' }
   Vue.component('Home', Home)
   Vue.component('Page', Page)
   Vue.component('font-awesome', FontAwesomeIcon)

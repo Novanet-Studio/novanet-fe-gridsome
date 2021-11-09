@@ -41,6 +41,9 @@
 
 <page-query>
 query {
+  metadata {
+    image
+  }
   nosotros: allStrapiNosotros {
     edges {
       node {
@@ -62,14 +65,23 @@ query {
       }
       } 
     }
-  }
+  } 
 }
 </page-query>
 
 <script>
 import Header from '~/components/HeaderPage'
 
-export default {
+export default { 
+  metaInfo () {
+    return {
+      meta: [
+        { key: 'title', name: 'title', content: 'Nosotros' },
+        { key: 'description', name: 'description', content: this.$page.nosotros.edges[0].node.principal.descripcion.substring(0, 168)},
+        { key: 'image', name: 'image', content: this.$page.metadata.image },
+      ]
+    }
+  },
   components: {
     Header,
   },

@@ -26,7 +26,7 @@
             :key="proyecto.id"
           >
             <Card
-            class="categories__items"
+              class="categories__items"
               view="portafolio"
               :imagen="proyecto.miniatura.url"
               :coleccion="$page.categorias.slug"
@@ -41,6 +41,16 @@
 
 <page-query>
 query Categoria($id: ID!) {
+  metadata {
+    siteName
+    siteDescription
+    siteUrl
+    image
+    twitter {
+      site
+      creator
+    }
+  }
   categorias: strapiCategorias(id: $id)  {
     id
     nombre
@@ -65,6 +75,18 @@ import Header from '~/components/HeaderPage'
 import Card from '~/components/Card'
 
 export default {
+  metaInfo() {
+    return {
+      meta: [
+        { key: 'title', name: 'title', content: this.$page.categorias.nombre },
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.categorias.descripcion.substring(0, 158),
+        },
+      ],
+    }
+  },
   components: {
     Header,
     Card,
