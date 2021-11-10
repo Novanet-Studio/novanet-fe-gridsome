@@ -64,16 +64,12 @@ import Header from '~/components/HeaderPage'
 export default {
   metaInfo() {
     return {
-      meta: [
-        { key: 'title', name: 'title', content: 'Pagos' },
-        {
-          key: 'description',
-          name: 'description',
-          content:
-            'Te ofrecemos diversos métodos de pago para que puedas vender online. Estas son las plataformas que podemos integrar a tu sitio web.',
-        },
-        { key: 'image', name: 'image', content: this.$page.metadata.image },
-      ],
+      ...this.$ogp({
+        title: 'Pagos',
+        description:
+          'Te ofrecemos diversos métodos de pago para que puedas vender online. Estas son las plataformas que podemos integrar a tu sitio web.',
+        image: this.$page.metadata.image,
+      }),
     }
   },
   components: {

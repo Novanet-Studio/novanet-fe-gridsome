@@ -72,14 +72,17 @@ query {
 <script>
 import Header from '~/components/HeaderPage'
 
-export default { 
-  metaInfo () {
+export default {
+  metaInfo() {
     return {
-      meta: [
-        { key: 'title', name: 'title', content: 'Nosotros' },
-        { key: 'description', name: 'description', content: this.$page.nosotros.edges[0].node.principal.descripcion.substring(0, 168)},
-        { key: 'image', name: 'image', content: this.$page.metadata.image },
-      ]
+      ...this.$ogp({
+        title: 'Nosotros',
+        description: this.$page.nosotros.edges[0].node.principal.descripcion.substring(
+          0,
+          168,
+        ),
+        image: this.$page.metadata.image,
+      }),
     }
   },
   components: {

@@ -78,14 +78,11 @@ import Card from '~/components/Card'
 export default {
   metaInfo() {
     return {
-      meta: [
-        { key: 'title', name: 'title', content: this.$page.categorias.nombre },
-        {
-          key: 'description',
-          name: 'description',
-          content: this.$page.categorias.descripcion.substring(0, 158),
-        },
-      ],
+      ...this.$ogp({
+        title: this.$page.categorias.nombre,
+        description:this.$page.categorias.descripcion.substring(0, 158),
+        image: this.$page.articulos.imagen.url,
+      })
     }
   },
   components: {

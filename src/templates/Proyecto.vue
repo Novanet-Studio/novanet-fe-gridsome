@@ -27,7 +27,11 @@
                   "
                   class="project__button"
                 >
-                  <g-image class="project__thumbnail" :src="imagen.url" :alt="imagen.alternativeText" />
+                  <g-image
+                    class="project__thumbnail"
+                    :src="imagen.url"
+                    :alt="imagen.alternativeText"
+                  />
                 </button>
                 <Modal
                   v-if="showModal"
@@ -82,13 +86,13 @@ import Share from '~/components/Share'
 import Modal from '~/components/Modal'
 
 export default {
-  metaInfo () {
+  metaInfo() {
     return {
-      meta: [
-        { key: 'title', name: 'title', content: this.$page.proyectos.titulo },
-        { key: 'description', name: 'description', content: this.$page.proyectos.descripcion.substring(0, 168)},
-        { key: 'image', name: 'image', content: this.$page.proyectos.miniatura.url},
-      ]
+      ...this.$ogp({
+        title: this.$page.proyectos.titulo,
+        description: this.$page.proyectos.descripcion.substring(0, 168),
+        image: this.$page.proyectos.miniatura.url,
+      }),
     }
   },
   components: {

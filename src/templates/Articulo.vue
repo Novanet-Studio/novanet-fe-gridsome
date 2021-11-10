@@ -10,7 +10,11 @@
       <section class="section">
         <article class="article">
           <div class="article__image-share">
-            <g-image class="article__image" :src="$page.articulos.imagen.url" :alt="$page.articulos.imagen.alternativeText" />
+            <g-image
+              class="article__image"
+              :src="$page.articulos.imagen.url"
+              :alt="$page.articulos.imagen.alternativeText"
+            />
             <Share
               class="article__share"
               :url="currentUrl"
@@ -53,13 +57,13 @@ import Share from '~/components/Share'
 import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
-  metaInfo () {
+  metaInfo() {
     return {
-      meta: [
-        { key: 'title', name: 'title', content: this.$page.articulos.titulo },
-        { key: 'description', name: 'description', content: this.$page.articulos.descripcion.substring(0, 158)},
-        { key: 'image', name: 'image', content: this.$page.articulos.imagen.url},
-      ]
+      ...this.$ogp({
+        title: this.$page.articulos.titulo,
+        description: this.$page.articulos.descripcion.substring(0, 158),
+        image: this.$page.articulos.imagen.url,
+      }),
     }
   },
   components: {

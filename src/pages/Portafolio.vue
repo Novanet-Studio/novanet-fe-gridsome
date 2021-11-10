@@ -62,13 +62,16 @@ query {
 import Header from '~/components/HeaderPage'
 
 export default {
-  metaInfo () {
+  metaInfo() {
     return {
-      meta: [
-        { key: 'title', name: 'title', content: 'Portafolio' },
-        { key: 'description', name: 'description', content: this.$page.portafolio.edges[0].node.descripcion.substring(0, 168)},
-        { key: 'image', name: 'image', content: this.$page.metadata.image },
-      ]
+      ...this.$ogp({
+        title: 'Portafolio',
+        description: this.$page.portafolio.edges[0].node.descripcion.substring(
+          0,
+          168,
+        ),
+        image: this.$page.metadata.image,
+      }),
     }
   },
   components: {

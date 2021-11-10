@@ -32,6 +32,7 @@ module.exports = {
   
   plugins: [
     'gridsome-plugin-seo',
+    'gridsome-plugin-ogp',
     {
       use: '@gridsome/plugin-sitemap',
       options: {

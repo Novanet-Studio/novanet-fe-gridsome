@@ -60,15 +60,11 @@ query {
 export default {
   metaInfo() {
     return {
-      meta: [
-        { key: 'title', name: 'title', content: 'Inicio' },
-        {
-          key: 'description',
-          name: 'description',
-          content: this.$page.inicio.edges[0].node.principal,
-        },
-        { key: 'image', name: 'image', content: this.$page.metadata.image },
-      ],
+      ...this.$ogp({
+        title: 'Inicio',
+        description: this.$page.inicio.edges[0].node.principal,
+        image: this.$page.metadata.image,
+      }),
     }
   },
   computed: {
