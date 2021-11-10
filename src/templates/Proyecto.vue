@@ -12,6 +12,7 @@
           <g-image
             class="project__image"
             :src="$page.proyectos.miniatura.url"
+            :alt="$page.proyectos.miniatura.alternativeText"
           />
           <div class="project__info">
             <time class="date">{{ $page.proyectos.Ano }}</time>
@@ -22,13 +23,13 @@
                 <button
                   @click="
                     showModal = true
-                    content = imagen.url
+                    content = imagen
                   "
                   class="project__button"
                 >
-                  <g-image class="project__thumbnail" :src="imagen.url" />
+                  <g-image class="project__thumbnail" :src="imagen.url" :alt="imagen.alternativeText" />
                 </button>
-                <modal
+                <Modal
                   v-if="showModal"
                   @close="showModal = false"
                   :image="content"
@@ -61,10 +62,12 @@ query Proyectos($id: ID!) {
     slug
     miniatura {
       url
+      alternativeText
     }
     imagenes {
       id
       url
+      alternativeText
     }
     categorias {
       nombre

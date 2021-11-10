@@ -13,12 +13,7 @@
 <static-query>
 query {
   metadata {
-    siteName
-    siteDescription
-    siteUrl
-    author
-    image
-    title
+    author    
     twitter {
       site
       creator
@@ -34,10 +29,8 @@ import Footer from '~/components/Footer'
 export default {
   metaInfo () {
     return {
-      meta: [
-        { key: 'title', name: 'title', content: this.$static.metadata.title },
-        { key: 'description', name: 'description', content: this.$static.metadata.image},
-        { key: 'image', name: 'image', content: this.$static.metadata.image},
+      meta: [    
+        { key: 'author', name: 'author', content: this.$static.metadata.author}, 
         { key: 'twitter:site', name: 'twitter:site', content: this.$static.metadata.twitter.site },
         { key: 'twitter:creator', name: 'twitter:creator', content: this.$static.metadata.twitter.creator }
       ]

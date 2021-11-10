@@ -19,7 +19,7 @@
             <Card
               class="blog__articulos"
               view="blog"
-              :imagen="articulo.node.imagen.url"
+              :imagen="articulo.node.imagen"
               :coleccion="articulo.node.tag"
               :alias="articulo.node"
               :descripcion="articulo.node.descripcion"
@@ -54,6 +54,7 @@
           createdAt
           imagen {
             url
+            alternativeText
           }
         }
       }

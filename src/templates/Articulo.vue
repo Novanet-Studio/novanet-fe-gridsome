@@ -8,9 +8,9 @@
     />
     <main class="main">
       <section class="section">
-        <div class="article">
+        <article class="article">
           <div class="article__image-share">
-            <g-image class="article__image" :src="$page.articulos.imagen.url" />
+            <g-image class="article__image" :src="$page.articulos.imagen.url" :alt="$page.articulos.imagen.alternativeText" />
             <Share
               class="article__share"
               :url="currentUrl"
@@ -25,7 +25,7 @@
               $page.articulos.descripcion
             }}</vue-markdown>
           </div>
-        </div>
+        </article>
       </section>
     </main>
   </Page>
@@ -41,6 +41,7 @@ query Proyectos($id: ID!) {
     createdAt
     imagen {
       url
+      alternativeText
     }
   }
 }

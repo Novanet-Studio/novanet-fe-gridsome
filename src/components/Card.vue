@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <g-link :to="`/${view}/${coleccion}/${alias.slug}`">
-      <g-image class="card__image" :src="imagen" />
+      <g-image class="card__image" :src="imagen.url" :alt="imagen.alternativeText" />
       <div class="card__info">
         <time class="date" v-if="alias.createdAt">{{
           convertDate(alias.createdAt)
@@ -19,7 +19,7 @@
 export default {
   props: {
     view: String,
-    imagen: String,
+    imagen: Object,
     coleccion: String,
     descripcion: String,
     alias: Object,

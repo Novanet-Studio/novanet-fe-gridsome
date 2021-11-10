@@ -28,7 +28,7 @@
             <Card
               class="categories__items"
               view="portafolio"
-              :imagen="proyecto.miniatura.url"
+              :imagen="proyecto.miniatura"
               :coleccion="$page.categorias.slug"
               :alias="proyecto"
             />
@@ -62,6 +62,7 @@ query Categoria($id: ID!) {
       titulo
       miniatura {
         url
+        alternativeText
       }
       descripcion
       slug

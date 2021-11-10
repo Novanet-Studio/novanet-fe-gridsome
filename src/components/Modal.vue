@@ -7,7 +7,7 @@
             <font-awesome :icon="['fa', 'times']" size="1x" />
           </button>
           <div class="modal__converter">
-              <img :src="image" alt="Some image">
+              <g-image :src="image.url" :alt="image.alternativeText" />
           </div>
         </div>
       </div>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  props: { image: String },
+  props: { image: Object },
 }
 import '../layouts/Home.scss'
 </script>

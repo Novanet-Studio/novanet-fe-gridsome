@@ -4,8 +4,8 @@
       <g-link class="nav__link" to="/">
         <img
           class="nav__link--logo"
-          alt="Novanet logo"
           src="../assets/images/novanet-logo.svg"
+          alt="Logo de novanet"
         />
       </g-link>
       <g-link class="nav__link nav__link--view" to="/nosotros/">
