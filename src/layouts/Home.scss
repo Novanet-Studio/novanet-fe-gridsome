@@ -8,8 +8,7 @@ body {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   color: $dark-grey;
   font-weight: 900;
   margin-top: $col-landscape * 0.5;
@@ -225,10 +224,13 @@ button {
     .nav {
       &__link {
         &--title {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           color: $white;
         }
       }
-    }
+    } /*  */
   }
 
   &--magenta {
@@ -244,13 +246,27 @@ button {
   }
 }
 
+//Plugin menu
+.bm-overlay {
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.bm-menu {
+  background-color: $white;
+  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.3);
+  padding-top: 4vh;
+}
+
+.bm-item-list {
+  color: $dark-grey-2;
+  & > * {
+    padding: $col-landscape * 0.4 0 0 0;
+  }
+}
+
 .nav {
   // Navegación Inicio
-  &--main {
-    @include grid-structure($columns: 6, $col: $col-landscape);
-    grid-column: 1 / 7;
-    box-sizing: border-box;
-  }
+  color: $dark-grey;
   // Navegación interna
   &--page {
     display: flex;
@@ -263,22 +279,19 @@ button {
     align-items: center;
     position: relative;
     color: inherit;
-    padding-right: 0;
-    padding-left: 0;
     &:visited {
       color: inherit;
     }
 
     &--logo {
       width: $col-landscape * 4.25;
+      margin-bottom: $col-landscape * 0.5;
     }
 
     &--icon {
       &::before {
-        font-size: 4rem;
-        position: absolute;
-        left: 0;
-        top: -0.18em;
+        font-size: 3rem;
+        margin-left: -($col-landscape * 0.4);
       }
 
       &-page {
@@ -289,16 +302,7 @@ button {
     }
 
     &--title {
-      margin: 0 0 0 ($col-landscape * 1.7);
       color: inherit;
-      &-contacto {
-        margin: 0 0 0 ($col-landscape * 1.52);
-        color: inherit;
-      }
-      &-pago {
-        margin: 0 0 0 ($col-landscape * 1.6);
-        color: inherit;
-      }
     }
   }
 }
@@ -674,7 +678,15 @@ button {
   .nav {
     // Navegación Inicio
     &--main {
-      @include grid-structure($columns: 1, $col: $col-portrait);
+    }
+
+    &__link {
+      &--icon {
+        &:before {
+          font-size: 3rem;
+          margin-left: -3.5vw;
+        }
+      }
     }
 
     &--page {
@@ -686,17 +698,13 @@ button {
         width: $col-portrait * 5.5;
       }
       &--title {
-        margin: 0 0 0 ($col-portrait * 3.3);
-        &-contacto {
-          margin: 0 0 0 ($col-portrait * 2.8);
-        }
-        &-pago {
-          margin: 0 0 0 ($col-portrait * 3.5);
-        }
       }
-      &--view {
-        display: none;
-      }
+    }
+  }
+
+  .bm-item-list {
+    & > * {
+      padding: $col-landscape * 1.25 0 0 0;
     }
   }
 
@@ -910,21 +918,16 @@ button {
   .nav {
     &__link {
       &--logo {
-        width: $col-landscape * 7;
+        width: $col-portrait-tablet * 3.5;
+      }
+
+      &--icon {
+        &::before {
+          font-size: 2.4rem;
+        }
       }
 
       &--title {
-        margin: 0 0 0 ($col-landscape * 3.5);
-        &-contacto {
-          margin: 0 0 0 ($col-landscape * 3.2);
-        }
-        &-pago {
-          margin: 0 0 0 ($col-landscape * 3.9);
-        }
-      }
-
-      &--view {
-        display: none;
       }
     }
   }
@@ -1100,9 +1103,6 @@ button {
 
   .nav {
     // Navegación Inicio
-    &--main {
-      @include grid-structure($columns: 6, $col: $col-portrait-tablet);
-    }
 
     // Navegación interna
     &--page {
@@ -1111,37 +1111,9 @@ button {
         &--icon {
           &::before {
             font-size: 4rem;
-            top: -0.15em;
           }
         }
         &--title {
-          margin: 0 0 0 ($col-portrait-tablet * 1.8);
-          &-contacto {
-            margin: 0 0 0 ($col-portrait-tablet * 1.6);
-          }
-        }
-      }
-    }
-
-    &__link {
-      &--logo {
-        width: $col-portrait-tablet * 3.5;
-      }
-
-      &--icon {
-        &::before {
-          font-size: 2.6rem;
-          top: -0.01em;
-        }
-      }
-
-      &--title {
-        margin: 0 0 0 ($col-portrait-tablet * 1.15);
-        &-contacto {
-          margin: 0 0 0 ($col-portrait-tablet * 1.05);
-        }
-        &-pago {
-          margin: 0 0 0 ($col-portrait-tablet * 1.95);
         }
       }
     }
@@ -1325,18 +1297,10 @@ button {
 
       &--icon {
         &::before {
-          top: -0.125em;
         }
       }
 
       &--title {
-        margin: 0 0 0 ($col-landscape * 2.2);
-        &-contacto {
-          margin: 0 0 0 ($col-landscape * 2);
-        }
-        &-pago {
-          margin: 0 0 0 ($col-landscape * 2.4);
-        }
       }
     }
   }
@@ -1380,13 +1344,6 @@ button {
       }
 
       &--title {
-        margin: 0 0 0 ($col-landscape * 1.75);
-        &-contacto {
-          margin: 0 0 0 ($col-landscape * 1.55);
-        }
-        &-pago {
-          margin: 0 0 0 ($col-landscape * 1.85);
-        }
       }
     }
   }
@@ -1430,7 +1387,6 @@ button {
     &--page {
       .nav__link--icon {
         &::before {
-          top: -0.14em;
         }
       }
     }
@@ -1438,17 +1394,6 @@ button {
     &__link {
       &--icon {
         &::before {
-          top: -0.065em;
-        }
-      }
-
-      &--title {
-        margin: 0 0 0 ($col-landscape * 1.55);
-        &-contacto {
-          margin: 0 0 0 ($col-landscape * 1.4);
-        }
-        &-pago {
-          margin: 0 0 0 ($col-landscape * 1.65);
         }
       }
     }
@@ -1500,7 +1445,7 @@ button {
     &__link {
       &--icon {
         &::before {
-          font-size: 4.5rem;
+          font-size: 3.5rem;
         }
       }
     }
@@ -1535,17 +1480,9 @@ button {
     &__link {
       &--icon {
         &::before {
-          top: 0.015rem;
         }
       }
       &--title {
-        margin: 0 0 0 ($col-landscape * 1.4);
-        &-contacto {
-          margin: 0 0 0 ($col-landscape * 1.25);
-        }
-        &-pago {
-          margin: 0 0 0 ($col-landscape * 1.5);
-        }
       }
     }
   }
@@ -1646,7 +1583,6 @@ button {
     &--page {
       .nav__link--icon {
         &::before {
-          top: -0.15em;
         }
       }
     }
