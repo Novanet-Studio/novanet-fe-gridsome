@@ -28,9 +28,6 @@
           >
             <div :data-icon="item.icono" class="services__icon icon"></div>
             <h3>{{ item.titulo }}</h3>
-            <vue-markdown class="services__description">{{
-              item.descripcion
-            }}</vue-markdown>
           </div>
         </div>
       </section>

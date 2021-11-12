@@ -15,38 +15,40 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  runtimeCompiler: true,    
-  siteName: 'Novanet web app',
+  runtimeCompiler: true,
+  siteName: 'Novanet Studio',
   siteUrl: process.env.DEPLOY_URL || 'https://novanet.studio',
   metadata: {
     siteName: 'Novanet web app',
-    title: "Novanet",
-    titleTemplate: "%s · Estudio de diseño",
-    siteDescription: 'Estudio de diseño dedicado al diseño gráfico, al desarrollo web y al marketing online.',
+    title: 'Novanet',
+    titleTemplate: '%s · Estudio de diseño',
+    siteDescription:
+      'Estudio de diseño dedicado al diseño gráfico, al desarrollo web y al marketing online.',
     siteUrl: process.env.DEPLOY_URL || 'https://novanet.studio',
-    author: "Novanet Studio",
-    image: "https://novanet.studio/site/img/og-thumbnail.png",
+    author: 'Novanet Studio',
+    image: 'https://novanet.studio/site/img/og-thumbnail.png',
     twitter: {
       site: '@novanetstudio',
-      creator: '@flaex_'
-    }
+      creator: '@flaex_',
+    },
   },
-  
+
   plugins: [
     'gridsome-plugin-seo',
     'gridsome-plugin-ogp',
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        exclude: ['/privacy', '/legal']
-      }
+        exclude: ['/privacy', '/legal'],
+      },
     },
     {
       use: '@gridsome/source-strapi',
       options: {
-        apiURL: process.env.NODE_ENV === 'production'
-        ? process.env.API_URL
-        : 'https://novanet-be.herokuapp.com/',
+        apiURL:
+          process.env.NODE_ENV === 'production'
+            ? process.env.API_URL
+            : 'https://novanet-be.herokuapp.com/',
         queryLimit: 1000, // Defaults to 100
         contentTypes: [`articulos`, `proyectos`, `categorias`],
         singleTypes: [
@@ -62,7 +64,7 @@ module.exports = {
           password: process.env.API_USER_PASSWORD,
         },
       },
-    },       
+    },
   ],
   chainWebpack(config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']

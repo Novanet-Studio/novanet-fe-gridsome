@@ -23,13 +23,25 @@ query {
 import Footer from '~/components/Footer'
 
 export default {
-  metaInfo () {
+  metaInfo() {
     return {
       meta: [
-        { key: 'author', name: 'author', content: this.$static.metadata.author}, 
-        { key: 'twitter:site', name: 'twitter:site', content: this.$static.metadata.twitter.site },
-        { key: 'twitter:creator', name: 'twitter:creator', content: this.$static.metadata.twitter.creator }
-      ]
+        {
+          key: 'author',
+          name: 'author',
+          content: this.$static.metadata.author,
+        },
+        {
+          key: 'twitter:site',
+          name: 'twitter:site',
+          content: this.$static.metadata.twitter.site,
+        },
+        {
+          key: 'twitter:creator',
+          name: 'twitter:creator',
+          content: this.$static.metadata.twitter.creator,
+        },
+      ],
     }
   },
   components: {

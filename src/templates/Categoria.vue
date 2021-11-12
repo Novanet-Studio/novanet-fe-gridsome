@@ -70,8 +70,8 @@ export default {
     return {
       ...this.$ogp({
         title: this.$page.categorias.nombre,
-        description:this.$page.categorias.descripcion.substring(0, 158),    
-      })
+        description: this.$page.categorias.descripcion.substring(0, 158),
+      }),
     }
   },
   components: {

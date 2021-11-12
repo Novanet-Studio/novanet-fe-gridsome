@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="bg">
+  <header class="header header--page" :class="bg">
     <nav class="nav--page">
       <button class="nav__link" @click="$router.go(-1)">
         <font-awesome :icon="['fa', 'caret-left']" size="lg" />

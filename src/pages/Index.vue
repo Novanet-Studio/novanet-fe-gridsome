@@ -1,6 +1,9 @@
 <template>
   <Home>
-    <section class="section--home">
+    <section class="section section--home">
+      <h1 class="shapes__titulo">
+        {{ $page.inicio.edges[0].node.principal }}
+      </h1>
       <div class="shapes">
         <div class="shapes__item">
           <g-image
@@ -8,7 +11,7 @@
             src="~/assets/images/novanet-inicio-diseno.png"
             alt="Forma triangular del servicio de diseño gráfico"
           />
-          <h4>Diseño gráfico</h4>
+          <h4 class="shapes__subtitulo">Diseño gráfico</h4>
         </div>
         <div class="shapes__item">
           <g-image
@@ -16,7 +19,7 @@
             src="~/assets/images/novanet-inicio-web.png"
             alt="Forma triangular del servicio de tecnologías web"
           />
-          <h4>Tecnologías web</h4>
+          <h4 class="shapes__subtitulo">Tecnologías web</h4>
         </div>
         <div class="shapes__item">
           <g-image
@@ -24,11 +27,8 @@
             src="~/assets/images/novanet-inicio-asesoria.png"
             alt="Forma triangular del servicio de asesoría"
           />
-          <h4>Asesoría</h4>
+          <h4 class="shapes__subtitulo">Asesoría</h4>
         </div>
-        <h1 class="shapes__titulo">
-          {{ $page.inicio.edges[0].node.principal }}
-        </h1>
       </div>
     </section>
   </Home>

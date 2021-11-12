@@ -7,7 +7,7 @@
             <font-awesome :icon="['fa', 'times']" size="1x" />
           </button>
           <div class="modal__converter">
-              <g-image :src="image.url" :alt="image.alternativeText" />
+            <g-image :src="image.url" :alt="image.alternativeText" />
           </div>
         </div>
       </div>

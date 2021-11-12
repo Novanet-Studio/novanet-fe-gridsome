@@ -13,7 +13,7 @@
     </ShareNetwork>
 
     <ShareNetwork
-     class="whatsapp"
+      class="whatsapp"
       network="whatsapp"
       :url="url"
       :title="titulo"

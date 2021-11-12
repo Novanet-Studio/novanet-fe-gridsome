@@ -2,7 +2,7 @@
   <header class="header">
     <nav class="nav--main">
       <client-only>
-        <Slide noOverlay width="240">
+        <Slide noOverlay width="220">
           <g-link class="nav__link" to="/">
             <img
               class="nav__link--logo"
@@ -30,6 +30,10 @@
             <div data-icon="z" class="nav__link--icon icon"></div>
             <p class="nav__link--title">Contacto</p>
           </g-link>
+          <p class="nav__legal">
+            Novanet Studio<br />Derechos reservados
+            {{ new Date().getFullYear() }}
+          </p>
         </Slide>
       </client-only>
     </nav>

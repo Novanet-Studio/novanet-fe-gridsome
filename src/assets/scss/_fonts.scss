@@ -5,11 +5,19 @@
   font-weight: 400;
   src: url('~@/assets/fonts/red-hat-display-v4-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('~@/assets/fonts/red-hat-display-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('~@/assets/fonts/red-hat-display-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('~@/assets/fonts/red-hat-display-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('~@/assets/fonts/red-hat-display-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('~@/assets/fonts/red-hat-display-v4-latin-regular.svg#RedHatDisplay') format('svg'); /* Legacy iOS */
+    url('~@/assets/fonts/red-hat-display-v4-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('~@/assets/fonts/red-hat-display-v4-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('~@/assets/fonts/red-hat-display-v4-latin-regular.woff')
+      format('woff'),
+    /* Modern Browsers */
+      url('~@/assets/fonts/red-hat-display-v4-latin-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('~@/assets/fonts/red-hat-display-v4-latin-regular.svg#RedHatDisplay')
+      format('svg'); /* Legacy iOS */
 }
 /* red-hat-display-900 - latin */
 @font-face {
@@ -18,28 +26,33 @@
   font-weight: 900;
   src: url('~@/assets/fonts/red-hat-display-v4-latin-900.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('~@/assets/fonts/red-hat-display-v4-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('~@/assets/fonts/red-hat-display-v4-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-       url('~@/assets/fonts/red-hat-display-v4-latin-900.woff') format('woff'), /* Modern Browsers */
-       url('~@/assets/fonts/red-hat-display-v4-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('~@/assets/fonts/red-hat-display-v4-latin-900.svg#RedHatDisplay') format('svg'); /* Legacy iOS */
+    url('~@/assets/fonts/red-hat-display-v4-latin-900.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('~@/assets/fonts/red-hat-display-v4-latin-900.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('~@/assets/fonts/red-hat-display-v4-latin-900.woff') format('woff'),
+    /* Modern Browsers */
+      url('~@/assets/fonts/red-hat-display-v4-latin-900.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+      url('~@/assets/fonts/red-hat-display-v4-latin-900.svg#RedHatDisplay')
+      format('svg'); /* Legacy iOS */
 }
 
 /*-- Font Icons --*/
 @font-face {
-  font-family: "novaicons";
-  src:url("~@/assets/fonts/novaicons.eot");
-  src:url("~@/assets/fonts/novaicons.eot?#iefix") format("embedded-opentype"),
-    url("~@/assets/fonts/novaicons.woff") format("woff"),
-    url("~@/assets/fonts/novaicons.ttf") format("truetype"),
-    url("~@/assets/fonts/novaicons.svg#novaicons") format("svg");
+  font-family: 'novaicons';
+  src: url('~@/assets/fonts/novaicons.eot');
+  src: url('~@/assets/fonts/novaicons.eot?#iefix') format('embedded-opentype'),
+    url('~@/assets/fonts/novaicons.woff') format('woff'),
+    url('~@/assets/fonts/novaicons.ttf') format('truetype'),
+    url('~@/assets/fonts/novaicons.svg#novaicons') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 [data-icon]:before {
-  font-family: "novaicons" !important;
+  font-family: 'novaicons' !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -51,9 +64,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="ni-"]:before,
-[class*=" ni-"]:before {
-  font-family: "novaicons" !important;
+[class^='ni-']:before,
+[class*=' ni-']:before {
+  font-family: 'novaicons' !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -65,86 +78,86 @@
 }
 
 .ni-ni-backend:before {
-  content: "\61";
+  content: '\61';
 }
 .ni-ni-ball:before {
-  content: "\62";
+  content: '\62';
 }
 .ni-ni-brain:before {
-  content: "\63";
+  content: '\63';
 }
 .ni-ni-bulb:before {
-  content: "\64";
+  content: '\64';
 }
 .ni-ni-chat:before {
-  content: "\65";
+  content: '\65';
 }
 .ni-ni-comment:before {
-  content: "\66";
+  content: '\66';
 }
 .ni-ni-compas:before {
-  content: "\67";
+  content: '\67';
 }
 .ni-ni-connection:before {
-  content: "\68";
+  content: '\68';
 }
 .ni-ni-database:before {
-  content: "\69";
+  content: '\69';
 }
 .ni-ni-frontend:before {
-  content: "\6a";
+  content: '\6a';
 }
 .ni-ni-gear:before {
-  content: "\6b";
+  content: '\6b';
 }
 .ni-ni-icon:before {
-  content: "\6c";
+  content: '\6c';
 }
 .ni-ni-integration:before {
-  content: "\6d";
+  content: '\6d';
 }
 .ni-ni-lock:before {
-  content: "\6e";
+  content: '\6e';
 }
 .ni-ni-logo:before {
-  content: "\6f";
+  content: '\6f';
 }
 .ni-ni-message:before {
-  content: "\70";
+  content: '\70';
 }
 .ni-ni-pencil:before {
-  content: "\71";
+  content: '\71';
 }
 .ni-ni-phone:before {
-  content: "\72";
+  content: '\72';
 }
 .ni-ni-pin:before {
-  content: "\73";
+  content: '\73';
 }
 .ni-ni-portfolio:before {
-  content: "\74";
+  content: '\74';
 }
 .ni-ni-printer:before {
-  content: "\75";
+  content: '\75';
 }
 .ni-ni-responsive:before {
-  content: "\76";
+  content: '\76';
 }
 .ni-ni-rocket:before {
-  content: "\77";
+  content: '\77';
 }
 .ni-ni-star:before {
-  content: "\78";
+  content: '\78';
 }
 .ni-ni-sync:before {
-  content: "\79";
+  content: '\79';
 }
 .ni-ni-tap:before {
-  content: "\7a";
+  content: '\7a';
 }
 .ni-ni-tools:before {
-  content: "\41";
+  content: '\41';
 }
 .ni-ni-webpage:before {
-  content: "\42";
+  content: '\42';
 }
