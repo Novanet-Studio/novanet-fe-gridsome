@@ -247,20 +247,22 @@ button {
 }
 
 //Plugin menu
-.bm-overlay {
-  background-color: rgb(255, 255, 255, 0.5);
+
+.bm-burger-button {
+  width: 30px !important;
+  height: 25px !important;
 }
 
 .bm-menu {
-  background-color: $white;
-  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.3);
-  padding-top: 4vh;
+  background-color: $white !important;
+  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.3) !important;
+  padding-top: 4vh !important;
 }
 
 .bm-item-list {
-  color: $dark-grey-2;
+  color: $dark-grey-2 !important;
   & > * {
-    padding: $col-landscape * 0.4 0 0 0;
+    padding: $col-landscape * 0.4 0 0 0 !important;
   }
 }
 
@@ -272,6 +274,24 @@ button {
     display: flex;
     grid-column: 1 / 7;
     align-items: center;
+    .nav__link {
+      &--icon {
+        &:before {
+          margin-left: -($col-landscape * 0.2);
+          margin-right: -($col-landscape * 0.2);
+        }
+      }
+    }
+  }
+
+  &--main {
+    .nav__link {
+      &--icon {
+        &:before {
+          margin-left: -($col-landscape * 0.4);
+        }
+      }
+    }
   }
 
   &__link {
@@ -291,7 +311,6 @@ button {
     &--icon {
       &::before {
         font-size: 3rem;
-        margin-left: -($col-landscape * 0.4);
       }
 
       &-page {
@@ -303,6 +322,7 @@ button {
 
     &--title {
       color: inherit;
+      margin: 0;
     }
   }
 }

@@ -16,6 +16,8 @@ function addStyleResource(rule) {
 
 module.exports = {
   runtimeCompiler: true,    
+  siteName: 'Novanet web app',
+  siteUrl: process.env.DEPLOY_URL || 'https://novanet.studio',
   metadata: {
     siteName: 'Novanet web app',
     title: "Novanet",

@@ -41,16 +41,6 @@
 
 <page-query>
 query Categoria($id: ID!) {
-  metadata {
-    siteName
-    siteDescription
-    siteUrl
-    image
-    twitter {
-      site
-      creator
-    }
-  }
   categorias: strapiCategorias(id: $id)  {
     id
     nombre
@@ -80,8 +70,7 @@ export default {
     return {
       ...this.$ogp({
         title: this.$page.categorias.nombre,
-        description:this.$page.categorias.descripcion.substring(0, 158),
-        image: this.$page.articulos.imagen.url,
+        description:this.$page.categorias.descripcion.substring(0, 158),    
       })
     }
   },
