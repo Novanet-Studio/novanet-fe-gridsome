@@ -109,7 +109,7 @@ button {
   }
 
   & > a {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   &__text {
@@ -277,29 +277,19 @@ button {
   &--main {
     @include grid-structure($columns: 6, $col: $col-landscape);
     grid-column: 1 / 7;
-    box-sizing: border-box;
   }
   color: $dark-grey;
   // Navegación interna
   &--page {
     display: flex;
     grid-column: 1 / 7;
-    align-items: center;
-    .nav__link {
-      &--icon {
-        &:before {
-          margin-left: -($col-landscape * 0.2);
-          margin-right: -($col-landscape * 0.2);
-        }
-      }
-    }
   }
 
   &--main {
     .nav__link {
       &--icon {
         &:before {
-          margin-left: -($col-landscape * 0.4);
+          margin-left: -0.7rem;
         }
       }
     }
@@ -308,8 +298,8 @@ button {
   &__link {
     display: flex;
     align-items: center;
-    position: relative;
     color: inherit;
+
     &:visited {
       color: inherit;
     }
@@ -321,12 +311,14 @@ button {
 
     &--icon {
       &::before {
+        display: block;
+        margin: 0.4rem -0.2rem 0 0;
         font-size: 3rem;
       }
 
       &-page {
         &::before {
-          top: -0.22em;
+          font-size: 3.5rem;
         }
       }
     }
@@ -334,7 +326,6 @@ button {
     &--title {
       color: inherit;
       margin: 0;
-      font-size: 1rem;
     }
   }
 
@@ -408,7 +399,7 @@ button {
   }
 
   &__icono {
-    font-size: 1.75rem !important;
+    margin-top: 0.1rem;
   }
 }
 
@@ -474,9 +465,11 @@ button {
   }
 
   &__icon {
-    margin-bottom: -$col-landscape;
-    margin-left: -$col-landscape * 0.3;
-    font-size: 5rem;
+    &:before {
+      display: block;
+      font-size: 5rem;
+      margin-bottom: $col-landscape * 0.75;
+    }
   }
 
   &__description {
@@ -745,13 +738,11 @@ button {
       &--icon {
         &:before {
           font-size: 3rem;
-          margin-left: -3.5vw;
         }
       }
     }
 
     &--page {
-      align-items: start;
     }
 
     &__link {
@@ -760,7 +751,6 @@ button {
         margin-top: ($col-portrait * 0.75);
       }
       &--icon {
-        margin-left: -$col-portrait * 0.5;
       }
     }
 
@@ -1192,7 +1182,6 @@ button {
 
     // Navegación interna
     &--page {
-      align-items: center;
       .nav__link {
         &--icon {
           &::before {
@@ -1439,7 +1428,7 @@ button {
   }
 
   .bm-item-list {
-    & > *{
+    & > * {
       padding: 0.5rem 0 0 0 !important;
     }
   }
@@ -1460,11 +1449,11 @@ button {
   // Inicio
   .section {
     margin-bottom: $col-landscape;
-   &--home {
-    & > * {
-      margin-top: $col-landscape * 3;
+    &--home {
+      & > * {
+        margin-top: $col-landscape * 3;
+      }
     }
-   }
   }
 
   .categories {
@@ -1593,7 +1582,7 @@ button {
   }
 
   .bm-item-list {
-    & > *{
+    & > * {
       padding: 0 0 0 0 !important;
     }
   }
@@ -1607,9 +1596,9 @@ button {
 
   .mensaje {
     &__icono {
-       font-size: 2.5rem !important;
-     }
-   }
+      font-size: 2.5rem !important;
+    }
+  }
 
   .categories {
     &__icon {

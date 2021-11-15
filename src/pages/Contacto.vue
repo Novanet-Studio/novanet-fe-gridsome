@@ -13,9 +13,10 @@
             <h2 class="blue">
               {{ $page.contacto.edges[0].node.principal.titulo }}
             </h2>
-            <p>
-              {{ $page.contacto.edges[0].node.principal.descripcion }}
-            </p>
+            <vue-markdown>{{
+              $page.contacto.edges[0].node.principal.descripcion
+            }}</vue-markdown>
+
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d980.7857007733666!2d-66.87772169073442!3d10.489406951509675!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1952146d76df33c4!2sNovanet%20Studio!5e0!3m2!1ses!2sve!4v1632839029172!5m2!1ses!2sve"
               class="contacto__mapa"
@@ -69,6 +70,15 @@
                   name="phone"
                   v-model="formData.phone"
                   placeholder="Teléfono"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name="findus"
+                  v-model="formData.name"
+                  placeholder="¿Cómo nos encontró?"
                 />
               </div>
 
