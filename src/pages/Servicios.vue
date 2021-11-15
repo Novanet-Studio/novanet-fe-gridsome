@@ -21,14 +21,19 @@
         <h2 class="blue">{{ servicio.titulo }}</h2>
         <p>{{ servicio.descripcion }}</p>
         <div class="services">
-          <div
+          <button         
             class="services__items"
             v-for="item in servicio.especialidad"
             :key="item.id"
+            @click="
+              showModal = true
+              content = item
+            "
           >
             <div :data-icon="item.icono" class="services__icon icon"></div>
-            <h3>{{ item.titulo }}</h3>
-          </div>
+            <h3 class="services__title">{{ item.titulo }}</h3>
+          </button>
+          <Modal v-if="showModal" @close="showModal = false" :content="content" :clase=$magenta />
         </div>
       </section>
     </main>
@@ -63,6 +68,7 @@ query {
 
 <script>
 import Header from '~/components/HeaderPage'
+import Modal from '~/components/Modal'
 import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
@@ -81,6 +87,13 @@ export default {
   components: {
     Header,
     VueMarkdown,
+    Modal,
+  },
+  data: function() {
+    return {
+      showModal: false,
+      content: null,
+    }
   },
   computed: {
     console: () => console,

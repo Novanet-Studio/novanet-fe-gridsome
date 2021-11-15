@@ -11,6 +11,7 @@ import Page from '~/layouts/Page.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import {
+  faFacebook,
   faTwitter,
   faInstagram,
   faWhatsapp,
@@ -29,6 +30,7 @@ import VueSocialSharing from 'vue-social-sharing'
 
 config.autoAddCss = false
 library.add(
+  faFacebook,
   faFacebookF,
   faTwitter,
   faInstagram,
@@ -37,6 +39,7 @@ library.add(
   faPinterest,
   faCaretLeft,
   faTimes,
+  faTimesCircle,
 )
 
 export default function(Vue, { router, head, isClient }) {

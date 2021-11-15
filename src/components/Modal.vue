@@ -7,7 +7,20 @@
             <font-awesome :icon="['fa', 'times']" size="1x" />
           </button>
           <div class="modal__converter">
-            <g-image :src="image.url" :alt="image.alternativeText" />
+            <div v-if="image">
+              <g-image :src="image.url" :alt="image.alternativeText" />
+            </div>
+            
+            <div v-if="content">
+              <div class="modal__item">
+                <div
+                  :data-icon="content.icono"
+                  class="services__icon icon"
+                ></div>
+                <h3 class="services__title">{{ content.titulo }}</h3>
+                <vue-markdown>{{ content.descripcion }}</vue-markdown>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -16,8 +29,16 @@
 </template>
 
 <script>
+import VueMarkdown from '@adapttive/vue-markdown'
+
 export default {
-  props: { image: Object },
+  props: { image: Object, content: Object },
+   components: {
+    VueMarkdown,
+  },
+  computed: {
+    console: () => console,
+  },
 }
 import '../layouts/Home.scss'
 </script>
