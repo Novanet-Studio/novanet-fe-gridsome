@@ -297,7 +297,7 @@ button {
     .nav__link {
       &--icon {
         &:before {
-          margin-left: -0.7rem;
+          margin-left: -2vh;
         }
       }
     }
@@ -320,7 +320,7 @@ button {
     &--icon {
       &::before {
         display: block;
-        margin: 0.4rem -0.2rem 0 0;
+        margin: 2vh -0.2rem 0 0;
         font-size: 3rem;
       }
 
@@ -527,7 +527,7 @@ button {
 
     &::before {
       display: block;
-     
+      padding: 1rem 0.25rem 0;
     }
   }
   @include subheader();
