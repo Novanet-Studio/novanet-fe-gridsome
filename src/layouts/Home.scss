@@ -265,11 +265,12 @@ button {
 .bm-menu {
   background-color: $white !important;
   box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.3) !important;
-  padding-top: $col-landscape * 0.75 !important;
+  padding-top: $col-landscape * 1 !important;
 }
 
 .bm-item-list {
   display: flex !important;
+  font-size: unset;
   flex-wrap: wrap;
   flex-direction: column;
   height: 100vh;
@@ -518,12 +519,15 @@ button {
   &__icon {
     display: flex;
     font-size: 3.5rem;
-    padding: $col-landscape * 0.095;
+    flex-direction: column;
+    justify-content: center;
+
     color: $white;
     @include image-background($image: 'novanet-circle.svg');
 
     &::before {
-      margin-top: $col-landscape * 0.25;
+      display: block;
+     
     }
   }
   @include subheader();
@@ -869,11 +873,10 @@ button {
         grid-column: 1 / 2;
       }
     }
-
     &__icon {
-      padding: $col-portrait * 0.25;
+     
       &::before {
-        margin-top: $col-portrait * 0.55;
+        
       }
     }
 
@@ -1076,7 +1079,7 @@ button {
     @include grid-structure($columns: 2, $col: $col-landscape);
     &__icon {
       &::before {
-        margin-top: $col-landscape * 0.7;
+
       }
     }
 
@@ -1267,9 +1270,9 @@ button {
     }
 
     &__icon {
-      padding: $col-portrait-tablet * 0.15;
+     
       &::before {
-        margin-top: $col-portrait-tablet * 0.5;
+       
       }
     }
 
@@ -1427,7 +1430,7 @@ button {
   .nav {
     &__link {
       &--logo {
-        width: $col-landscape * 3.5 !important;
+        width: $col-landscape * 4 !important;
       }
 
       &--title {
@@ -1471,7 +1474,7 @@ button {
 
     &__icon {
       &::before {
-        margin-top: $col-landscape * 0.45;
+
       }
     }
   }
