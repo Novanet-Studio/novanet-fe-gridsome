@@ -45,7 +45,7 @@ query {
       }
     }
   }
-  categorias: allStrapiCategorias {
+  categorias: allStrapiCategorias(sortBy: "nombre", order: ASC) {
     edges {
       node {
         id

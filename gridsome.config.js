@@ -65,6 +65,29 @@ module.exports = {
         },
       },
     },
+    {
+      use: 'gridsome-plugin-pwa',
+      options: {
+        // Service Worker Options
+        disableServiceWorker: false,
+        serviceWorkerPath: 'service-worker.js',
+        cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
+        disableTemplatedUrls: false, // Optional
+        // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
+        manifestPath: 'manifest.json',
+        title: 'Novanet Studio',
+        startUrl: '/',
+        display: 'standalone',
+        statusBarStyle: 'default',
+        themeColor: '#ffffff',
+        backgroundColor: '#ffffff',
+        icon: 'src/assets/images/favicon.png',
+        shortName: 'Novanet Studio', // Optional
+        description: 'Estudio de diseño dedicado al diseño gráfico, al desarrollo web y al marketing online', // Optional
+        lang: 'es-ES', // Optional
+        maskableIcon: true, // Optional
+      },
+    },
   ],
   chainWebpack(config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
