@@ -173,6 +173,9 @@ button {
     padding: $col-landscape * 1.1;
     background: $white;
     border: 1px solid lightgray;
+    p {
+      line-height: 1.375rem;
+    }
     ul {
       list-style: unset;
       list-style-position: inside ;
@@ -213,7 +216,7 @@ button {
 
   .header--page,
   .footer {
-    padding: $col-landscape;
+    padding: $col-landscape * 0.6;
   }
 }
 
@@ -242,7 +245,7 @@ button {
           color: $white;
         }
       }
-    } /*  */
+    }
   }
 
   &--magenta {
@@ -304,6 +307,10 @@ button {
         &:before {
           margin-left: -2vh;
         }
+      }
+      &--title {
+         font-size: 1rem;
+         line-height: 1.25rem;
       }
     }
   }
@@ -546,7 +553,7 @@ button {
 
   &__description {
     font-size: 0.9rem;
-    line-height: 1.2rem;
+    line-height: 1.15rem;
     color: $dark-grey-2;
   }
 }
@@ -1455,7 +1462,28 @@ button {
 }
 
 /*---------------------------------- Desktop 1440px ---------------------------------*/
-@include responsive-min($min-width: 90em) {}
+@include responsive-min($min-width: 90em) {
+  .section {
+    &--home {
+      & > * {
+        margin-top: $col-landscape * 4;
+      }
+    }
+  }
+
+  .services {
+    &__icon {
+      &:before {  
+        margin-bottom: -$col-landscape * 0.5;      
+      }
+    }
+
+    &__title {
+      margin-top: 0;
+    }
+  }
+  
+}
 
 /*----------------------------------- Desktop 1600px --------------------------------*/
 @include responsive-min($min-width: 100em) {
@@ -1504,6 +1532,14 @@ button {
         &::before {
           font-size: 3.5rem;
         }
+      }
+    }
+  }
+
+  .section {
+    &--home {
+      & > * {
+        margin-top: $col-landscape * 2.5;
       }
     }
   }

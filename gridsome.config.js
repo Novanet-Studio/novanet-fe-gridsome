@@ -18,6 +18,7 @@ module.exports = {
   runtimeCompiler: true,
   siteName: 'Novanet Studio',
   siteUrl: process.env.DEPLOY_URL || 'https://novanet.studio',
+  icon: 'src/assets/images/favicon.png',
   metadata: {
     siteName: 'Novanet web app',
     title: 'Novanet',

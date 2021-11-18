@@ -10,23 +10,23 @@
               alt="Logo de novanet"
             />
           </g-link>
-          <g-link class="nav__link nav__link--view" to="/nosotros/">
+          <g-link class="nav__link nav__link" to="/nosotros/">
             <div data-icon="f" class="nav__link--icon icon"></div>
             <p class="nav__link--title">Nosotros</p>
           </g-link>
-          <g-link class="nav__link nav__link--view" to="/servicios/">
+          <g-link class="nav__link nav__link" to="/servicios/">
             <div data-icon="m" class="nav__link--icon icon"></div>
             <p class="nav__link--title">Servicios</p>
           </g-link>
-          <g-link class="nav__link nav__link--view" to="/portafolio/">
+          <g-link class="nav__link nav__link" to="/portafolio/">
             <div data-icon="t" class="nav__link--icon icon"></div>
             <p class="nav__link--title">Portafolio</p>
           </g-link>
-          <g-link class="nav__link nav__link--view" to="/blog/">
+          <g-link class="nav__link nav__link" to="/blog/">
             <div data-icon="q" class="nav__link--icon icon"></div>
             <p class="nav__link--title">Blog</p>
           </g-link>
-          <g-link class="nav__link nav__link--view" to="/contacto/">
+          <g-link class="nav__link nav__link" to="/contacto/">
             <div data-icon="z" class="nav__link--icon icon"></div>
             <p class="nav__link--title">Contacto</p>
           </g-link>
