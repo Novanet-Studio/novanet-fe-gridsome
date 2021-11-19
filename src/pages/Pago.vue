@@ -4,7 +4,7 @@
       icon="u"
       vista="Pagos"
       bg="header--blue"
-      tituloclase="nav__link--title-pago"
+      tituloclase="nav__link--title"
     />
     <main class="main">
       <section class="section">
