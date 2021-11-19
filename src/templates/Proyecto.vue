@@ -120,4 +120,6 @@ export default {
     console: () => console,
   },
 }
+
+import './Proyecto.scss'
 </script>

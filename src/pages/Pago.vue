@@ -76,4 +76,6 @@ export default {
     Header,
   },
 }
+
+import './Pago.scss'
 </script>

@@ -182,4 +182,6 @@ export default {
     console: () => console,
   },
 }
+
+import './Contacto.scss'
 </script>

@@ -99,4 +99,6 @@ export default {
     console: () => console,
   },
 }
+
+import './Servicios.scss'
 </script>

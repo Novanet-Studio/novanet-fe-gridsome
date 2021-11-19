@@ -56,5 +56,5 @@ export default {
     },
   },
 }
-import '../layouts/Home.scss'
+import './Card.scss'
 </script>

@@ -89,4 +89,6 @@ export default {
     console: () => console,
   },
 }
+
+import './Articulo.scss'
 </script>

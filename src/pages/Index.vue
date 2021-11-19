@@ -71,4 +71,6 @@ export default {
     console: () => console,
   },
 }
+
+import './Inicio.scss'
 </script>

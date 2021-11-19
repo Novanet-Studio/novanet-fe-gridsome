@@ -1,0 +1,139 @@
+
+.modal {
+  &__mask {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: opacity 0.2s ease;
+    animation: fadeIn 0.4s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &__wrapper {
+    align-self: center;
+  }
+
+  &__container {
+    position: relative;
+    width: auto;
+    margin: 0px auto;
+    transition: all 0.3s ease;
+  }
+
+  &__converter {
+    img {
+      width: 50em;
+    }
+  }
+
+  &__item {
+    width: 40em;
+    padding: $col-landscape * 1.1;
+    background: $white;
+    border: 1px solid lightgray;
+    p {
+      font-size: 0.938rem;
+      line-height: 1.25rem;
+    }
+    ul {
+      list-style: unset;
+      list-style-position: inside;
+      font-size: 0.938rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  &__boton {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: $col-landscape * 0.5;
+    right: $col-landscape * 0.5;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: white;
+    background-color: $magenta;
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*----------------------------------- Mobile Portrait ---------------------------------*/
+@include responsive-max($max-width: 26em, $orientation: 'portrait') {
+    
+  .modal {
+    &__converter {
+      img {
+        width: 30em;
+      }
+    }
+    &__boton {
+      font-size: 0.7rem;
+    }
+    &__item {
+      width: 21em;
+    }
+  }
+}
+
+/*----------------------------------- Mobile Landscape --------------------------------*/
+@include responsive-max($max-width: 46em, $orientation: 'landscape') {
+
+  .modal {
+    &__converter {
+      img {
+        width: 29em;
+      }
+    }
+
+    &__item {
+      width: 33em;
+    }
+  }
+}
+
+/*----------------------------------- Tablet Portrait ---------------------------------*/
+@include responsive-min-max(
+  $min-width: 48em,
+  $max-width: 64em,
+  $orientation: 'portrait'
+) {
+
+  .modal {
+    &__converter {
+      img {
+        width: 40em;
+      }
+    }
+
+    &__item {
+      width: 36em;
+    }
+  }
+}

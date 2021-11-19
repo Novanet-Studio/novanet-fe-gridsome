@@ -82,4 +82,6 @@ export default {
     console: () => console,
   },
 }
+
+import '../pages/Portafolio.scss'
 </script>
