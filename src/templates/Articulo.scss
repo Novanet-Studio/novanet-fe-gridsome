@@ -15,10 +15,15 @@
 
   &__description {
     p,
-    ol {
+    ol,
+    ul {
       font-size: 0.969rem;
       line-height: 1.282rem;
       color: $dark-grey-2;
+    }
+    ul {
+      list-style: unset;
+      list-style-position: inside;
     }
   }
 }

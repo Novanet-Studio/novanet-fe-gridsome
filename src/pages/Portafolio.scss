@@ -66,6 +66,24 @@
   }
 }
 
+/*----------------------------------- Mobile Landscape --------------------------------*/
+@include responsive-max($max-width: 46em, $orientation: 'landscape') {
+  .categories {
+    @include grid-structure($columns: 2, $col: $col-landscape);
+
+    &__internal {
+      @include grid-structure($columns: 3, $col: $col-landscape);
+      > div {
+        margin-bottom: $col-landscape;
+        &:nth-child(odd),
+        &:nth-child(even) {
+          padding-right: ($col-landscape);
+        }
+      }
+    }
+  }
+}
+
 /*----------------------------------- Tablet Portrait ---------------------------------*/
 @include responsive-min-max(
   $min-width: 48em,
@@ -98,26 +116,22 @@
   }
 }
 
-/*----------------------------------- Mobile Landscape --------------------------------*/
-@include responsive-max($max-width: 46em, $orientation: 'landscape') {
-  .categories {
-    @include grid-structure($columns: 2, $col: $col-landscape);
-
-    &__internal {
-      @include grid-structure($columns: 3, $col: $col-landscape);
-      > div {
-        margin-bottom: $col-landscape;
-        &:nth-child(odd),
-        &:nth-child(even) {
-          padding-right: ($col-landscape);
-        }
-      }
-    }
+/*----------------------------------- Tablet Landscape -------------------------------*/
+@include responsive-min-max(
+  $min-width: 64em,
+  $max-width: 85.375em,
+  $orientation: 'landscape'
+) {
+ .categories {
+  @include grid-structure($columns: 4, $col: $col-landscape);
+ }
   }
-}
 
+
+/*----------------------------------- Desktop 1366px -------------------------------*/
 @include responsive-min($min-width: 85.375em) {
   .categories {
+    @include grid-structure($columns: 4, $col: $col-landscape);
     &__items {
       margin-bottom: $col-landscape * 0.25;
     }
