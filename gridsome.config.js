@@ -84,9 +84,18 @@ module.exports = {
         backgroundColor: '#ffffff',
         icon: 'src/assets/images/favicon.png',
         shortName: 'Novanet Studio', // Optional
-        description: 'Estudio de diseño dedicado al diseño gráfico, al desarrollo web y al marketing online', // Optional
+        description:
+          'Estudio de diseño dedicado al diseño gráfico, al desarrollo web y al marketing online', // Optional
         lang: 'es-ES', // Optional
         maskableIcon: true, // Optional
+      },
+    },
+    {
+      use: 'gridsome-plugin-gtm',
+      options: {
+        id: 'GTM-W4T9CPR',
+        enabled: true,
+        debug: true,
       },
     },
   ],
