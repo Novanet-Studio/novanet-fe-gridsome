@@ -44,18 +44,23 @@ module.exports = {
       },
     },
     {
-      resolve: 'gridsome-plugin-robots',
+      use: 'gridsome-plugin-robots-txt',
       options: {
-        host: 'https://www.novanet.studio',
-        sitemap: 'https://www.novanet.studio/sitemap.xml',
-        env: {
-          development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+        policy: [
+          {
+            userAgent: "Googlebot",
+            allow: "/",
+            disallow: "/search",
+            crawlDelay: 2
           },
-          production: {
-            policy: [{ userAgent: '*', allow: '/' }]
+          {
+            userAgent: "*",
+            allow: "/",
+            disallow: "/search",
+            crawlDelay: 10,
+            cleanParam: "ref /articles/"
           }
-        }
+        ]
       }
     },
     {
