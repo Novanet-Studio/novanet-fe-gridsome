@@ -20,6 +20,7 @@
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-ogp": "^0.0.14",
     "gridsome-plugin-pwa": "^0.0.20",
+    "gridsome-plugin-robots": "^0.2.1",
     "gridsome-plugin-seo": "^1.0.2",
     "sass": "^1.38.1",
     "sass-loader": "^10.0.1",

@@ -44,6 +44,21 @@ module.exports = {
       },
     },
     {
+      resolve: 'gridsome-plugin-robots',
+      options: {
+        host: 'https://www.novanet.studio',
+        sitemap: 'https://www.novanet.studio/sitemap.xml',
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
+    {
       use: '@gridsome/source-strapi',
       options: {
         apiURL:

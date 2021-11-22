@@ -1,5 +1,0 @@
-Sitemap: https://novanet.studio/sitemap.xml
-
-User-agent:*
-Disallow: /legal
-Disallow: /privacy
