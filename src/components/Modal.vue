@@ -40,5 +40,5 @@ export default {
     console: () => console,
   },
 }
-import '../layouts/Home.scss'
+import './Modal.scss'
 </script>

@@ -1,0 +1,81 @@
+.shapes {
+  @include grid-structure($columns: 3, $col: $col-landscape);
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__img {
+    width: 15vw;
+  }
+
+  &__img--circle {
+    width: 16.1vw;
+  }
+
+  &__titulo {
+    grid-column: 1 / 4;
+    text-align: center;
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: $dark-grey-2;
+  }
+
+  &__subtitulo {
+    margin-bottom: 0;
+  }
+}
+
+@include responsive-max($max-width: 26em, $orientation: 'portrait') {
+  .shapes {
+    &__img,
+    &__img--circle {
+      width: 24vw;
+    }
+
+    &__titulo {
+      font-size: 0.95rem;
+      line-height: 1.15rem;
+    }
+  }
+}
+
+/*----------------------------------- Mobile Landscape --------------------------------*/
+@include responsive-max($max-width: 46em, $orientation: 'landscape') {
+  .shapes {
+    &__titulo {
+      margin: ($col-landscape) ($col-landscape * 1.7) 0;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  /*----------------------------------- Tablet Portrait ---------------------------------*/
+  @include responsive-min-max(
+    $min-width: 48em,
+    $max-width: 64em,
+    $orientation: 'portrait'
+  ) {
+    .shapes {
+      &__img,
+      &__img--circle {
+        width: 21vw;
+      }
+
+      &__titulo {
+        font-size: 1.22rem;
+      }
+    }
+  }
+}
+
+/*----------------------------------- Desktop 1600px --------------------------------*/
+@include responsive-min($min-width: 100em) {
+  .shapes {
+    &__titulo {
+      font-size: 1.7rem;
+    }
+  }
+}

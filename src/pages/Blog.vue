@@ -87,4 +87,6 @@ export default {
     console: () => console,
   },
 }
+
+import './Blog.scss'
 </script>

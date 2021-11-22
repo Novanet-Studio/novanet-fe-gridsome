@@ -11,7 +11,7 @@
           convertDate(alias.createdAt)
         }}</time>
         <h3 class="card__title">{{ alias.titulo }}</h3>
-        <p class="description" v-if="descripcion">
+        <p class="card__description" v-if="descripcion">
           {{ maxWords(descripcion) + '...' }}
         </p>
       </div>
@@ -38,7 +38,7 @@ export default {
       // String as an argument for a function
       let description = str
       // Number of allowed characters
-      const maxLength = 180
+      const maxLength = 120
 
       //trim the string to the maximum length
       let trimmedDescription = description.substring(0, maxLength)
@@ -56,5 +56,5 @@ export default {
     },
   },
 }
-import '../layouts/Home.scss'
+import './Card.scss'
 </script>

@@ -45,7 +45,7 @@ query {
       }
     }
   }
-  categorias: allStrapiCategorias {
+  categorias: allStrapiCategorias(sortBy: "nombre", order: ASC) {
     edges {
       node {
         id
@@ -81,4 +81,6 @@ export default {
     console: () => console,
   },
 }
+
+import './Portafolio.scss'
 </script>
