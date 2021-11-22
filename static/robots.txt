@@ -1,4 +1,4 @@
-Sitemap: https://mannes.tech/sitemap.xml
+Sitemap: https://novanet.studio/sitemap.xml
 
 User-agent:*
 Disallow: /legal
