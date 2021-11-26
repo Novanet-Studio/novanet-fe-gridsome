@@ -1,13 +1,13 @@
 <template>
   <header class="header header--page" :class="bg">
-    <nav class="nav--page">
+    <nav class="nav nav--page">
       <button class="nav__link" @click="$router.go(-1)">
         <font-awesome :icon="['fa', 'caret-left']" size="lg" />
       </button>
       <div class="nav__link">
         <div
           :data-icon="icon"
-          class="nav__link--icon nav__link--icon-page icon"
+          class="nav__icon icon"
         ></div>
         <h1 :class="tituloclase">{{ vista }}</h1>
       </div>

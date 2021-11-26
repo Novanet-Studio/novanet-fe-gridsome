@@ -27,7 +27,7 @@
             src="~/assets/images/novanet-inicio-asesoria.png"
             alt="Forma triangular del servicio de asesoría"
           />
-          <h4 class="shapes__subtitulo">Asesoría</h4>
+          <h4 class="shapes__subtitulo shapes__subtitulo--circle">Asesoría</h4>
         </div>
       </div>
     </section>

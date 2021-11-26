@@ -4,7 +4,7 @@
       icon="z"
       vista="Contacto"
       bg="header--blue"
-      tituloclase="nav__link--title"
+      tituloclase="nav__title"
     />
     <main class="main">
       <section class="section">

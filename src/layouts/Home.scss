@@ -131,7 +131,7 @@ button {
   min-height: 100vh;
   grid-template-rows: min-content;
 
-  .header--page,
+  .header,
   .footer {
     padding: $col-landscape * 0.6;
   }
@@ -153,28 +153,11 @@ button {
   &--blue {
     background-color: $blue;
     color: $white;
-    .nav {
-      &__link {
-        &--title {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          color: $white;
-        }
-      }
-    }
   }
 
   &--magenta {
     background-color: $magenta;
     color: $white;
-    .nav {
-      &__link {
-        &--title {
-          color: $white;
-        }
-      }
-    }
   }
 }
 
@@ -182,14 +165,12 @@ button {
 .bm-burger-button {
   width: 24px !important;
   height: 20px !important;
-  left: $col-landscape !important;
-  top: $col-landscape !important;
 }
 
 .bm-menu {
   background-color: $white !important;
   box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.3) !important;
-  padding-top: $col-landscape * 1 !important;
+  padding-top: $col-landscape !important;
 }
 
 .bm-item-list {
@@ -205,72 +186,62 @@ button {
 }
 
 .nav {
-  // Navegación Inicio
   &--main {
-    @include grid-structure($columns: 6, $col: $col-landscape);
-    grid-column: 1 / 7;
+    position: absolute;
+    .nav {
+      &__link {
+        margin: 1vh 0 1vh 0;
+      }
+      &__icon {
+        &:before {
+          display: block;
+          font-size: 3rem;
+          line-height: 1.25rem;
+          margin-left: -1vh;
+        }
+      }
+
+      &__title {
+        font-size: 1.1rem;
+      }
+    }
   }
-  color: $dark-grey;
-  // Navegación interna
+
   &--page {
     display: flex;
     grid-column: 1 / 7;
-  }
 
-  &--main {
-    .nav__link {
-      &--icon {
-        &:before {
-          margin-left: -2vh;
+    .nav {
+      &__icon {
+        &::before {
+          display: block;
+          font-size: 3.5rem;
+          margin-left: -0.2rem;
         }
       }
-      &--title {
-        font-size: 1rem;
-        line-height: 1.25rem;
+      &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: inherit;
       }
     }
+  }
+
+  &__logo {
+    width: $col-landscape * 4.25;
+    margin: ($col-landscape * 0.2) 0 0 ($col-landscape * 1.6);
   }
 
   &__link {
     display: flex;
     align-items: center;
     color: inherit;
+    margin: 0;
 
     &:visited {
       color: inherit;
     }
-
-    &--logo {
-      width: $col-landscape * 4.25;
-      margin-bottom: $col-landscape * 0.5;
-    }
-
-    &--icon {
-      &::before {
-        display: block;
-        margin: 2vh -0.2rem 0 0;
-        font-size: 3rem;
-      }
-
-      &-page {
-        &::before {
-          font-size: 3.5rem;
-        }
-      }
-    }
-
-    &--title {
-      color: inherit;
-      margin: 0;
-    }
-  }
-
-  &__legal {
-    width: 12em;
-    margin-top: auto;
-    margin-bottom: 6vh;
-    font-size: 0.8rem;
-    line-height: 1.1rem;
   }
 }
 
@@ -335,6 +306,7 @@ button {
   }
 
   &__icono {
+    font-size: 1.8rem !important;
     margin-top: 0.1rem;
   }
 }
@@ -346,9 +318,10 @@ button {
   }
 
   &--home {
-    & > * {
-      margin-top: $col-landscape * 3.3;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: $col-landscape * 12 ;
   }
 }
 
@@ -418,21 +391,18 @@ button {
     &--main {
       position: absolute;
       display: flex;
-    }
 
-    &__link {
-      &--icon {
-        &:before {
-          font-size: 3rem;
+      .nav {
+        &__icon {
+          &:before {
+            font-size: 3rem;
+          }
         }
       }
     }
 
-    &__link {
-      &--logo {
-        width: $col-portrait * 7;
-        margin-top: ($col-portrait * 1);
-      }
+    &__logo {
+      width: $col-portrait * 7;
     }
 
     &__legal {
@@ -442,7 +412,7 @@ button {
 
   .container {
     @include grid-structure($columns: 20, $col: $col-portrait);
-    .header--page,
+    .header,
     .footer {
       padding: $col-portrait;
     }
@@ -457,12 +427,6 @@ button {
     left: $col-portrait !important;
   }
 
-  .mensaje {
-    &__titulo {
-      font-size: 0.7rem;
-    }
-  }
-
   .rrss {
     &__link {
       font-size: 0.62rem;
@@ -474,11 +438,6 @@ button {
 
   .section {
     margin-bottom: $col-portrait * 0.9;
-    &--home {
-      & > * {
-        margin-top: $col-landscape * 11.5;
-      }
-    }
   }
 }
 
@@ -491,20 +450,20 @@ button {
   }
 
   .nav {
-    &__link {
-      &--logo {
-        width: $col-portrait-tablet * 4.5;
-      }
+    &__logo {
+      width: $col-portrait-tablet * 4.5;
+    }
 
-      &--icon {
-        &::before {
-          font-size: 2.4rem;
-        }
-      }
-      &--title {
-        font-size: 0.95rem;
+    &__title {
+      font-size: 0.95rem;
+    }
+
+    &__icon {
+      &::before {
+        font-size: 2.4rem;
       }
     }
+
     &__legal {
       font-size: 0.7rem;
       line-height: 1rem;
@@ -517,14 +476,6 @@ button {
       width: $col-landscape * 1.5;
       height: $col-landscape * 1.5;
       margin-right: $col-landscape;
-    }
-  }
-
-  .section {
-    &--home {
-      & > * {
-        margin-top: $col-landscape * 3.1;
-      }
     }
   }
 }
@@ -560,21 +511,6 @@ button {
     grid-column: 1 / 25;
   }
 
-  .nav {
-    // Navegación
-
-    // Navegación interna
-    &--page {
-      .nav__link {
-        &--icon {
-          &::before {
-            font-size: 4rem;
-          }
-        }
-      }
-    }
-  }
-
   .main {
     padding: ($col-portrait-tablet) ($col-portrait-tablet) 0;
   }
@@ -589,11 +525,6 @@ button {
 
   .section {
     margin-bottom: $col-portrait-tablet;
-    &--home {
-      & > * {
-        margin-top: $col-landscape * 6;
-      }
-    }
   }
 }
 
@@ -604,10 +535,8 @@ button {
   $orientation: 'landscape'
 ) {
   .nav {
-    &__link {
-      &--logo {
-        width: $col-landscape * 5;
-      }
+    &__logo {
+      width: $col-landscape * 5;
     }
   }
 
@@ -620,21 +549,14 @@ button {
 
   .section {
     margin-bottom: $col-portrait-tablet;
-    &--home {
-      & > * {
-        margin-top: $col-landscape * 5;
-      }
-    }
   }
 }
 
 /*----------------------------------- Desktop 1366px --------------------------------*/
 @include responsive-min($min-width: 85.375em) {
   .nav {
-    &__link {
-      &--logo {
-        width: $col-landscape * 4 !important;
-      }
+    &__logo {
+      width: $col-landscape * 4.1;
     }
   }
 
@@ -645,31 +567,13 @@ button {
     }
   }
 
-  .mensaje {
-    &__titulo {
-      font-size: inherit;
-    }
-  }
-
   .section {
     margin-bottom: $col-landscape;
-    &--home {
-      & > * {
-        margin-top: $col-landscape * 3.5;
-      }
-    }
   }
 }
 
 /*---------------------------------- Desktop 1440px ---------------------------------*/
 @include responsive-min($min-width: 90em) {
-  .section {
-    &--home {
-      & > * {
-        margin-top: $col-landscape * 4;
-      }
-    }
-  }
 }
 
 /*----------------------------------- Desktop 1600px --------------------------------*/
@@ -711,24 +615,6 @@ button {
   h4 {
     font-size: 1.25rem;
     line-height: 1.5rem;
-  }
-
-  .nav {
-    &__link {
-      &--icon {
-        &::before {
-          font-size: 3.5rem;
-        }
-      }
-    }
-  }
-
-  .section {
-    &--home {
-      & > * {
-        margin-top: $col-landscape * 2.5;
-      }
-    }
   }
 }
 
