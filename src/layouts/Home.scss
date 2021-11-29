@@ -649,6 +649,12 @@ button {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
+
+  .section {
+    &--home {
+      height: $col-landscape * 11.25;
+    }
+  }
 }
 
 /*------------------------------------ Desktop 1920px -------------------------------*/
@@ -661,12 +667,6 @@ button {
     }
     &__logo {
       width: $col-landscape * 4;
-    }
-  }
-
-  .section {
-    &--home {
-      height: $col-landscape * 11.25;
     }
   }
 }
