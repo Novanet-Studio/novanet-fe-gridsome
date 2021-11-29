@@ -29,9 +29,9 @@
   $max-width: 64em,
   $orientation: 'portrait'
 ) {
-  .card {  
+  .card {
     &__description {
-     display: none;
+      display: none;
     }
   }
 }

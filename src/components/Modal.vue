@@ -10,7 +10,7 @@
             <div v-if="image">
               <g-image :src="image.url" :alt="image.alternativeText" />
             </div>
-            
+
             <div v-if="content">
               <div class="modal__item">
                 <div
@@ -33,7 +33,7 @@ import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
   props: { image: Object, content: Object },
-   components: {
+  components: {
     VueMarkdown,
   },
   computed: {

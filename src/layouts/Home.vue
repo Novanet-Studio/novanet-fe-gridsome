@@ -2,7 +2,6 @@
   <div class="layout">
     <div class="container">
       <Header />
-      <Menu />      
       <main class="main">
         <slot />
       </main>
@@ -25,7 +24,6 @@ query {
 
 <script>
 import Header from '~/components/Header'
-import Menu from '~/components/Menu'
 import Footer from '~/components/Footer'
 
 export default {
@@ -52,7 +50,6 @@ export default {
   },
   components: {
     Header,
-    Menu,
     Footer,
   },
 }

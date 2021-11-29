@@ -1,11 +1,6 @@
 <template>
   <Page>
-    <Header
-      icon="q"
-      vista="Blog"
-      bg="header--green"
-      tituloclase="nav__title"
-    />
+    <Header icon="q" vista="Blog" bg="header--green" tituloclase="nav__title" />
     <main class="main">
       <section class="section">
         <p>

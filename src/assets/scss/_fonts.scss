@@ -41,19 +41,18 @@
 
 /*-- Font Icons --*/
 @font-face {
-  font-family: "novaicon";
-  src:url("~@/assets/fonts/novaicon.eot");
-  src:url("~@/assets/fonts/novaicon.eot?#iefix") format("embedded-opentype"),
-    url("~@/assets/fonts/novaicon.woff") format("woff"),
-    url("~@/assets/fonts/novaicon.ttf") format("truetype"),
-    url("~@/assets/fonts/novaicon.svg#novaicon") format("svg");
+  font-family: 'novaicon';
+  src: url('~@/assets/fonts/novaicon.eot');
+  src: url('~@/assets/fonts/novaicon.eot?#iefix') format('embedded-opentype'),
+    url('~@/assets/fonts/novaicon.woff') format('woff'),
+    url('~@/assets/fonts/novaicon.ttf') format('truetype'),
+    url('~@/assets/fonts/novaicon.svg#novaicon') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 [data-icon]:before {
-  font-family: "novaicon" !important;
+  font-family: 'novaicon' !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -65,9 +64,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "novaicon" !important;
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  font-family: 'novaicon' !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -79,86 +78,86 @@
 }
 
 .icon-ni-backend:before {
-  content: "\61";
+  content: '\61';
 }
 .icon-ni-ball:before {
-  content: "\62";
+  content: '\62';
 }
 .icon-ni-brain:before {
-  content: "\63";
+  content: '\63';
 }
 .icon-ni-bulb:before {
-  content: "\64";
+  content: '\64';
 }
 .icon-ni-chat:before {
-  content: "\65";
+  content: '\65';
 }
 .icon-ni-comment:before {
-  content: "\66";
+  content: '\66';
 }
 .icon-ni-compas:before {
-  content: "\67";
+  content: '\67';
 }
 .icon-ni-connection:before {
-  content: "\68";
+  content: '\68';
 }
 .icon-ni-database:before {
-  content: "\69";
+  content: '\69';
 }
 .icon-ni-frontend:before {
-  content: "\6a";
+  content: '\6a';
 }
 .icon-ni-gear:before {
-  content: "\6b";
+  content: '\6b';
 }
 .icon-ni-icon:before {
-  content: "\6c";
+  content: '\6c';
 }
 .icon-ni-integration:before {
-  content: "\6d";
+  content: '\6d';
 }
 .icon-ni-lock:before {
-  content: "\6e";
+  content: '\6e';
 }
 .icon-ni-logo:before {
-  content: "\6f";
+  content: '\6f';
 }
 .icon-ni-message:before {
-  content: "\70";
+  content: '\70';
 }
 .icon-ni-pencil:before {
-  content: "\71";
+  content: '\71';
 }
 .icon-ni-phone:before {
-  content: "\72";
+  content: '\72';
 }
 .icon-ni-pin:before {
-  content: "\73";
+  content: '\73';
 }
 .icon-ni-portfolio:before {
-  content: "\74";
+  content: '\74';
 }
 .icon-ni-printer:before {
-  content: "\75";
+  content: '\75';
 }
 .icon-ni-responsive:before {
-  content: "\76";
+  content: '\76';
 }
 .icon-ni-rocket:before {
-  content: "\77";
+  content: '\77';
 }
 .icon-ni-star:before {
-  content: "\78";
+  content: '\78';
 }
 .icon-ni-sync:before {
-  content: "\79";
+  content: '\79';
 }
 .icon-ni-tap:before {
-  content: "\7a";
+  content: '\7a';
 }
 .icon-ni-tools:before {
-  content: "\41";
+  content: '\41';
 }
 .icon-ni-webpage:before {
-  content: "\42";
+  content: '\42';
 }

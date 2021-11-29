@@ -1,11 +1,6 @@
 <template>
   <Page>
-    <Header
-      icon="u"
-      vista="Pagos"
-      bg="header--blue"
-      tituloclase="nav__title"
-    />
+    <Header icon="u" vista="Pagos" bg="header--blue" tituloclase="nav__title" />
     <main class="main">
       <section class="section">
         <h2 class="blue">Pagos online</h2>

@@ -3,13 +3,6 @@
   &__items {
     display: flex;
     margin-bottom: $col-landscape * 0.5;
-    &:nth-child(odd) {
-      grid-column: 1 / 2;
-    }
-
-    &:nth-child(even) {
-      grid-column: 2 / 3;
-    }
   }
 
   &__icon {
@@ -39,9 +32,8 @@
     @include grid-structure($columns: 1, $col: $col-portrait);
     &__items {
       margin-bottom: $col-portrait;
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4) {
+      &:nth-child(odd),
+      &:nth-child(even) {
         grid-column: 1 / 2;
       }
     }
@@ -93,11 +85,10 @@
   .categories {
     @include grid-structure($columns: 2, $col: $col-portrait-tablet);
     &__items {
-      &:nth-child(2),
-      &:nth-child(4) {
+      &:nth-child(even) {
         grid-column: 2 / 3;
       }
-      &:nth-child(3) {
+      &:nth-child(even) {
         grid-column: 1 / 2;
       }
     }
@@ -122,18 +113,18 @@
   $max-width: 85.375em,
   $orientation: 'landscape'
 ) {
- .categories {
-  @include grid-structure($columns: 4, $col: $col-landscape);
- }
+  .categories {
+    @include grid-structure($columns: 4, $col: $col-landscape);
   }
+}
 
-
-/*----------------------------------- Desktop 1366px -------------------------------*/
-@include responsive-min($min-width: 85.375em) {
+/*----------------------------------- Desktop 1280px -------------------------------*/
+@include responsive-min($min-width: 80em) {
   .categories {
     @include grid-structure($columns: 4, $col: $col-landscape);
     &__items {
       margin-bottom: $col-landscape * 0.25;
+      grid-column: auto;
     }
   }
 }

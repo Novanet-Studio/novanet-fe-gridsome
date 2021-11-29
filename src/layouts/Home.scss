@@ -61,14 +61,14 @@ h2 {
 }
 
 h3 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-bottom: $col-landscape * 0.1;
 }
 
 h4 {
-  font-size: 1rem;
-  line-height: 1.125rem;
+  font-size: 0.938rem;
+  line-height: 1.188rem;
 }
 
 button {
@@ -159,39 +159,34 @@ button {
     background-color: $magenta;
     color: $white;
   }
-}
 
-//Plugin menu
-.bm-burger-button {
-  width: 24px !important;
-  height: 20px !important;
-}
+  &__index {
+    display: flex;
+  }
 
-.bm-menu {
-  background-color: $white !important;
-  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.3) !important;
-  padding-top: $col-landscape !important;
-}
+  &__logo {
+    width: $col-landscape * 4.25;
+  }
 
-.bm-item-list {
-  display: flex !important;
-  font-size: unset;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: 100vh;
-  color: $dark-grey-2 !important;
-  & > * {
-    padding: 0 !important;
+  &__trigram {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    button {
+      font-size: 1.25rem;
+    }
   }
 }
 
 .nav {
   &--main {
-    position: absolute;
+    color: $dark-grey-2;
+
     .nav {
       &__link {
-        margin: 1vh 0 1vh 0;
+        margin: 3vh 0 3vh 0;
       }
+
       &__icon {
         &:before {
           display: block;
@@ -202,9 +197,42 @@ button {
       }
 
       &__title {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
+  }
+
+  &__slide-enter-active,
+  &__slide-leave-active {
+    transition: transform 0.2s ease;
+  }
+
+  &__slide-enter,
+  &__slide-leave-to {
+    transform: translateX(-100%);
+    transition: all 150ms ease-in 0s;
+  }
+
+  &__sidebar-backdrop {
+    background-color: rgba($dark-grey, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  &__sidebar-panel {
+    overflow-y: auto;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 999;
+    padding: 2vh;
+    width: 150px;
   }
 
   &--page {
@@ -226,11 +254,6 @@ button {
         color: inherit;
       }
     }
-  }
-
-  &__logo {
-    width: $col-landscape * 4.25;
-    margin: ($col-landscape * 0.2) 0 0 ($col-landscape * 1.6);
   }
 
   &__link {
@@ -304,24 +327,16 @@ button {
     margin: 0;
     padding-left: $col-landscape * 0.25;
   }
-
-  &__icono {
-    font-size: 1.8rem !important;
-    margin-top: 0.1rem;
-  }
 }
 
 .section {
   margin-bottom: $col-landscape;
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   &--home {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: $col-landscape * 12 ;
+    height: $col-landscape * 13;
   }
 }
 
@@ -386,27 +401,28 @@ button {
     grid-column: 1 / 21;
   }
 
+  .header {
+    &__index {
+      grid-column: 1 / 7;
+    }
+    &__logo {
+      width: $col-portrait * 5.5;
+    }
+  }
+
   .nav {
     // Navegación Inicio
     &--main {
-      position: absolute;
-      display: flex;
-
       .nav {
+        &__link {
+          margin: 4vh 0 4vh 0;
+        }
         &__icon {
           &:before {
             font-size: 3rem;
           }
         }
       }
-    }
-
-    &__logo {
-      width: $col-portrait * 7;
-    }
-
-    &__legal {
-      margin-bottom: 4vh;
     }
   }
 
@@ -422,11 +438,6 @@ button {
     padding: $col-portrait $col-portrait 0;
   }
 
-  .bm-burger-button {
-    top: $col-portrait !important;
-    left: $col-portrait !important;
-  }
-
   .rrss {
     &__link {
       font-size: 0.62rem;
@@ -438,24 +449,37 @@ button {
 
   .section {
     margin-bottom: $col-portrait * 0.9;
+    &--home {
+      height: $col-landscape * 32.5;
+    }
+  }
+
+  .mensaje {
+    &__icono {
+      margin-top: 0.4vh;
+    }
+
+    &__titulo {
+      font-size: 0.65rem;
+    }
   }
 }
 
 /*----------------------------------- Mobile Landscape --------------------------------*/
 @include responsive-max($max-width: 46em, $orientation: 'landscape') {
-  .share {
-    & > * {
-      margin-right: $col-landscape * 0.5;
+  .header {
+    &__logo {
+      width: $col-portrait-tablet * 4;
     }
   }
 
   .nav {
-    &__logo {
-      width: $col-portrait-tablet * 4.5;
-    }
-
-    &__title {
-      font-size: 0.95rem;
+    &--main {
+      .nav {
+        &__link {
+          margin: 5vh 0 5vh 0;
+        }
+      }
     }
 
     &__icon {
@@ -463,10 +487,11 @@ button {
         font-size: 2.4rem;
       }
     }
+  }
 
-    &__legal {
-      font-size: 0.7rem;
-      line-height: 1rem;
+  .share {
+    & > * {
+      margin-right: $col-landscape * 0.5;
     }
   }
 
@@ -491,12 +516,6 @@ button {
     line-height: 1.125rem;
   }
 
-  .share {
-    & > * {
-      margin-right: $col-portrait-tablet * 0.2;
-    }
-  }
-
   .container {
     @include grid-structure($columns: 24, $col: $col-portrait-tablet);
     .header,
@@ -513,6 +532,24 @@ button {
 
   .main {
     padding: ($col-portrait-tablet) ($col-portrait-tablet) 0;
+  }
+
+  .header {
+    &__logo {
+      width: $col-portrait-tablet * 4;
+    }
+  }
+
+  .section {
+    &--home {
+      height: $col-portrait-tablet * 15;
+    }
+  }
+
+  .share {
+    & > * {
+      margin-right: $col-portrait-tablet * 0.2;
+    }
   }
 
   .rrss {
@@ -534,9 +571,9 @@ button {
   $max-width: 85.375em,
   $orientation: 'landscape'
 ) {
-  .nav {
+  .header {
     &__logo {
-      width: $col-landscape * 5;
+      width: $col-landscape * 5.5;
     }
   }
 
@@ -546,17 +583,13 @@ button {
       height: $col-landscape;
     }
   }
-
-  .section {
-    margin-bottom: $col-portrait-tablet;
-  }
 }
 
-/*----------------------------------- Desktop 1366px --------------------------------*/
-@include responsive-min($min-width: 85.375em) {
-  .nav {
+/*----------------------------------- Desktop 1280px --------------------------------*/
+@include responsive-min($min-width: 80em) {
+  .header {
     &__logo {
-      width: $col-landscape * 4.1;
+      width: $col-landscape * 4.4;
     }
   }
 
@@ -620,6 +653,22 @@ button {
 
 /*------------------------------------ Desktop 1920px -------------------------------*/
 @include responsive-min($min-width: 120em) {
+  .header {
+    &__trigram {
+      button {
+        font-size: 1.75rem;
+      }
+    }
+    &__logo {
+      width: $col-landscape * 4;
+    }
+  }
+
+  .section {
+    &--home {
+      height: $col-landscape * 11.25;
+    }
+  }
 }
 
 /*----------------------------------- 4k Screen 3840px ------------------------------*/

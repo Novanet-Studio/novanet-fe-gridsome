@@ -13,7 +13,6 @@
 
   &__img--circle {
     width: 15.25vw;
-
   }
 
   &__titulo {
@@ -22,23 +21,29 @@
     font-size: 1.55rem;
     font-weight: 400;
     color: $dark-grey-2;
+    margin-top: 5vh;
   }
 
   &__subtitulo {
-    margin-bottom: 0;  
+    margin-bottom: 0;
   }
 }
 
+/*----------------------------------- Mobile Portrait ---------------------------------*/
 @include responsive-max($max-width: 26em, $orientation: 'portrait') {
   .shapes {
-    &__img,
-    &__img--circle {
+    &__img {
       width: 24vw;
+    }
+
+    &__img--circle {
+      width: 24.25vw;
     }
 
     &__titulo {
       font-size: 0.95rem;
       line-height: 1.15rem;
+      margin-top: 10vh;
     }
   }
 }
@@ -47,27 +52,26 @@
 @include responsive-max($max-width: 46em, $orientation: 'landscape') {
   .shapes {
     &__titulo {
-      margin: ($col-landscape) ($col-landscape * 1.7) 0;
+      margin: 0 ($col-landscape * 1.7) 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
     }
   }
+}
 
-  /*----------------------------------- Tablet Portrait ---------------------------------*/
-  @include responsive-min-max(
-    $min-width: 48em,
-    $max-width: 64em,
-    $orientation: 'portrait'
-  ) {
-    .shapes {
-      &__img,
-      &__img--circle {
-        width: 21vw;
-      }
+/*----------------------------------- Tablet Portrait ---------------------------------*/
+@include responsive-min-max(
+  $min-width: 48em,
+  $max-width: 64em,
+  $orientation: 'portrait'
+) {
+  .shapes {
+    &__img {
+      width: 21vw;
+    }
 
-      &__titulo {
-        font-size: 1.22rem;
-      }
+    &__img--circle {
+      width: 21.25vw;
     }
   }
 }
@@ -76,7 +80,12 @@
 @include responsive-min($min-width: 100em) {
   .shapes {
     &__titulo {
+      margin-top: 0;
       font-size: 1.7rem;
     }
   }
+}
+
+/*------------------------------------ Desktop 1920px -------------------------------*/
+@include responsive-min($min-width: 120em) {
 }

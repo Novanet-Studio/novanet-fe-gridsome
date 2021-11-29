@@ -30,11 +30,12 @@
             $static.inicio.edges[0].node.contacto.prefix,
             $static.inicio.edges[0].node.contacto.icono,
           ]"
+          size="lg"
         />
       </a>
       <p class="mensaje__titulo">
-        {{ $static.inicio.edges[0].node.contacto.descripcion }} &nbsp;
-        | &nbsp; Novanet Studio - {{ new Date().getFullYear() }}
+        {{ $static.inicio.edges[0].node.contacto.descripcion }} &nbsp; | &nbsp;
+        Novanet Studio - {{ new Date().getFullYear() }}
       </p>
     </div>
   </footer>

@@ -1,4 +1,3 @@
-
 .modal {
   &__mask {
     position: fixed;
@@ -87,7 +86,6 @@
 
 /*----------------------------------- Mobile Portrait ---------------------------------*/
 @include responsive-max($max-width: 26em, $orientation: 'portrait') {
-    
   .modal {
     &__converter {
       img {
@@ -105,7 +103,6 @@
 
 /*----------------------------------- Mobile Landscape --------------------------------*/
 @include responsive-max($max-width: 46em, $orientation: 'landscape') {
-
   .modal {
     &__converter {
       img {
@@ -125,7 +122,6 @@
   $max-width: 64em,
   $orientation: 'portrait'
 ) {
-
   .modal {
     &__converter {
       img {

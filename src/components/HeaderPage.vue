@@ -5,10 +5,7 @@
         <font-awesome :icon="['fa', 'caret-left']" size="lg" />
       </button>
       <div class="nav__link">
-        <div
-          :data-icon="icon"
-          class="nav__icon icon"
-        ></div>
+        <div :data-icon="icon" class="nav__icon icon"></div>
         <h1 :class="tituloclase">{{ vista }}</h1>
       </div>
     </nav>

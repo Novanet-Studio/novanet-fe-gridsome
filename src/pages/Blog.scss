@@ -103,7 +103,7 @@
 }
 
 /*----------------------------------- Desktop 1366px --------------------------------*/
-@include responsive-min($min-width: 85.375em) {
+@include responsive-min($min-width: 80em) {
   .blog {
     .description {
       display: block;

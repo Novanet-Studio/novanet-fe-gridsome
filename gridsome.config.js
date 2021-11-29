@@ -48,20 +48,20 @@ module.exports = {
       options: {
         policy: [
           {
-            userAgent: "Googlebot",
-            allow: "/",
-            disallow: "/search",
-            crawlDelay: 2
+            userAgent: 'Googlebot',
+            allow: '/',
+            disallow: '/search',
+            crawlDelay: 2,
           },
           {
-            userAgent: "*",
-            allow: "/",
-            disallow: "/search",
+            userAgent: '*',
+            allow: '/',
+            disallow: '/search',
             crawlDelay: 10,
-            cleanParam: "ref /articles/"
-          }
-        ]
-      }
+            cleanParam: 'ref /articles/',
+          },
+        ],
+      },
     },
     {
       use: '@gridsome/source-strapi',
