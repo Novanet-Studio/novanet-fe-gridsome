@@ -14,13 +14,15 @@
               class="article__image"
               :src="$page.articulos.imagen.url"
               :alt="$page.articulos.imagen.alternativeText"
+              background="#ededed"
+              blur="40"
             />
             <Share
               class="article__share"
               :url="currentUrl"
               :titulo="$page.articulos.titulo"
               :descripcion="$page.articulos.descripcion"
-              :imagen="$page.articulos.imagen.url"
+              :imagen="$page.articulos.imagen"
             />
           </div>
           <div class="article__info">

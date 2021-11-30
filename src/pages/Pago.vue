@@ -15,28 +15,36 @@
             <img
               class="pago__logos"
               src="../assets/images/nn-pago-paypal.svg"
-              alt=""
+              alt="Logo de paypal"
+              background="#ededed"
+              blur="40"
             />
           </div>
           <div class="pago__app">
             <img
               class="pago__logos"
               src="../assets/images/nn-pago-amazonpay.svg"
-              alt=""
+              alt="Logo de amazon pay"
+              background="#ededed"
+              blur="40"
             />
           </div>
           <div class="pago__app">
             <img
               class="pago__logos"
               src="../assets/images/nn-pago-square.svg"
-              alt=""
+              alt="Logo de squareup"
+              background="#ededed"
+              blur="40"
             />
           </div>
           <div class="pago__app">
             <img
               class="pago__logos"
               src="../assets/images/nn-pago-stripe.svg"
-              alt=""
+              alt="Logo de Stripe"
+              background="#ededed"
+              blur="40"
             />
           </div>
         </div>

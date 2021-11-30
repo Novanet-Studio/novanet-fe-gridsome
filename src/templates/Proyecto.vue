@@ -31,6 +31,8 @@
                     class="project__thumbnail"
                     :src="imagen.url"
                     :alt="imagen.alternativeText"
+                    background="#ededed"
+                    blur="40"
                   />
                 </button>
                 <Modal

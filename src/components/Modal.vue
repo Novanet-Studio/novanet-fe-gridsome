@@ -8,7 +8,12 @@
           </button>
           <div class="modal__converter">
             <div v-if="image">
-              <g-image :src="image.url" :alt="image.alternativeText" />
+              <g-image
+                :src="image.url"
+                :alt="image.alternativeText"
+                background="#ededed"
+                blur="40"
+              />
             </div>
 
             <div v-if="content">

@@ -10,6 +10,8 @@
             class="shapes__img"
             src="~/assets/images/novanet-inicio-diseno.png"
             alt="Forma triangular del servicio de diseño gráfico"
+            background="#d6f630"
+            blur="40"	
           />
           <h4 class="shapes__subtitulo">Diseño gráfico</h4>
         </div>
@@ -18,6 +20,8 @@
             class="shapes__img"
             src="~/assets/images/novanet-inicio-web.png"
             alt="Forma triangular del servicio de tecnologías web"
+            background="#099bc3"
+            blur="40"
           />
           <h4 class="shapes__subtitulo">Tecnologías web</h4>
         </div>
@@ -26,6 +30,8 @@
             class="shapes__img--circle"
             src="~/assets/images/novanet-inicio-asesoria.png"
             alt="Forma triangular del servicio de asesoría"
+            background="#df1f5b"
+            blur="40"
           />
           <h4 class="shapes__subtitulo shapes__subtitulo--circle">Asesoría</h4>
         </div>

@@ -5,6 +5,8 @@
         class="card__image"
         :src="imagen.url"
         :alt="imagen.alternativeText"
+        background="#ededed"
+        blur="40"	
       />
       <div class="card__info">
         <time class="date" v-if="alias.createdAt">{{
