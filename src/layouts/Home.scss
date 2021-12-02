@@ -609,8 +609,8 @@ button {
 
   .mensaje {
     &__icono {
-      margin-top: 0.2vh;
-      font-size: 2rem !important;
+      margin-top: -0.2vh;
+      font-size: 1.85rem !important;
     }
   }
   .section {
@@ -620,6 +620,12 @@ button {
 
 /*---------------------------------- Desktop 1440px ---------------------------------*/
 @include responsive-min($min-width: 90em) {
+  .mensaje {
+    &__icono {
+      margin-top:0.15vh;
+      font-size: 2rem !important;
+    }
+  }
 }
 
 /*----------------------------------- Desktop 1600px --------------------------------*/
@@ -642,6 +648,11 @@ button {
     }
     &__logo {
       width: $col-landscape * 4;
+    }
+  }
+  .mensaje {
+    &__icono {
+      font-size: 2.3rem !important;
     }
   }
 }
