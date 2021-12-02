@@ -49,7 +49,7 @@
               <div>
                 <input
                   type="text"
-                  name="name"
+                  name="nombre"
                   v-model="formData.name"
                   placeholder="Nombre y Apellido"
                 />
@@ -67,7 +67,7 @@
               <div>
                 <input
                   type="number"
-                  name="phone"
+                  name="telefono"
                   v-model="formData.phone"
                   placeholder="Teléfono"
                 />
@@ -76,15 +76,15 @@
               <div>
                 <input
                   type="text"
-                  name="findus"
-                  v-model="formData.name"
+                  name="origen"
+                  v-model="formData.origin"
                   placeholder="¿Cómo nos encontró?"
                 />
               </div>
 
               <div>
                 <textarea
-                  name="message"
+                  name="mensaje"
                   v-model="formData.message"
                   placeholder="Mensaje"
                 />
