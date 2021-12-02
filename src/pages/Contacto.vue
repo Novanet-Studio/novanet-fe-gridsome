@@ -36,7 +36,7 @@
               class="formulario"
               name="contacto"
               v-on:submit.prevent="handleSubmit"
-              action="/gracias"
+              action="/gracias/"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
