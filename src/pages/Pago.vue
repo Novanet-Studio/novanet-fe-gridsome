@@ -12,39 +12,43 @@
       <section class="section">
         <div class="pago">
           <div class="pago__app">
-            <img
+            <g-image
               class="pago__logos"
               src="../assets/images/nn-pago-paypal.svg"
               alt="Logo de paypal"
               background="#ededed"
               blur="40"
+              quality="100"
             />
           </div>
           <div class="pago__app">
-            <img
+            <g-image
               class="pago__logos"
               src="../assets/images/nn-pago-amazonpay.svg"
               alt="Logo de amazon pay"
               background="#ededed"
               blur="40"
+              quality="100"
             />
           </div>
           <div class="pago__app">
-            <img
+            <g-image
               class="pago__logos"
               src="../assets/images/nn-pago-square.svg"
               alt="Logo de squareup"
               background="#ededed"
               blur="40"
+              quality="100"
             />
           </div>
           <div class="pago__app">
-            <img
+            <g-image
               class="pago__logos"
               src="../assets/images/nn-pago-stripe.svg"
               alt="Logo de Stripe"
               background="#ededed"
               blur="40"
+              quality="100"
             />
           </div>
         </div>
