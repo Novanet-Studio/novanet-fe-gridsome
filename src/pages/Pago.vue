@@ -21,7 +21,7 @@
               quality="100"
             />
           </div>
-          <div class="pago__app">
+          <!-- <div class="pago__app">
             <g-image
               class="pago__logos"
               src="../assets/images/nn-pago-amazonpay.svg"
@@ -30,7 +30,7 @@
               blur="40"
               quality="100"
             />
-          </div>
+          </div> -->
           <div class="pago__app">
             <g-image
               class="pago__logos"
@@ -41,7 +41,7 @@
               quality="100"
             />
           </div>
-          <div class="pago__app">
+          <!-- <div class="pago__app">
             <g-image
               class="pago__logos"
               src="../assets/images/nn-pago-stripe.svg"
@@ -50,7 +50,7 @@
               blur="40"
               quality="100"
             />
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
