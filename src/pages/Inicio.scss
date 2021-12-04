@@ -26,24 +26,39 @@
 
   &__subtitulo {
     margin-bottom: 0;
+    font-weight: 400;
+    font-size: 1.25rem;
   }
 }
 
 /*----------------------------------- Mobile Portrait ---------------------------------*/
 @include responsive-max($max-width: 26em, $orientation: 'portrait') {
   .shapes {
+    &__item {
+      &:nth-child(1) {
+        padding-right: $col-portrait;
+      }
+      &:nth-child(3) {
+        padding-left: $col-portrait;
+      }
+    }
+
     &__img {
-      width: 24vw;
+      width: 25vw;
     }
 
     &__img--circle {
-      width: 24.25vw;
+      width: 25.25vw;
     }
 
     &__titulo {
-      font-size: 0.95rem;
+      font-size: 1rem;
       line-height: 1.15rem;
       margin-top: 10vh;
+    }
+
+    &__subtitulo {
+      font-size: unset;
     }
   }
 }
@@ -55,6 +70,9 @@
       margin: 0 ($col-landscape * 1.7) 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
+    }
+    &__subtitulo {
+      font-size: unset;
     }
   }
 }

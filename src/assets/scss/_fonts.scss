@@ -18,6 +18,7 @@
     /* Safari, Android, iOS */
       url('~@/assets/fonts/red-hat-display-v4-latin-regular.svg#RedHatDisplay')
       format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 /* red-hat-display-900 - latin */
 @font-face {
@@ -37,6 +38,7 @@
     /* Safari, Android, iOS */
       url('~@/assets/fonts/red-hat-display-v4-latin-900.svg#RedHatDisplay')
       format('svg'); /* Legacy iOS */
+  font-display: swap;
 }
 
 /*-- Font Icons --*/

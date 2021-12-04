@@ -27,7 +27,8 @@ module.exports = {
       'Estudio de diseño dedicado al diseño gráfico, al desarrollo web y al marketing online.',
     siteUrl: process.env.DEPLOY_URL || 'https://novanet.studio',
     author: 'Novanet Studio',
-    image: 'https://res.cloudinary.com/novanet-studio/image/upload/v1638481973/novanet_open_graph_miniatura_a58d0828f9.jpg',
+    image:
+      'https://res.cloudinary.com/novanet-studio/image/upload/v1638481973/novanet_open_graph_miniatura_a58d0828f9.jpg',
     twitter: {
       site: '@novanetstudio',
       creator: '@flaex_',

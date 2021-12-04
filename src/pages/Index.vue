@@ -9,6 +9,7 @@
           <g-image
             class="shapes__img"
             src="~/assets/images/novanet-inicio-diseno.jpg"
+            width="290"
             alt="Forma triangular del servicio de diseño gráfico"
             background="#d6f630"
             blur="40"
@@ -20,6 +21,7 @@
           <g-image
             class="shapes__img"
             src="~/assets/images/novanet-inicio-web.jpg"
+            width="290"
             alt="Forma triangular del servicio de tecnologías web"
             background="#099bc3"
             blur="40"
@@ -31,6 +33,7 @@
           <g-image
             class="shapes__img--circle"
             src="~/assets/images/novanet-inicio-asesoria.jpg"
+            width="290"
             alt="Forma triangular del servicio de asesoría"
             background="#df1f5b"
             blur="40"

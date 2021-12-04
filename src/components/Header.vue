@@ -27,9 +27,10 @@
         </nav>
       </Sidebar>
 
-      <img
+      <g-image
         class="header__logo"
         src="../assets/images/novanet-logo.svg"
+        width="192"
         alt="Logo de novanet"
       />
     </div>
