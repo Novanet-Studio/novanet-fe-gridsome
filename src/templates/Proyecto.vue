@@ -17,7 +17,9 @@
           <div class="project__info">
             <time class="date">{{ $page.proyectos.Ano }}</time>
             <h1>{{ $page.proyectos.titulo }}</h1>
-            <p>{{ $page.proyectos.descripcion }}</p>
+            <vue-markdown class="article__description">{{
+              $page.proyectos.descripcion
+            }}</vue-markdown>
             <ul class="project__gallery">
               <li v-for="imagen in $page.proyectos.imagenes" :key="imagen.id">
                 <button
@@ -86,6 +88,7 @@ query Proyectos($id: ID!) {
 import Header from '~/components/HeaderPage'
 import Share from '~/components/Share'
 import Modal from '~/components/Modal'
+import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
   metaInfo() {
@@ -101,6 +104,7 @@ export default {
     Header,
     Share,
     Modal,
+    VueMarkdown
   },
   data: function() {
     return {

@@ -20,6 +20,12 @@ p {
   margin-bottom: $col-landscape * 0.3;
 }
 
+a {
+  &:visited {
+    color: $blue;
+  }
+}
+
 time {
   font-size: 0.8rem;
   font-weight: bold;
@@ -356,6 +362,7 @@ button {
   p {
     font-size: 0.875rem;
     line-height: 1.125rem;
+    margin-bottom: $col-landscape * 0.5;
   }
 
   time {

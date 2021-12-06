@@ -45,7 +45,7 @@
     }
 
     &__gallery {
-      @include grid-structure($columns: 4, $col: $col-portrait);
+      @include grid-structure($columns: 2, $col: $col-portrait);
       margin-top: $col-portrait * 0.6;
     }
 
