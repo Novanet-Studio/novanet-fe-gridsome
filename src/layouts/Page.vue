@@ -1,10 +1,12 @@
 <template>
-  <div class="layout">
-    <div class="container">
-      <slot />
-      <Footer />
+  <transition name="fade" appear>
+    <div class="layout">
+      <div class="container">
+        <slot />
+        <Footer />
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <static-query>

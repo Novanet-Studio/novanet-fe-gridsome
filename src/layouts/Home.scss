@@ -125,7 +125,7 @@ button {
 }
 
 .fade-enter-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.6s;
 }
 
 .fade-enter {
@@ -291,6 +291,9 @@ button {
   justify-content: space-between;
   width: fit-content;
   &__link {
+    &:visited {
+      color: $white;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -629,7 +632,7 @@ button {
 @include responsive-min($min-width: 90em) {
   .mensaje {
     &__icono {
-      margin-top:0.15vh;
+      margin-top: 0.15vh;
       font-size: 2rem !important;
     }
   }
@@ -637,7 +640,6 @@ button {
 
 /*----------------------------------- Desktop 1600px --------------------------------*/
 @include responsive-min($min-width: 100em) {
-
   .section {
     &--home {
       height: $col-landscape * 11.25;

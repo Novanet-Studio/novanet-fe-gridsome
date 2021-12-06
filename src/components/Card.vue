@@ -1,13 +1,15 @@
 <template>
   <div class="card">
     <g-link :to="`/${view}/${coleccion}/${alias.slug}`">
-      <g-image
-        class="card__image"
-        :src="imagen.url"
-        :alt="imagen.alternativeText"
-        background="#ededed"
-        blur="40"	
-      />
+      <transition name="fade" appear>
+        <g-image
+          class="card__image"
+          :src="imagen.url"
+          :alt="imagen.alternativeText"
+          background="#ededed"
+          blur="40"
+        />
+      </transition>
       <div class="card__info">
         <time class="date" v-if="alias.createdAt">{{
           convertDate(alias.createdAt)

@@ -18,7 +18,7 @@
         v-for="servicio in $page.servicios.edges[0].node.servicios"
         :key="servicio.id"
       >
-        <h2 class="blue">{{ servicio.titulo }}</h2>
+        <h2 :id="servicio.id" class="blue">{{ servicio.titulo }}</h2>
         <p>{{ servicio.descripcion }}</p>
         <div class="services">
           <button

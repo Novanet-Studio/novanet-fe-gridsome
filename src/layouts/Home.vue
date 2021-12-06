@@ -1,13 +1,15 @@
 <template>
-  <div class="layout">
-    <div class="container">
-      <Header />
-      <main class="main">
-        <slot />
-      </main>
-      <Footer />
+  <transition name="fade" appear>
+    <div class="layout">
+      <div class="container">
+        <Header />
+        <main class="main">
+          <slot />
+        </main>
+        <Footer />
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <static-query>
