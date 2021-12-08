@@ -28,6 +28,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import VueSocialSharing from 'vue-social-sharing'
 
+import '~/layouts/Home.scss'
+
 config.autoAddCss = false
 library.add(
   faFacebook,
