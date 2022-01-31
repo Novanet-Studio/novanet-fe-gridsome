@@ -30,22 +30,33 @@
       </a>
 
       <a
+        class="rrss__chat rrss__chat--whatsapp"
         href="https://wa.me/message/QA5DVPVFSXYCJ1"
         target="_blank"
         aria-label="Ir al chat de whatsapp de Novanet Studio"
         rel="noopener noreferrer"
       >
         <font-awesome
-          class="mensaje__icono whatsapp"
+          class="mensaje__icono"
           :icon="[
             $static.inicio.edges[0].node.contacto.prefix,
             $static.inicio.edges[0].node.contacto.icono,
           ]"
         />
       </a>
-      <p class="mensaje__titulo">
-        {{ $static.inicio.edges[0].node.contacto.descripcion }} &nbsp; | &nbsp;
-        Novanet Studio - {{ new Date().getFullYear() }}
+      <a
+        class="mensaje__whatsapp"
+        href="https://wa.me/message/QA5DVPVFSXYCJ1"
+        target="_blank"
+        aria-label="Ir al chat de whatsapp de Novanet Studio"
+        rel="noopener noreferrer"
+      >
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+    <div class="rrss">
+      <p class="mensaje__legal">
+        Novanet Studio - Derechos reservados {{ new Date().getFullYear() }}
       </p>
     </div>
   </footer>

@@ -290,19 +290,25 @@ button {
   display: flex;
   justify-content: space-between;
   width: fit-content;
-  &__link {
+  margin-top: $col-portrait * 0.4;
+  &__link,
+  &__chat {
     &:visited {
       color: $white;
     }
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.8rem;
     color: $white;
+    box-sizing: border-box;
+    
     width: $col-landscape * 0.85;
     height: $col-landscape * 0.85;
-    box-sizing: border-box;
     margin-right: $col-landscape * 0.45;
+  }
+
+  &__link {
+    font-size: 0.8rem;
     &--triangle {
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
       background: $green;
@@ -324,24 +330,35 @@ button {
       justify-content: center;
     }
   }
+
+  &__chat {
+    font-size: 1rem;
+    &--whatsapp {
+      clip-path: circle(50% at 50% 50%);
+      background: $whatsapp;
+      justify-content: center;
+    }
+  }
 }
 
 .mensaje {
   display: flex;
-
-  &__icono {
-    font-size: 1.5rem !important;
-  }
-
-  &__titulo {
-    font-size: 0.9rem;
+  &__legal,
+  &__whatsapp {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;   
     color: $dark-grey-2;
-    margin: 0;
-    padding-left: $col-landscape * 0.25;
   }
+
+  &__legal{
+    font-size: 0.9rem;    
+  }
+
+  &__whatsapp {
+    line-height: 1.45rem;
+  }
+  
 }
 
 .section {
@@ -454,15 +471,6 @@ button {
     padding: $col-portrait $col-portrait 0;
   }
 
-  .rrss {
-    &__link {
-      font-size: 0.62rem;
-      width: $col-portrait * 1.3;
-      height: $col-portrait * 1.3;
-      margin-right: $col-portrait * 0.5;
-    }
-  }
-
   .section {
     margin-bottom: $col-portrait * 0.9;
     &--home {
@@ -470,14 +478,27 @@ button {
     }
   }
 
-  .mensaje {
-    &__icono {
-      margin-top: 0.4vh;
-      font-size: 1.188rem !important;
+  .rrss {    
+    margin-top: $col-portrait * 0.15;
+    &__link,
+    &__chat {
+      width: $col-portrait * 1.3;
+      height: $col-portrait * 1.3;      
+      margin-right: $col-portrait * 0.5;
     }
 
-    &__titulo {
-      font-size: 0.75rem;
+    &__link {
+      font-size: 0.62rem;
+    }
+
+    &__chat {
+      font-size: 0.9rem;
+    }
+  }
+
+  .mensaje {
+    &__whatsapp {
+      font-size: 1rem;
     }
   }
 }
@@ -513,11 +534,26 @@ button {
   }
 
   .rrss {
-    &__link {
-      font-size: 0.75rem;
+    margin-top: $col-landscape * 0.2;
+    &__link,
+    &__chat {      
       width: $col-landscape * 1.5;
       height: $col-landscape * 1.5;
-      margin-right: $col-landscape;
+      margin-right: $col-landscape * 0.55;
+    }
+
+    &__link {
+      font-size: 0.75rem;
+    }
+
+    &__chat {
+      font-size: 0.95rem;
+    }
+  }
+
+  .mensaje {
+    &__whatsapp {
+      font-size: 1rem;
     }
   }
 }
@@ -558,6 +594,7 @@ button {
   }
 
   .section {
+    margin-bottom: $col-portrait-tablet;
     &--home {
       height: $col-portrait-tablet * 15;
     }
@@ -570,15 +607,13 @@ button {
   }
 
   .rrss {
-    &__link {
+    margin-top: $col-portrait-tablet * 0.25;
+    &__link,
+    &__chat {
       width: $col-portrait-tablet * 0.85;
       height: $col-portrait-tablet * 0.85;
-      margin-right: $col-portrait-tablet * 0.65;
+      margin-right: $col-portrait-tablet * 0.45;
     }
-  }
-
-  .section {
-    margin-bottom: $col-portrait-tablet;
   }
 }
 
@@ -595,9 +630,24 @@ button {
   }
 
   .rrss {
-    &__link {
+    margin-top: $col-landscape * 0.25;
+    &__link,
+    &__chat {
       width: $col-landscape;
       height: $col-landscape;
+    }
+    &__link {
+      font-size: 0.7rem;
+    }
+
+    &__chat {
+      font-size: 0.95rem;
+    }
+  }
+
+  .mensaje {
+    &__whatsapp{
+      font-size: 1rem;
     }
   }
 }
@@ -610,30 +660,41 @@ button {
     }
   }
 
+  .section {
+    margin-bottom: $col-landscape;
+  }
+
   .rrss {
-    &__link {
+    margin-top: $col-landscape * 0.1;
+    &__link,
+    &__chat {
       width: $col-landscape * 0.85;
       height: $col-landscape * 0.85;
+    }
+
+    &__chat {
+      font-size: 1.05rem;
     }
   }
 
   .mensaje {
-    &__icono {
-      margin-top: -0.2vh;
-      font-size: 1.85rem !important;
+    &__whatsapp {
+      font-size: 1.1rem;
+      line-height: 1.6rem;
     }
-  }
-  .section {
-    margin-bottom: $col-landscape;
   }
 }
 
 /*---------------------------------- Desktop 1440px ---------------------------------*/
 @include responsive-min($min-width: 90em) {
   .mensaje {
-    &__icono {
-      margin-top: 0.15vh;
-      font-size: 2rem !important;
+    &__whatsapp{
+      font-size: 1.2rem;
+      line-height: 1.9rem;
+    }
+
+    &__legal {
+      font-size: 1rem;      
     }
   }
 }
@@ -643,6 +704,12 @@ button {
   .section {
     &--home {
       height: $col-landscape * 11.25;
+    }
+  }
+
+  .mensaje {
+    &__whatsapp {
+      font-size: 1.3rem;
     }
   }
 }
@@ -659,9 +726,31 @@ button {
       width: $col-landscape * 4;
     }
   }
+
+  .rrss {
+    margin-top: $col-landscape * 0.1;
+    &__link,
+    &__chat {
+      width: $col-landscape * 0.85;
+      height: $col-landscape * 0.85;
+    }
+
+    &__link {
+      font-size: 1.1rem;
+    }
+    &__chat {
+      font-size: 1.4rem;
+    }
+  }
+
   .mensaje {
-    &__icono {
-      font-size: 2.3rem !important;
+    &__whatsapp{
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+    }
+
+    &__legal {
+      font-size: 1.1rem;      
     }
   }
 }
