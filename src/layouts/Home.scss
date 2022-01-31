@@ -357,6 +357,9 @@ button {
 
   &__whatsapp {
     line-height: 1.45rem;
+    &:visited {
+      color: $dark-grey;
+    }
   }
   
 }
@@ -707,9 +710,23 @@ button {
     }
   }  
 
+  .rrss {
+    &__link {
+      font-size:0.8rem;
+    }
+
+    &__chat {
+      font-size: 1.1rem;
+    }
+  }
+
   .mensaje {
     &__whatsapp {
       font-size: 1.3rem;
+    }
+
+    &__legal {
+      font-size: 1.05rem;      
     }
   }
 }
