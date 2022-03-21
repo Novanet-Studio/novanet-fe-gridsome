@@ -46,7 +46,7 @@
           descripcion
           tag
           slug
-          createdAt
+          fecha
           imagen {
             url
             alternativeText

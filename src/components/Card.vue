@@ -11,8 +11,8 @@
         />
       </transition>
       <div class="card__info">
-        <time class="date" v-if="alias.createdAt">{{
-          convertDate(alias.createdAt)
+        <time class="date" v-if="alias.fecha">{{
+          convertDate(alias.fecha)
         }}</time>
         <h3 class="card__title">{{ alias.titulo }}</h3>
         <p class="card__description" v-if="descripcion">
