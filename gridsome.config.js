@@ -70,7 +70,7 @@ module.exports = {
         apiURL:
           process.env.NODE_ENV === 'production'
             ? process.env.API_URL
-            : 'https://novanet-be.herokuapp.com/',
+            : 'http://localhost:1337/',
         queryLimit: 1000, // Defaults to 100
         contentTypes: [`articulos`, `proyectos`, `categorias`],
         singleTypes: [

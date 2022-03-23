@@ -13,7 +13,7 @@
               class="shapes__img"
               src="~/assets/images/novanet-inicio-diseno.jpg"
               width="290"
-              alt="Forma triangular del servicio de diseño gráfico"
+              alt="Triángulo amarillo e imagen en escala de grises del servicio de diseño gráfico."
               background="#d6f630"
               blur="40"
               quality="100"
@@ -27,7 +27,7 @@
               class="shapes__img"
               src="~/assets/images/novanet-inicio-web.jpg"
               width="290"
-              alt="Forma triangular del servicio de tecnologías web"
+              alt="Cuadrado azul e imagen en escala de grises del servicio de tecnologías web."
               background="#099bc3"
               blur="40"
               quality="100"
@@ -41,7 +41,7 @@
               class="shapes__img--circle"
               src="~/assets/images/novanet-inicio-asesoria.jpg"
               width="290"
-              alt="Forma triangular del servicio de asesoría"
+              alt="Círculo rojo e imagen e escala de grises del servicio de asesoría."
               background="#df1f5b"
               blur="40"
               quality="100"
@@ -100,5 +100,5 @@ export default {
   },
 }
 
-import './Inicio.scss'
+import './Index.scss'
 </script>

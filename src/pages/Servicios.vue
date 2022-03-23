@@ -18,28 +18,47 @@
         v-for="servicio in $page.servicios.edges[0].node.servicios"
         :key="servicio.id"
       >
-        <h2 :id="servicio.id" class="blue">{{ servicio.titulo }}</h2>
-        <p>{{ servicio.descripcion }}</p>
-        <div class="services">
-          <button
+        <div class="services__heading">
+          <g-image
+            class="services__heading-image"
+            :src="servicio.imagen.url"
+            :alt="servicio.imagen.alternativeText"
+            blur="40"
+            quality="100"
+          />
+          <div class="services__heading-info">
+            <h2 :id="servicio.id">{{ servicio.titulo }}</h2>
+            <p>{{ servicio.descripcion }}</p>
+          </div>
+        </div>
+
+        <vue-tabs class="services">
+          <div
             class="services__items"
             v-for="item in servicio.especialidad"
             :key="item.id"
-            @click="
-              showModal = true
-              content = item
-            "
+          >
+            <v-tab class="services__title" :title="item.titulo">
+              <div :data-icon="item.icono" class="services__icon icon"></div>
+              <p class="services__description">{{ item.descripcion }}</p>
+            </v-tab>
+          </div>
+        </vue-tabs>
+
+        <!-- <vue-tabs v-for="item in servicio.especialidad" :key="item.id">
+          <v-tab :title="item.titulo"> {{ item.descripcion }} </v-tab>
+        </vue-tabs> -->
+
+        <!-- <div class="services">
+          <div
+            class="services__items"
+            v-for="item in servicio.especialidad"
+            :key="item.id"
           >
             <div :data-icon="item.icono" class="services__icon icon"></div>
             <h3 class="services__title">{{ item.titulo }}</h3>
-          </button>
-          <Modal
-            v-if="showModal"
-            @close="showModal = false"
-            :content="content"
-            :clase="$magenta"
-          />
-        </div>
+          </div>
+        </div> -->
       </section>
     </main>
   </Page>
@@ -58,6 +77,10 @@ query {
           id
         	titulo
           descripcion
+          imagen  {
+            url 
+            alternativeText
+          }
           especialidad {
             id
             titulo
@@ -73,8 +96,9 @@ query {
 
 <script>
 import Header from '~/components/HeaderPage'
-import Modal from '~/components/Modal'
+import { VueTabs, VTab } from 'vue-nav-tabs'
 import VueMarkdown from '@adapttive/vue-markdown'
+import 'vue-nav-tabs/themes/vue-tabs.css'
 
 export default {
   metaInfo() {
@@ -92,9 +116,10 @@ export default {
   components: {
     Header,
     VueMarkdown,
-    Modal,
+    VueTabs,
+    VTab,
   },
-  data: function() {
+  data: function () {
     return {
       showModal: false,
       content: null,

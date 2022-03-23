@@ -16,6 +16,7 @@
     "@adapttive/vue-markdown": "^4.0.1",
     "@gridsome/plugin-sitemap": "^0.4.0",
     "@gridsome/source-strapi": "^0.2.0",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "gridsome": "^0.7.0",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-ogp": "^0.0.14",
