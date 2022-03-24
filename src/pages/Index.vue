@@ -5,50 +5,35 @@
         {{ $page.inicio.edges[0].node.principal }}
       </h1>
       <div class="shapes">
-        <div class="shapes__item">
-          <g-link
-            :to="`/servicios#${$page.servicios.edges[0].node.servicios[0].id}`"
-          >
-            <g-image
-              class="shapes__img"
-              src="~/assets/images/novanet-inicio-diseno.jpg"
-              width="290"
-              alt="Triángulo amarillo e imagen en escala de grises del servicio de diseño gráfico."
-              background="#d6f630"
-              blur="40"
-              quality="100"
-            />
-          </g-link>
-          <h4 class="shapes__subtitulo">Diseño gráfico</h4>
-        </div>
-        <div class="shapes__item">
-          <g-link :to="`/servicios#${$page.servicios.edges[0].node.servicios[1].id}`">
-            <g-image
-              class="shapes__img"
-              src="~/assets/images/novanet-inicio-web.jpg"
-              width="290"
-              alt="Cuadrado azul e imagen en escala de grises del servicio de tecnologías web."
-              background="#099bc3"
-              blur="40"
-              quality="100"
-            />
-          </g-link>
-          <h4 class="shapes__subtitulo">Tecnologías web</h4>
-        </div>
-        <div class="shapes__item">
-          <g-link :to="`/servicios#${$page.servicios.edges[0].node.servicios[2].id}`">
-            <g-image
-              class="shapes__img--circle"
-              src="~/assets/images/novanet-inicio-asesoria.jpg"
-              width="290"
-              alt="Círculo rojo e imagen e escala de grises del servicio de asesoría."
-              background="#df1f5b"
-              blur="40"
-              quality="100"
-            />
-          </g-link>
-          <h4 class="shapes__subtitulo shapes__subtitulo--circle">Asesoría</h4>
-        </div>
+        <button
+          class="shapes__item"
+          v-for="servicio in $page.servicios.edges[0].node.servicios"
+          :key="servicio.id"
+          @click="
+            showModal = true
+            item = servicio.especialidad
+            servicios = $page.servicios.edges[0].node.servicios
+            
+          "
+        >
+          <g-image
+            class="shapes__img"
+            :src="servicio.imagen.url"
+            width="290"
+            :alt="servicio.imagen.alternativeText"
+            background="#d6f630"
+            blur="40"
+            quality="100"
+          />
+          <h4 class="shapes__subtitulo">{{ servicio.titulo }}</h4>
+        </button>
+        <Modal  
+          v-if="showModal"
+          @close="showModal = false"
+          :item="item"
+          :servicios="servicios"
+          clase="modal__index"
+        />
       </div>
     </section>
   </Home>
@@ -75,8 +60,19 @@ query {
   servicios: allStrapiServicios {
     edges {
       node {      
-        servicios {
-          id        	
+        servicios {  
+          id
+        	titulo
+          imagen  {
+            url 
+            alternativeText
+          }
+          especialidad {
+            id
+            titulo
+            icono
+            descripcion
+          }        	
         }
       }
     }
@@ -85,6 +81,8 @@ query {
 </page-query>
 
 <script>
+import Modal from '~/components/Modal'
+
 export default {
   metaInfo() {
     return {
@@ -93,6 +91,16 @@ export default {
         description: this.$page.inicio.edges[0].node.principal,
         image: this.$page.metadata.image,
       }),
+    }
+  },
+  components: {
+    Modal,
+  },
+  data: function () {
+    return {
+      showModal: false,
+      item: null,
+      servicios: null,
     }
   },
   computed: {

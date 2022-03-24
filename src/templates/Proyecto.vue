@@ -41,6 +41,7 @@
                   v-if="showModal"
                   @close="showModal = false"
                   :image="content"
+                  clase="modal__item"
                 />
               </li>
             </ul>

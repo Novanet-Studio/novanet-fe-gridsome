@@ -17,6 +17,7 @@
         <div class="services">
           <div
             class="services__items"
+            :id="servicio.id"
             v-for="servicio in $page.servicios.edges[0].node.servicios"
             :key="servicio.id"
           >
@@ -29,7 +30,7 @@
                 quality="100"
               />
               <div class="services__info">
-                <h2 :id="servicio.id" class="services__title">
+                <h2 class="services__title">
                   {{ servicio.titulo }}
                 </h2>
                 <p>{{ servicio.descripcion }}</p>

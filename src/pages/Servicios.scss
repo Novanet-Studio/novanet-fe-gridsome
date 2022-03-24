@@ -199,16 +199,7 @@
 }
 
 /*----------------------------------- Desktop 1600px --------------------------------*/
-@include responsive-min($min-width: 100em) {
-  .services {
-    &__description {
-      p {
-        font-size: 1.188rem;
-        line-height: 1.5rem;
-      }
-    }
-  }
-}
+@include responsive-min($min-width: 100em) {}
 
 /*---------------------------------- Desktop 1440px ---------------------------------*/
 @include responsive-min($min-width: 90em) {
