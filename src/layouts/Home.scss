@@ -716,6 +716,21 @@ button {
     margin-bottom: $col-landscape;
   }
 
+  .nav {
+    &--page {
+      .nav {
+        &__icon {
+          &::before {
+            font-size: 4rem;
+            margin-top: 1vh;
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+          }
+        }
+      }
+    }
+  }
+
   .rrss {
     margin-top: $col-landscape * 0.3;
     &__link,

@@ -13,52 +13,43 @@
         </p>
       </section>
 
-      <section
-        class="section"
-        v-for="servicio in $page.servicios.edges[0].node.servicios"
-        :key="servicio.id"
-      >
-        <div class="services__heading">
-          <g-image
-            class="services__heading-image"
-            :src="servicio.imagen.url"
-            :alt="servicio.imagen.alternativeText"
-            blur="40"
-            quality="100"
-          />
-          <div class="services__heading-info">
-            <h2 :id="servicio.id">{{ servicio.titulo }}</h2>
-            <p>{{ servicio.descripcion }}</p>
+      <section class="section">
+        <div class="services">
+          <div
+            class="services__items"
+            v-for="servicio in $page.servicios.edges[0].node.servicios"
+            :key="servicio.id"
+          >
+            <div class="services__heading">
+              <g-image
+                class="services__image"
+                :src="servicio.imagen.url"
+                :alt="servicio.imagen.alternativeText"
+                blur="40"
+                quality="100"
+              />
+              <div class="services__info">
+                <h2 :id="servicio.id" class="services__title">
+                  {{ servicio.titulo }}
+                </h2>
+                <p>{{ servicio.descripcion }}</p>
+              </div>
+            </div>
+            <vue-tabs class="services__tabs">
+              <div v-for="item in servicio.especialidad" :key="item.id">
+                <v-tab class="services__tab" :title="item.titulo">
+                  <div
+                    :data-icon="item.icono"
+                    class="services__icon icon"
+                  ></div>
+                  <vue-markdown class="services__description">{{
+                    item.descripcion
+                  }}</vue-markdown>
+                </v-tab>
+              </div>
+            </vue-tabs>
           </div>
         </div>
-
-        <vue-tabs class="services">
-          <div
-            class="services__items"
-            v-for="item in servicio.especialidad"
-            :key="item.id"
-          >
-            <v-tab class="services__title" :title="item.titulo">
-              <div :data-icon="item.icono" class="services__icon icon"></div>
-              <p class="services__description">{{ item.descripcion }}</p>
-            </v-tab>
-          </div>
-        </vue-tabs>
-
-        <!-- <vue-tabs v-for="item in servicio.especialidad" :key="item.id">
-          <v-tab :title="item.titulo"> {{ item.descripcion }} </v-tab>
-        </vue-tabs> -->
-
-        <!-- <div class="services">
-          <div
-            class="services__items"
-            v-for="item in servicio.especialidad"
-            :key="item.id"
-          >
-            <div :data-icon="item.icono" class="services__icon icon"></div>
-            <h3 class="services__title">{{ item.titulo }}</h3>
-          </div>
-        </div> -->
       </section>
     </main>
   </Page>
@@ -98,7 +89,7 @@ query {
 import Header from '~/components/HeaderPage'
 import { VueTabs, VTab } from 'vue-nav-tabs'
 import VueMarkdown from '@adapttive/vue-markdown'
-import 'vue-nav-tabs/themes/vue-tabs.css'
+import '~/components/vue-tabs.scss'
 
 export default {
   metaInfo() {
