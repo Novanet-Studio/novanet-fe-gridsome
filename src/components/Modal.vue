@@ -32,7 +32,7 @@
               <div
                 v-for="element in item"
                 :key="element.id"
-                class="modal__index-elements"
+                class="modal__index-element"
               >
                 <div
                   :data-icon="element.icono"
