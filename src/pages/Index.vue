@@ -13,7 +13,6 @@
             showModal = true
             item = servicio.especialidad
             servicios = $page.servicios.edges[0].node.servicios
-            
           "
         >
           <g-image
@@ -27,7 +26,7 @@
           />
           <h4 class="shapes__subtitulo">{{ servicio.titulo }}</h4>
         </button>
-        <Modal  
+        <Modal
           v-if="showModal"
           @close="showModal = false"
           :item="item"
@@ -63,6 +62,7 @@ query {
         servicios {  
           id
         	titulo
+          link
           imagen  {
             url 
             alternativeText
@@ -96,7 +96,7 @@ export default {
   components: {
     Modal,
   },
-  data: function () {
+  data: function() {
     return {
       showModal: false,
       item: null,

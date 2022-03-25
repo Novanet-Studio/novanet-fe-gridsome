@@ -39,8 +39,10 @@
                 ></div>
                 <h3 class="modal__index-titulo">{{ element.titulo }}</h3>
               </div>
-               <div class="modal__index-link"><g-link to="/servicios/">Ver todos los servicios</g-link></div>
-            </div>            
+              <div class="modal__index-link">
+                <g-link to="{{`/servicios/#`element.link}}">Ver todos los servicios</g-link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
