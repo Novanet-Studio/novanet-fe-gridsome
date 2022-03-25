@@ -28,16 +28,19 @@
             </div>
 
             <div v-if="item" :class="clase">
-              <div v-for="element in item" :key="element.id" class="modal__index-elements">
-                <div>
-                  <div :data-icon="element.icono" class="icon modal__index-icons"></div>
-                  <h3 class="modal__index-titulo">{{ element.titulo }}</h3>
-                  <div v-for="servicio in servicios" :key="servicio.id">
-                  <g-link :to="`/servicios#${servicio.id}`">Ver más</g-link>
-                  </div>
-                </div>
+              <div
+                v-for="element in item"
+                :key="element.id"
+                class="modal__index-elements"
+              >
+                <div
+                  :data-icon="element.icono"
+                  class="icon modal__index-icons"
+                ></div>
+                <h3 class="modal__index-titulo">{{ element.titulo }}</h3>
               </div>
-            </div>
+               <div class="modal__index-link"><g-link to="/servicios/">Ver todos los servicios</g-link></div>
+            </div>            
           </div>
         </div>
       </div>
@@ -49,7 +52,13 @@
 import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
-  props: { image: Object, content: Object, item: Array, servicios: Array, clase: String },
+  props: {
+    image: Object,
+    content: Object,
+    item: Array,
+    servicios: Array,
+    clase: String,
+  },
   components: {
     VueMarkdown,
   },
