@@ -28,6 +28,7 @@
             </div>
 
             <div v-if="item" :class="clase">
+              <h2 class="modal__index-header">{{ title }}</h2>
               <div
                 v-for="element in item"
                 :key="element.id"
@@ -40,7 +41,9 @@
                 <h3 class="modal__index-titulo">{{ element.titulo }}</h3>
               </div>
               <div class="modal__index-link">
-                <g-link to="{{`/servicios/#`element.link}}">Ver todos los servicios</g-link>
+                <g-link :to="`/servicios/#${link}`"
+                  >Ver toda la información del servicio</g-link
+                >
               </div>
             </div>
           </div>
@@ -57,8 +60,9 @@ export default {
   props: {
     image: Object,
     content: Object,
+    title: String,
     item: Array,
-    servicios: Array,
+    link: String,
     clase: String,
   },
   components: {

@@ -12,7 +12,8 @@
           @click="
             showModal = true
             item = servicio.especialidad
-            servicios = $page.servicios.edges[0].node.servicios
+            link = servicio.link
+            title = servicio.titulo
           "
         >
           <g-image
@@ -29,8 +30,9 @@
         <Modal
           v-if="showModal"
           @close="showModal = false"
+          :title="title"
           :item="item"
-          :servicios="servicios"
+          :link="link"
           clase="modal__index"
         />
       </div>
@@ -96,11 +98,12 @@ export default {
   components: {
     Modal,
   },
-  data: function() {
+  data: function () {
     return {
       showModal: false,
+      title: null,
       item: null,
-      servicios: null,
+      link: null,
     }
   },
   computed: {

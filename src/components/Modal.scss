@@ -8,7 +8,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     transition: opacity 0.2s ease;
     animation: fadeIn 0.4s;
     overflow-y: scroll;
@@ -81,10 +81,19 @@
     text-align: center;
     margin-top: -2vh;
   }
-  &__index-link {
+  &__index-link,
+  &__index-header {
     width: 100%;
     text-align: center;
-    margin-top: 4vh;
+  }
+
+  &__index-link {
+    margin-top: 8vh;
+  }
+
+  &__index-header {
+    font-size: 1.8rem;
+    margin-bottom: 8vh;
   }
 
   &__boton {
