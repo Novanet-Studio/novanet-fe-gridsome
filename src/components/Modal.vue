@@ -42,7 +42,7 @@
               </div>
               <div class="modal__index-link">
                 <g-link :to="`/servicios/#${link}`"
-                  >Ver toda la información del servicio</g-link
+                  >Ver información del servicio</g-link
                 >
               </div>
             </div>

@@ -38,7 +38,7 @@
         }
       }
     }
-    articulos: allStrapiArticulos {
+    articulos: allStrapiArticulos(order: ASC) {
       edges {
         node {
           id
