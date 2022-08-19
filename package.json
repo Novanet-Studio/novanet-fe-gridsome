@@ -1,6 +1,6 @@
 {
   "name": "novanet-fe",
-  "private": true,
+  "private": false,
   "description": "Novanet Studio web app",
   "version": "0.5.0",
   "author": "Novanet Studio <info@novanet.studio>",
